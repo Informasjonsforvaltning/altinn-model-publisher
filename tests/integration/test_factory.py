@@ -1,4 +1,4 @@
-"""Unit test cases for the factory."""
+"""Integration test cases for the factory."""
 import pytest
 
 from altinn_model_publisher import create_app
