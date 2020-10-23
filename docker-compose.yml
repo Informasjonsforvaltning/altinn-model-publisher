@@ -1,0 +1,7 @@
+version: '3'
+services:
+  altinn-model-publisher:
+    build: .
+    image: eu.gcr.io/digdir-fdk-infra/altinn-model-publisher:test
+    ports:
+      - "8080:8080"
