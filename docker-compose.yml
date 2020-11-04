@@ -1,7 +1,19 @@
 version: '3'
 services:
+
   altinn-model-publisher:
     build: .
     image: eu.gcr.io/digdir-fdk-infra/altinn-model-publisher:test
     ports:
       - "8080:8080"
+    environment:
+      - ALTINN_URI=http://wiremock:8080
+      - SELF_URI=http://altinn-model-publisher:8080
+      - ORG_URI=https://organization-catalogue.fellesdatakatalog.digdir.no
+
+  wiremock:
+    image: rodolpheche/wiremock
+    ports:
+      - "8000:8080"
+    volumes:
+      - ./mock_mappings/mappings:/home/wiremock/mappings

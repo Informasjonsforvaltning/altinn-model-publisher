@@ -1,0 +1,26 @@
+{
+  "id" : "56824e1c-e8e8-4a9a-bb75-e0d9eed654a7",
+  "name" : "api_metadata_formtask_3743_140516",
+  "request" : {
+    "url" : "/api/metadata/formtask/3743/140516",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"ServiceOwnerCode\":\"SKD\",\"ServiceOwnerName\":\"Norwegian Tax Administration\",\"ServiceName\":\"A04 Declaration of paid work at home where a private individual is the employer\",\"ServiceCode\":\"3743\",\"ServiceEditionCode\":140516,\"ValidFrom\":\"2020-01-02T08:35:15.18\",\"ValidTo\":\"2025-01-01T00:26:00\",\"ServiceType\":\"FormTask\",\"RestEnabled\":false,\"FormsMetaData\":[{\"FormID\":15494,\"FormName\":\"A04 Declaration of paid work at home where a private individual is the employer\",\"DataFormatProviderType\":\"Seres\",\"DataFormatID\":\"4444\",\"DataFormatVersion\":32407,\"IsOnlyXsdValidation\":false,\"FormType\":\"MainForm\"}],\"EUSEnabled\":false,\"EnterpriseUserEnabled\":true,\"ProcessSteps\":[{\"SequenceNumber\":1,\"Name\":\"FormFilling\",\"SecurityLevel\":2},{\"SequenceNumber\":2,\"Name\":\"SendIn\",\"SecurityLevel\":2}]}",
+    "headers" : {
+      "Cache-Control" : "no-cache",
+      "Pragma" : "no-cache",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Expires" : "-1",
+      "Vary" : "Accept-Encoding",
+      "Server" : "Microsoft-IIS/8.5",
+      "P3P" : "CP=\"CAO PSA OUR LEG NAV\"",
+      "Strict-Transport-Security" : "max-age=31536000",
+      "Date" : "Thu, 29 Oct 2020 12:43:27 GMT"
+    }
+  },
+  "uuid" : "56824e1c-e8e8-4a9a-bb75-e0d9eed654a7",
+  "persistent" : true,
+  "insertionIndex" : 7
+}

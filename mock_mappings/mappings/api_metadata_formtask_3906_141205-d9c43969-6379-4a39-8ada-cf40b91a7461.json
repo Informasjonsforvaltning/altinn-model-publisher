@@ -1,0 +1,26 @@
+{
+  "id" : "d9c43969-6379-4a39-8ada-cf40b91a7461",
+  "name" : "api_metadata_formtask_3906_141205",
+  "request" : {
+    "url" : "/api/metadata/formtask/3906/141205",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"ServiceOwnerCode\":\"SKD\",\"ServiceOwnerName\":\"Norwegian Tax Administration\",\"ServiceName\":\"A01 a-melding\",\"ServiceCode\":\"3906\",\"ServiceEditionCode\":141205,\"ValidFrom\":\"2020-09-03T08:00:00\",\"ValidTo\":\"2099-10-21T10:00:00\",\"ServiceType\":\"FormTask\",\"RestEnabled\":false,\"FormsMetaData\":[{\"FormID\":16791,\"FormName\":\"A01 a-melding\",\"DataFormatProviderType\":\"Seres\",\"DataFormatID\":\"3940\",\"DataFormatVersion\":20161021,\"IsOnlyXsdValidation\":false,\"FormType\":\"MainForm\"}],\"EUSEnabled\":false,\"EnterpriseUserEnabled\":true,\"ProcessSteps\":[{\"SequenceNumber\":1,\"Name\":\"FormFilling\",\"SecurityLevel\":2},{\"SequenceNumber\":2,\"Name\":\"SendIn\",\"SecurityLevel\":2}]}",
+    "headers" : {
+      "Cache-Control" : "no-cache",
+      "Pragma" : "no-cache",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Expires" : "-1",
+      "Vary" : "Accept-Encoding",
+      "Server" : "Microsoft-IIS/8.5",
+      "P3P" : "CP=\"CAO PSA OUR LEG NAV\"",
+      "Strict-Transport-Security" : "max-age=31536000",
+      "Date" : "Thu, 29 Oct 2020 12:43:27 GMT"
+    }
+  },
+  "uuid" : "d9c43969-6379-4a39-8ada-cf40b91a7461",
+  "persistent" : true,
+  "insertionIndex" : 5
+}
