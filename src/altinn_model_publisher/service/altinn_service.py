@@ -26,13 +26,11 @@ def is_ready() -> bool:
 
 def service_meta_data_filtered_by_type_form_task() -> List[Dict]:
     """Fetch service metadata from Altinn, filter by type FormTask."""
-    form_tasks = [
+    return [
         metadata
         for metadata in fetch_altinn_metadata()
         if metadata.get("ServiceType") == "FormTask"
     ]
-
-    return form_tasks
 
 
 def filter_form_tasks_by_edition(form_tasks: List[Dict]) -> Dict:

@@ -20,7 +20,4 @@ class Organization:
 def map_shortname_to_org(shortname: str) -> Optional[Organization]:
     """Map shortname to organization."""
     org = shortname_orgs_map.get(shortname)
-    if org:
-        return Organization(orgnr=org["orgnr"], name=org["name"])
-    else:
-        return None
+    return Organization(orgnr=org["orgnr"], name=org["name"]) if org else None
