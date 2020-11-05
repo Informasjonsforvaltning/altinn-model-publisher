@@ -15,6 +15,7 @@ import requests
 from requests.exceptions import ConnectionError
 
 from altinn_model_publisher import create_app
+from .test_data import altinn_catalog_turtle
 
 load_dotenv()
 HOST_PORT = int(env.get("HOST_PORT", "8080"))
@@ -145,4 +146,23 @@ def mock_not_ready(mocker: MockFixture) -> Mock:
     """Mock check models file is missing."""
     mock = mocker.patch("os.path.isfile")
     mock.return_value = False
+    return mock
+
+
+@pytest.fixture
+def mock_save_to_file(mocker: MockFixture) -> Mock:
+    """Mock save catalog to file."""
+    mock = mocker.patch(
+        "altinn_model_publisher.service.altinn_service.save_catalog_to_zip_file"
+    )
+    return mock
+
+
+@pytest.fixture
+def mock_load_rdf_from_file(mocker: MockFixture) -> Mock:
+    """Mock save catalog to file."""
+    mock = mocker.patch(
+        "altinn_model_publisher.service.altinn_service.read_catalog_zip_file"
+    )
+    mock.return_value = altinn_catalog_turtle
     return mock

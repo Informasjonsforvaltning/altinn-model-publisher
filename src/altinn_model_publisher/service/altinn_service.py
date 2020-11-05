@@ -1,5 +1,4 @@
 """Service layer module for modelldcat-ap-no compliant information models from altinn."""
-import gzip
 import logging
 import os
 from typing import Dict, List, Optional
@@ -12,10 +11,12 @@ from .altinn_client import (
     fetch_metadata_with_task_forms,
     get_xsd_data,
 )
+from .altinn_file_service import (
+    CATALOG_FILE_PATH,
+    read_catalog_zip_file,
+    save_catalog_to_zip_file,
+)
 from .altinn_model_mapper import map_model_from_dict
-
-
-CATALOG_FILE_PATH = os.getenv("CATALOG_FILE_PATH", "/app/altinn_catalog.ttl.gz")
 
 
 def is_ready() -> bool:
@@ -93,19 +94,6 @@ def create_altinn_models_catalog(altinn_models: List[InformationModel]) -> Catal
     return catalog
 
 
-def save_catalog_to_zip_file(catalog: Catalog) -> None:
-    """Zip and save catalog to file."""
-    rdf_catalog = bytes(catalog.to_rdf())
-    with gzip.open(CATALOG_FILE_PATH, "wb") as zip_file:
-        zip_file.write(rdf_catalog)
-
-
-def read_catalog_zip_file() -> str:
-    """Read zipped catalog from file."""
-    with gzip.open(CATALOG_FILE_PATH, "rb") as zip_file:
-        return zip_file.read().decode()
-
-
 def update_altinn_models_file() -> None:
     """Update content of altinn models file."""
     all_form_tasks = service_meta_data_filtered_by_type_form_task()
@@ -141,8 +129,8 @@ def update_altinn_models_file() -> None:
             models_data.append(data)
 
     altinn_models = [map_model_from_dict(model_dict) for model_dict in models_data]
-    altinn_catalog_turtle = create_altinn_models_catalog(altinn_models)
-    save_catalog_to_zip_file(altinn_catalog_turtle)
+    altinn_catalog = create_altinn_models_catalog(altinn_models)
+    save_catalog_to_zip_file(altinn_catalog)
 
     logging.info("Altinn model catalog successfully updated")
 

@@ -52,7 +52,7 @@ source = ["src", "*/site-packages"]
 [tool.coverage.run]
 branch = false
 source = ["altinn_model_publisher"]
-omit = ["*gunicorn_config.py"]
+omit = ["*gunicorn_config.py", "*altinn_file_service.py"]
 
 [tool.coverage.report]
 show_missing = true

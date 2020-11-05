@@ -53,7 +53,6 @@ def integration_tests(session: Session) -> None:
         *args,
         env={
             "ALTINN_URI": "http://localhost:8000",
-            "CATALOG_FILE_PATH": "../test_catalog.ttl.gz",
         },
     )
 
@@ -78,7 +77,6 @@ def tests(session: Session) -> None:
         *args,
         env={
             "ALTINN_URI": "http://localhost:8000",
-            "CATALOG_FILE_PATH": "../test_catalog.ttl.gz",
         },
     )
 

@@ -2,4 +2,5 @@
 
 Modules:
     conftest
+    test_data
 """
