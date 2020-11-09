@@ -1,0 +1,27 @@
+{
+  "id" : "19adb6e6-23cd-4089-9d6a-e3b7c4081508",
+  "name" : "api_metadata_formtask_3314_1212",
+  "request" : {
+    "url" : "/api/metadata/formtask/3314/1212",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"ServiceOwnerCode\":\"ACN\",\"ServiceOwnerName\":\"Test agency for Accenture\",\"ServiceName\":\"1911 Repo Service\",\"ServiceCode\":\"3314\",\"ServiceEditionCode\":1212,\"ValidFrom\":\"2020-01-20T09:42:15.817\",\"ValidTo\":\"2024-07-07T10:15:00\",\"ServiceType\":\"FormTask\",\"RestEnabled\":false,\"AttachmentRules\":[{\"AttachmentRuleId\":317,\"AllowedFileTypes\":\"*.*\",\"AttachmentTypeName\":\"AT01_Cycle01\",\"AttachmentTypeNameLanguage\":\"AT01_Cycle01\",\"IsCheckSumAllowed\":false,\"IsXsdValidationRequired\":false,\"MaxAttachmentCount\":100,\"MaxFileSize\":200,\"MinAttachmentCount\":0}],\"FormsMetaData\":[{\"FormID\":15675,\"FormName\":\"Sensitive role Reporting\",\"DataFormatProviderType\":\"OR\",\"DataFormatID\":\"245\",\"DataFormatVersion\":10980,\"IsOnlyXsdValidation\":false,\"FormType\":\"MainForm\"}],\"EUSEnabled\":true,\"EnterpriseUserEnabled\":true,\"ProcessSteps\":[{\"SequenceNumber\":1,\"Name\":\"FormFilling\",\"SecurityLevel\":1},{\"SequenceNumber\":2,\"Name\":\"Signing\",\"SecurityLevel\":1}]}",
+    "headers" : {
+      "Cache-Control" : "no-cache",
+      "Pragma" : "no-cache",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Expires" : "-1",
+      "Vary" : "Accept-Encoding",
+      "Server" : "Microsoft-IIS/8.5",
+      "P3P" : "CP=\"CAO PSA OUR LEG NAV\"",
+      "Strict-Transport-Security" : "max-age=31536000",
+      "Date" : "Thu, 29 Oct 2020 12:43:27 GMT",
+      "Set-Cookie" : "BIGipServer~autoprov~aiport.ai-pr-port.ai-prod.osl.basefarm.net-85=rd1o00000000000000000000ffff0a2b4461o85; path=/; Httponly; Secure"
+    }
+  },
+  "uuid" : "19adb6e6-23cd-4089-9d6a-e3b7c4081508",
+  "persistent" : true,
+  "insertionIndex" : 4
+}

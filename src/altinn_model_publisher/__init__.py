@@ -5,8 +5,10 @@ from dotenv import load_dotenv
 from flask import Flask
 from flask_restful import Api
 
+from .resources.models import Models
 from .resources.ping import Ping
 from .resources.ready import Ready
+from .resources.update import Update
 
 __version__ = "0.1.0"
 
@@ -30,5 +32,9 @@ def create_app(test_config: Any = None) -> Flask:
     # healthcheck routes
     api.add_resource(Ping, "/ping")
     api.add_resource(Ready, "/ready")
+
+    # api routes
+    api.add_resource(Models, "/models")
+    api.add_resource(Update, "/update")
 
     return app

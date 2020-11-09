@@ -10,9 +10,7 @@ nox.options.sessions = (
     "lint",
     "mypy",
     "safety",
-    "unit_tests",
-    "integration_tests",
-    "contract_tests",
+    "tests",
 )
 
 
@@ -32,20 +30,19 @@ def unit_tests(session: Session) -> None:
         "-m unit",
         "-rA",
         *args,
-        env={},
+        env={"ALTINN_URI": "altinn-uri"},
     )
 
 
 @nox.session
 def integration_tests(session: Session) -> None:
     """Run the integration test suite."""
-    args = session.posargs or ["--cov"]
+    args = session.posargs
     nox_poetry.install(session, nox_poetry.WHEEL)
     nox_poetry.install(
         session,
-        "coverage[toml]",
         "pytest",
-        "pytest-cov",
+        "pytest-docker",
         "requests-mock",
         "pytest-mock",
     )
@@ -54,7 +51,33 @@ def integration_tests(session: Session) -> None:
         "-m integration",
         "-rA",
         *args,
-        env={},
+        env={
+            "ALTINN_URI": "http://localhost:8000",
+        },
+    )
+
+
+@nox.session
+def tests(session: Session) -> None:
+    """Run the integration test suite."""
+    args = session.posargs or ["--cov"]
+    nox_poetry.install(session, nox_poetry.WHEEL)
+    nox_poetry.install(
+        session,
+        "coverage[toml]",
+        "pytest",
+        "pytest-cov",
+        "pytest-docker",
+        "requests-mock",
+        "pytest-mock",
+    )
+    session.run(
+        "pytest",
+        "-rA",
+        *args,
+        env={
+            "ALTINN_URI": "http://localhost:8000",
+        },
     )
 
 
@@ -71,7 +94,7 @@ def contract_tests(session: Session) -> None:
         "-m contract",
         "-rA",
         *args,
-        env={},
+        env={"ALTINN_URI": "http://wiremock:8080"},
     )
 
 

@@ -53,10 +53,10 @@ To run linters, checkers and tests:
 % nox
 ```
 
-## PyCharm
+## Updating mock data
 
-### interpreter
-Ctrl+Alt+S -> Project -> python interpreter -> cog by dropdown -> Add -> Poetry Environment -> set 'python3.9' from '.../.pyenv/shims/' as Base interpreter and set 'poetry' from '.../.pyenv/shims/' as Poetry executable.
-
-### pytest
-Ctrl+Alt+S -> Tools -> Python integrated tools -> Testing -> set 'pytest' as Default test runner
+1. Set API_URL env variable to `http://0.0.0.0:8000`
+2. Start wiremock with `docker-compose up`
+2. Go to `http://0.0.0.0:8000/__admin/recorder/` and start recording with target url 
+3. Start the application with flask or gunicorn and run an http POST request to /update
+4. Stop recording
