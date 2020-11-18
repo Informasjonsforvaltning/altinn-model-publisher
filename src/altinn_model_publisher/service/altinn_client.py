@@ -9,7 +9,7 @@ import xmltodict
 from .altinn_endpoints import API_METADATA_ENDPOINT, forms_task_uri, xsd_uri
 
 
-ALTINN_URI = os.getenv('ALTINN_URI', 'https://www.altinn.no')
+ALTINN_URI = os.getenv("ALTINN_URI", "https://www.altinn.no")
 
 
 def fetch_altinn_metadata() -> List[Dict]:
@@ -72,9 +72,7 @@ def altinn_get_request(
     """Altinn GET request for specified endpoint and headers."""
     if endpoint:
         try:
-            response = requests.get(
-                f"""{ALTINN_URI}{endpoint}""", headers=headers
-            )
+            response = requests.get(f"""{ALTINN_URI}{endpoint}""", headers=headers)
 
             response.raise_for_status()
 
