@@ -21,6 +21,4 @@ def test_update(client: Flask, docker_service: str, mock_save_to_file: Mock) -> 
     expected = create_altinn_test_catalog()
     saved = mock_save_to_file.call_args_list.pop()[0][0]
 
-    assert expected.identifier == saved.identifier
-    assert expected.title == saved.title
-    assert len(saved.models) == 6
+    assert expected._to_graph().isomorphic(saved._to_graph())
