@@ -72,7 +72,7 @@ def create_altinn_test_catalog() -> Catalog:
     return altinn_test_catalog
 
 
-altinn_catalog_turtle = """
+test_altinn_catalog_turtle = """
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -89,26 +89,26 @@ altinn_catalog_turtle = """
         <https://altinn.fellesdatakatalog.digdir.no/models/3814-140602-4445-32408>,
         <https://altinn.fellesdatakatalog.digdir.no/models/3906-141205-3940-20161021> .
 
-<https://altinn.fellesdatakatalog.digdir.no/models/3314-1212-245-10980> a dcat:Resource ;
+<https://altinn.fellesdatakatalog.digdir.no/models/3314-1212-245-10980> a ns1:InformationModel ;
     dct:title "Sensitive role Reporting"@nb .
 
-<https://altinn.fellesdatakatalog.digdir.no/models/3357-130429-4166-35895> a dcat:Resource ;
+<https://altinn.fellesdatakatalog.digdir.no/models/3357-130429-4166-35895> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> ;
     dct:title "A02 a-melding submission from system"@nb .
 
-<https://altinn.fellesdatakatalog.digdir.no/models/3736-170607-4685-1706091129> a dcat:Resource ;
+<https://altinn.fellesdatakatalog.digdir.no/models/3736-170607-4685-1706091129> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> ;
     dct:title "A06 a-melding version 3.1.0 order reconciliation information"@nb .
 
-<https://altinn.fellesdatakatalog.digdir.no/models/3743-140516-4444-32407> a dcat:Resource ;
+<https://altinn.fellesdatakatalog.digdir.no/models/3743-140516-4444-32407> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> ;
     dct:title "A04 Declaration of paid work at home where a private individual is the employer"@nb .
 
-<https://altinn.fellesdatakatalog.digdir.no/models/3814-140602-4445-32408> a dcat:Resource ;
+<https://altinn.fellesdatakatalog.digdir.no/models/3814-140602-4445-32408> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> ;
     dct:title "A05 Simplified a-melding for charitable and non-profit organisations"@nb .
 
-<https://altinn.fellesdatakatalog.digdir.no/models/3906-141205-3940-20161021> a dcat:Resource ;
+<https://altinn.fellesdatakatalog.digdir.no/models/3906-141205-3940-20161021> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> ;
     dct:title "A01 a-melding"@nb .
 

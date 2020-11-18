@@ -21,7 +21,7 @@ python-dotenv = "^0.14.0"
 requests = "^2.24.0"
 flask-restful = "^0.3.8"
 xmltodict = "^0.12.0"
-modelldcatnotordf = "^0.0.1"
+modelldcatnotordf = "^0.0.2"
 datacatalogtordf = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
