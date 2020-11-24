@@ -3,6 +3,7 @@ from unittest.mock import Mock
 
 from flask import Flask
 import pytest
+from rdflib import Graph
 
 from ..test_data import create_altinn_test_catalog
 
@@ -21,6 +22,7 @@ def test_update(client: Flask, docker_service: str, mock_save_to_file: Mock) -> 
     expected = create_altinn_test_catalog()
     saved = mock_save_to_file.call_args_list.pop()[0][0]
 
-    assert expected.identifier == saved.identifier
-    assert expected.title == saved.title
-    assert len(saved.models) == 6
+    expected_graph = Graph().parse(data=expected.to_rdf(), format="turtle")
+    saved_graph = Graph().parse(data=saved.to_rdf(), format="turtle")
+
+    assert expected_graph.isomorphic(saved_graph)

@@ -1,7 +1,6 @@
 """Test data module."""
-from datacatalogtordf.catalog import Catalog
-from modelldcatnotordf.agent import Agent
-from modelldcatnotordf.informationmodel import InformationModel
+from datacatalogtordf import Agent, Catalog
+from modelldcatnotordf.modelldcatno import InformationModel
 
 
 def create_altinn_test_catalog() -> Catalog:
