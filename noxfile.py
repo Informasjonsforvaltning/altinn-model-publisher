@@ -77,6 +77,8 @@ def tests(session: Session) -> None:
         *args,
         env={
             "ALTINN_URI": "http://localhost:8000",
+            "SELF_URI": "https://altinn.fellesdatakatalog.digdir.no",
+            "ORG_URI": "https://organization-catalogue.staging.fellesdatakatalog.digdir.no",
         },
     )
 

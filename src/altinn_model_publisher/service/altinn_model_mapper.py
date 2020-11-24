@@ -2,9 +2,8 @@
 import os
 from typing import Dict, Optional
 
-
-from modelldcatnotordf.agent import Agent
-from modelldcatnotordf.informationmodel import InformationModel
+from datacatalogtordf import Agent
+from modelldcatnotordf.modelldcatno import InformationModel
 
 from altinn_model_publisher.organizations.organizations import map_shortname_to_org
 

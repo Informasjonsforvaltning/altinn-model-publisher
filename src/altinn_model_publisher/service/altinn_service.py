@@ -4,7 +4,7 @@ import os
 from typing import Dict, List, Optional
 
 from datacatalogtordf.catalog import Catalog
-from modelldcatnotordf.informationmodel import InformationModel
+from modelldcatnotordf.modelldcatno import InformationModel
 
 from .altinn_client import (
     fetch_altinn_metadata,
