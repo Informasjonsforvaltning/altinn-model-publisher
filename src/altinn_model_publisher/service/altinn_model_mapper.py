@@ -8,8 +8,13 @@ from modelldcatnotordf.modelldcatno import InformationModel
 from altinn_model_publisher.organizations.organizations import map_shortname_to_org
 
 
-ORG_URI = os.getenv("ORGANIZATION_CATALOGUE_URI", "https://organization-catalogue.fellesdatakatalog.digdir.no")
-SELF_URI = os.getenv("ALTINN_MODEL_PUBLISHER_URI", "https://altinn-model-publisher.digdir.no")
+ORG_URI = os.getenv(
+    "ORGANIZATION_CATALOGUE_URI",
+    "https://organization-catalogue.fellesdatakatalog.digdir.no",
+)
+SELF_URI = os.getenv(
+    "ALTINN_MODEL_PUBLISHER_URI", "https://altinn-model-publisher.digdir.no"
+)
 
 
 def map_model_from_dict(data: Dict) -> InformationModel:
@@ -48,9 +53,7 @@ def extract_publisher(data: Dict) -> Optional[Agent]:
         org = map_shortname_to_org(shortname)
         if org:
             publisher = Agent()
-            publisher.identifier = (
-                f"""{ORG_URI}/organizations/{org.orgnr}"""
-            )
+            publisher.identifier = f"""{ORG_URI}/organizations/{org.orgnr}"""
 
             publisher.name = {"nb": org.name}
             publisher.orgnr = org.orgnr

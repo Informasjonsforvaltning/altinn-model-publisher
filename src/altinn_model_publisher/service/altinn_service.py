@@ -19,7 +19,10 @@ from .altinn_file_service import (
 from .altinn_model_mapper import map_model_from_dict
 
 
-ORG_URI = os.getenv("ORGANIZATION_CATALOGUE_URI", "https://organization-catalogue.fellesdatakatalog.digdir.no")
+ORG_URI = os.getenv(
+    "ORGANIZATION_CATALOGUE_URI",
+    "https://organization-catalogue.fellesdatakatalog.digdir.no",
+)
 
 
 def is_ready() -> bool:
