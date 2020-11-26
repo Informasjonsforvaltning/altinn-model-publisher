@@ -19,6 +19,9 @@ from .altinn_file_service import (
 from .altinn_model_mapper import map_model_from_dict
 
 
+ORG_URI = os.getenv("ORGANIZATION_CATALOGUE_URI", "https://organization-catalogue.fellesdatakatalog.digdir.no")
+
+
 def is_ready() -> bool:
     """Check if altinn models file is available."""
     return os.path.isfile(CATALOG_FILE_PATH)
@@ -85,7 +88,7 @@ def create_altinn_models_catalog(altinn_models: List[InformationModel]) -> Catal
     catalog = Catalog()
     catalog.identifier = "https://www.altinn.no/models/catalog"
     catalog.title = {"nb": "Altinn informasjonsmodellkatalog"}
-    catalog.publisher = f"""{os.getenv("ORG_URI")}/organizations/991825827"""
+    catalog.publisher = f"""{ORG_URI}/organizations/991825827"""
 
     catalog.models = altinn_models
 
