@@ -28,10 +28,8 @@ def map_model_from_dict(data: Dict) -> InformationModel:
 def create_uri_identifier(data: Dict) -> str:
     """Create a URI identifier for the model from relevant codes."""
     service = data["service_meta"]["ServiceCode"]
-    edition = data["service_meta"]["ServiceEditionCode"]
     data_format = data["forms_meta"]["DataFormatID"]
-    version = data["forms_meta"]["DataFormatVersion"]
-    return f"""{SELF_URI}/models/{service}-{edition}-{data_format}-{version}"""
+    return f"""{SELF_URI}/models/{service}-{data_format}"""
 
 
 def extract_title(data: Dict) -> Dict[str, str]:
