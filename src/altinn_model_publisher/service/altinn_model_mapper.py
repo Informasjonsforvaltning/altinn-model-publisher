@@ -8,7 +8,13 @@ from modelldcatnotordf.modelldcatno import InformationModel
 from altinn_model_publisher.organizations.organizations import map_shortname_to_org
 
 
-BRREG_ORG_URI = "https://data.brreg.no/enhetsregisteret/api/enheter/"
+ORG_URI = os.getenv(
+    "ORGANIZATION_CATALOGUE_URI",
+    "https://organization-catalogue.fellesdatakatalog.digdir.no",
+)
+SELF_URI = os.getenv(
+    "ALTINN_MODEL_PUBLISHER_URI", "https://altinn-model-publisher.digdir.no"
+)
 
 
 def map_model_from_dict(data: Dict) -> InformationModel:
@@ -27,10 +33,8 @@ def map_model_from_dict(data: Dict) -> InformationModel:
 def create_uri_identifier(data: Dict) -> str:
     """Create a URI identifier for the model from relevant codes."""
     service = data["service_meta"]["ServiceCode"]
-    edition = data["service_meta"]["ServiceEditionCode"]
     data_format = data["forms_meta"]["DataFormatID"]
-    version = data["forms_meta"]["DataFormatVersion"]
-    return f"""{os.getenv("SELF_URI")}/models/{service}-{edition}-{data_format}-{version}"""
+    return f"""{SELF_URI}/models/{service}-{data_format}"""
 
 
 def extract_title(data: Dict) -> Dict[str, str]:
@@ -49,9 +53,7 @@ def extract_publisher(data: Dict) -> Optional[Agent]:
         org = map_shortname_to_org(shortname)
         if org:
             publisher = Agent()
-            publisher.identifier = (
-                f"""{os.getenv("ORG_URI")}/organizations/{org.orgnr}"""
-            )
+            publisher.identifier = f"""{ORG_URI}/organizations/{org.orgnr}"""
 
             publisher.name = {"nb": org.name}
             publisher.orgnr = org.orgnr
