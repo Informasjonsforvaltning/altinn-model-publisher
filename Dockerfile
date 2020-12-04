@@ -4,7 +4,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 RUN pip install "poetry==1.1.3"
-COPY poetry.lock pyproject.toml altinn_catalog.ttl.gz /app/
+COPY poetry.lock pyproject.toml /app/
 
 # Project initialization:
 RUN poetry config virtualenvs.create false \

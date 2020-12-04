@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from flask import Flask
 from flask_restful import Api
 
+from altinn_model_publisher.service.altinn_service import update_if_not_ready
 from .resources.models import Models
 from .resources.ping import Ping
 from .resources.ready import Ready
@@ -36,5 +37,9 @@ def create_app(test_config: Any = None) -> Flask:
     # api routes
     api.add_resource(Models, "/models")
     api.add_resource(Update, "/update")
+
+    @app.before_first_request
+    def before_first_request_func() -> None:
+        update_if_not_ready()
 
     return app

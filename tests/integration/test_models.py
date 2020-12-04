@@ -6,7 +6,9 @@ import pytest
 
 
 @pytest.mark.integration
-def test_models(client: Flask, mock_load_rdf_from_file: Mock) -> None:
+def test_models(
+    client: Flask, mock_load_rdf_from_mongo: Mock, mock_update_on_startup: Mock
+) -> None:
     """Should return OK."""
     response = client.get("/models")
 
