@@ -1,4 +1,5 @@
 """Service layer module for modelldcat-ap-no compliant information models from altinn."""
+import asyncio
 import logging
 import os
 from typing import Dict, List, Optional
@@ -11,12 +12,12 @@ from .altinn_client import (
     fetch_metadata_with_task_forms,
     get_xsd_data,
 )
-from .altinn_file_service import (
-    CATALOG_FILE_PATH,
-    read_catalog_zip_file,
-    save_catalog_to_zip_file,
-)
 from .altinn_model_mapper import map_model_from_dict
+from .altinn_mongo_service import (
+    no_altinn_models_in_database,
+    read_catalog_from_mongo,
+    save_catalog_to_mongo,
+)
 
 
 ORG_URI = os.getenv(
@@ -25,9 +26,11 @@ ORG_URI = os.getenv(
 )
 
 
-def is_ready() -> bool:
-    """Check if altinn models file is available."""
-    return os.path.isfile(CATALOG_FILE_PATH)
+def update_if_not_ready() -> None:
+    """Update database if missing from database."""
+    if no_altinn_models_in_database():
+        logging.info("Application is not ready, updating database")
+        asyncio.run(update_altinn_models())
 
 
 def service_meta_data_filtered_by_type_form_task() -> List[Dict]:
@@ -98,8 +101,8 @@ def create_altinn_models_catalog(altinn_models: List[InformationModel]) -> Catal
     return catalog
 
 
-def update_altinn_models_file() -> None:
-    """Update content of altinn models file."""
+async def update_altinn_models() -> None:
+    """Update altinn models database."""
     all_form_tasks = service_meta_data_filtered_by_type_form_task()
     form_tasks = filter_form_tasks_by_edition(all_form_tasks)
     combined_meta_data = []
@@ -134,11 +137,11 @@ def update_altinn_models_file() -> None:
 
     altinn_models = [map_model_from_dict(model_dict) for model_dict in models_data]
     altinn_catalog = create_altinn_models_catalog(altinn_models)
-    save_catalog_to_zip_file(altinn_catalog)
+    save_catalog_to_mongo(altinn_catalog)
 
     logging.info("Altinn model catalog successfully updated")
 
 
 def all_altinn_models() -> str:
-    """Return content of altinn models file."""
-    return read_catalog_zip_file()
+    """Return altinn models from database."""
+    return read_catalog_from_mongo()

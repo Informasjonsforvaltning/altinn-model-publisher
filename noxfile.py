@@ -30,7 +30,11 @@ def unit_tests(session: Session) -> None:
         "-m unit",
         "-rA",
         *args,
-        env={"ALTINN_URI": "altinn-uri"},
+        env={
+            "ALTINN_URI": "altinn-uri",
+            "MONGO_USERNAME": "admin",
+            "MONGO_PASSWORD": "admin",
+        },
     )
 
 
@@ -53,6 +57,8 @@ def integration_tests(session: Session) -> None:
         *args,
         env={
             "ALTINN_URI": "http://localhost:8000",
+            "MONGO_USERNAME": "admin",
+            "MONGO_PASSWORD": "admin",
         },
     )
 
@@ -79,6 +85,8 @@ def tests(session: Session) -> None:
             "ALTINN_URI": "http://localhost:8000",
             "ALTINN_MODEL_PUBLISHER_URI": "https://altinn.fellesdatakatalog.digdir.no",
             "ORGANIZATION_CATALOGUE_URI": "https://organization-catalogue.staging.fellesdatakatalog.digdir.no",
+            "MONGO_USERNAME": "admin",
+            "MONGO_PASSWORD": "admin",
         },
     )
 
@@ -96,7 +104,11 @@ def contract_tests(session: Session) -> None:
         "-m contract",
         "-rA",
         *args,
-        env={"ALTINN_URI": "http://wiremock:8080"},
+        env={
+            "ALTINN_URI": "http://wiremock:8080",
+            "MONGO_USERNAME": "admin",
+            "MONGO_PASSWORD": "admin",
+        },
     )
 
 

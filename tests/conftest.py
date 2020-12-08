@@ -1,4 +1,5 @@
 """Conftest module."""
+import gzip
 import json
 import os
 from os import environ as env
@@ -134,35 +135,72 @@ def mock_orgs_file(mocker: MockFixture) -> Mock:
 
 
 @pytest.fixture
-def mock_ready(mocker: MockFixture) -> Mock:
-    """Mock check models file is present."""
-    mock = mocker.patch("os.path.isfile")
-    mock.return_value = True
-    return mock
-
-
-@pytest.fixture
-def mock_not_ready(mocker: MockFixture) -> Mock:
-    """Mock check models file is missing."""
-    mock = mocker.patch("os.path.isfile")
+def mock_models_exist_in_db(mocker: MockFixture) -> Mock:
+    """Mock check models is present."""
+    mock = mocker.patch(
+        "altinn_model_publisher.service.altinn_service.no_altinn_models_in_database"
+    )
     mock.return_value = False
     return mock
 
 
 @pytest.fixture
-def mock_save_to_file(mocker: MockFixture) -> Mock:
-    """Mock save catalog to file."""
+def mock_no_models_in_db(mocker: MockFixture) -> Mock:
+    """Mock check models is missing."""
     mock = mocker.patch(
-        "altinn_model_publisher.service.altinn_service.save_catalog_to_zip_file"
+        "altinn_model_publisher.service.altinn_service.no_altinn_models_in_database"
+    )
+    mock.return_value = True
+    return mock
+
+
+@pytest.fixture
+def mock_save_to_mongo(mocker: MockFixture) -> Mock:
+    """Mock save catalog."""
+    mock = mocker.patch(
+        "altinn_model_publisher.service.altinn_service.save_catalog_to_mongo"
     )
     return mock
 
 
 @pytest.fixture
-def mock_load_rdf_from_file(mocker: MockFixture) -> Mock:
-    """Mock save catalog to file."""
+def mock_load_rdf_from_mongo(mocker: MockFixture) -> Mock:
+    """Mock load catalog."""
     mock = mocker.patch(
-        "altinn_model_publisher.service.altinn_service.read_catalog_zip_file"
+        "altinn_model_publisher.service.altinn_service.read_catalog_from_mongo"
     )
     mock.return_value = test_altinn_catalog_turtle
+    return mock
+
+
+@pytest.fixture
+def mock_update_on_startup(mocker: MockFixture) -> Mock:
+    """Mock update catalog on startup."""
+    mock = mocker.patch("altinn_model_publisher.update_if_not_ready")
+    return mock
+
+
+@pytest.fixture
+def mock_find_one(mocker: MockFixture) -> Mock:
+    """Mock find one from mongo."""
+    mock = mocker.patch("pymongo.collection.Collection.find_one")
+    mock.return_value = {
+        "_id": "",
+        "catalog": gzip.compress(test_altinn_catalog_turtle.encode("utf-8")),
+    }
+    return mock
+
+
+@pytest.fixture
+def mock_find_one_no_data(mocker: MockFixture) -> Mock:
+    """Mock find no data in mongo."""
+    mock = mocker.patch("pymongo.collection.Collection.find_one")
+    mock.return_value = None
+    return mock
+
+
+@pytest.fixture
+def mock_replace_one(mocker: MockFixture) -> Mock:
+    """Mock find no data in mongo."""
+    mock = mocker.patch("pymongo.collection.Collection.replace_one")
     return mock
