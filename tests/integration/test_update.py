@@ -1,7 +1,7 @@
 """Integration test cases for the ready route."""
-from unittest.mock import Mock
+from unittest.mock import call, Mock
 
-from flask import Flask
+from aiohttp.test_utils import TestClient
 import pytest
 from rdflib import Graph
 
@@ -10,17 +10,22 @@ from ..test_data import create_altinn_test_catalog
 
 @pytest.mark.integration
 @pytest.mark.docker
-def test_update(
-    client: Flask,
+async def test_update(
+    client: TestClient,
     docker_service: str,
     mock_save_to_mongo: Mock,
-    mock_models_exist_in_db: Mock,
+    mock_save_update_status: Mock,
+    mock_not_running_update_status: Mock,
 ) -> None:
     """Saved models are updated on post request to /update."""
-    response = client.post("/update")
+    response = await client.post("/update")
+    response_content = await response.content.read()
 
-    assert response.status_code == 200
-    assert response.data.decode() == "OK"
+    assert response.status == 200
+    assert response_content.decode() == "OK"
+
+    set_update_status_calls = [call("update_in_progress"), call("ready_to_update")]
+    mock_save_update_status.assert_has_calls(set_update_status_calls)
 
     mock_save_to_mongo.assert_called_once()
 
@@ -34,25 +39,14 @@ def test_update(
 
 
 @pytest.mark.integration
-@pytest.mark.docker
-def test_update_on_startup(
-    client: Flask,
+async def test_update_cancelled_if_other_update_running(
+    client: TestClient,
     docker_service: str,
-    mock_save_to_mongo: Mock,
-    mock_no_models_in_db: Mock,
+    mock_running_update_status: Mock,
 ) -> None:
     """Saved models are updated on startup."""
-    response = client.get("/ping")
+    response = await client.post("/update")
+    response_content = await response.content.read()
 
-    assert response.status_code == 200
-    assert response.data.decode() == "OK"
-
-    mock_save_to_mongo.assert_called_once()
-
-    expected = create_altinn_test_catalog()
-    saved = mock_save_to_mongo.call_args_list.pop()[0][0]
-
-    expected_graph = Graph().parse(data=expected.to_rdf(), format="turtle")
-    saved_graph = Graph().parse(data=saved.to_rdf(), format="turtle")
-
-    assert expected_graph.isomorphic(saved_graph)
+    assert response.status == 429
+    assert response_content.decode() == "Too Many Requests"

@@ -1,45 +1,8 @@
-"""Package for exposing modelldcat-ap-no compliant information models from altinn in a Flask API."""
-from typing import Any
+"""Package for exposing modelldcat-ap-no compliant information models from altinn."""
+from aiohttp import web
 
-from dotenv import load_dotenv
-from flask import Flask
-from flask_restful import Api
-
-from altinn_model_publisher.service.altinn_service import update_if_not_ready
-from .resources.models import Models
-from .resources.ping import Ping
-from .resources.ready import Ready
-from .resources.update import Update
-
-__version__ = "0.1.0"
+from .app import create_app
 
 
-def create_app(test_config: Any = None) -> Flask:
-    """Create and configure the app."""
-    app = Flask(__name__, instance_relative_config=True)
-
-    if test_config is None:
-        # load the instance config, if it exists, when not testing
-        app.config.from_pyfile("config.py", silent=True)
-    else:
-        # load the test config if passed in
-        app.config.from_mapping(test_config)
-
-    # Get environment
-    load_dotenv()
-
-    api = Api(app)
-
-    # healthcheck routes
-    api.add_resource(Ping, "/ping")
-    api.add_resource(Ready, "/ready")
-
-    # api routes
-    api.add_resource(Models, "/models")
-    api.add_resource(Update, "/update")
-
-    @app.before_first_request
-    def before_first_request_func() -> None:
-        update_if_not_ready()
-
-    return app
+if __name__ == "__main__":
+    web.run_app(create_app())

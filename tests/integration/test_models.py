@@ -1,15 +1,17 @@
 """Integration test cases for the ready route."""
 from unittest.mock import Mock
 
-from flask import Flask
+from aiohttp.test_utils import TestClient
 import pytest
+
+from ..test_data import test_altinn_catalog_turtle
 
 
 @pytest.mark.integration
-def test_models(
-    client: Flask, mock_load_rdf_from_mongo: Mock, mock_update_on_startup: Mock
-) -> None:
+async def test_models(client: TestClient, mock_load_rdf_from_mongo: Mock) -> None:
     """Should return OK."""
-    response = client.get("/models")
+    response = await client.get("/models")
+    response_content = await response.content.read()
 
-    assert response.status_code == 200
+    assert response.status == 200
+    assert response_content.decode() == test_altinn_catalog_turtle

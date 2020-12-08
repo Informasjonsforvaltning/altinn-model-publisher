@@ -76,6 +76,7 @@ def tests(session: Session) -> None:
         "pytest-docker",
         "requests-mock",
         "pytest-mock",
+        "pytest-aiohttp",
     )
     session.run(
         "pytest",
