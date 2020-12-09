@@ -213,7 +213,8 @@ def mock_find_one_update_status(mocker: MockFixture) -> Mock:
 
 
 @pytest.fixture
-def mock_replace_one_update_status(mocker: MockFixture) -> Mock:
-    """Mock set update status in mongo."""
-    mock = mocker.patch("pymongo.collection.Collection.replace_one")
+def mock_non_test_environment(mocker: MockFixture) -> Mock:
+    """Mock test environment check as non test."""
+    mock = mocker.patch("os.getenv")
+    mock.return_value = "prod"
     return mock

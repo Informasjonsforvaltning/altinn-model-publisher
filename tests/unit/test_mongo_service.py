@@ -35,7 +35,7 @@ def test_read_update_status(mock_find_one_update_status: Mock) -> None:
 
 
 @pytest.mark.unit
-def test_set_update_status(mock_replace_one_update_status: Mock) -> None:
+def test_set_update_status(mock_replace_one: Mock) -> None:
     """Should save catalog to database."""
     save_update_status("ready_to_update")
-    mock_replace_one_update_status.assert_called_once()
+    mock_replace_one.assert_called_once()
