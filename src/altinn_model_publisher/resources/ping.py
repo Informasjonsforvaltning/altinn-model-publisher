@@ -1,12 +1,11 @@
 """Resource module for ping."""
-from flask import Response
-from flask_restful import Resource
+from aiohttp.web import Response, View
 
 
-class Ping(Resource):
+class Ping(View):
     """Class representing ping resource."""
 
     @staticmethod
-    def get() -> Response:
+    async def get() -> Response:
         """Ping route function."""
-        return Response("OK")
+        return Response(text="OK")

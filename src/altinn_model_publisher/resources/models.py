@@ -1,17 +1,20 @@
 """Resource module for models."""
-from flask import Response
-from flask_restful import Resource
+import asyncio
+
+from aiohttp import hdrs
+from aiohttp.web import Response, View
 
 from altinn_model_publisher.service.altinn_service import all_altinn_models
 
 
-class Models(Resource):
+class Models(View):
     """Class representing models resource."""
 
     @staticmethod
-    def get() -> Response:
+    async def get() -> Response:
         """Get all altinn models."""
+        altinn_models = await asyncio.create_task(all_altinn_models())
         return Response(
-            all_altinn_models(),
-            mimetype="text/turtle",
+            text=altinn_models,
+            headers={hdrs.CONTENT_TYPE: "text/turtle"},
         )

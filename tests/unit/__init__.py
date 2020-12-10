@@ -1,5 +1,9 @@
 """Unit test package.
 
 Modules:
-    test_fdk_model_service
+    test_client
+    test_endpoints
+    test_model_mapper
+    test_mongo_service
+    test_service_filters
 """

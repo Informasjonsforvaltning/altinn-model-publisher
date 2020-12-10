@@ -1,21 +1,21 @@
 """Conftest module."""
+from asyncio import AbstractEventLoop
 import gzip
 import json
 import os
 from os import environ as env
 import time
-from typing import Any, Generator
+from typing import Any
 from unittest.mock import Mock
 
 from dotenv import load_dotenv
-from flask import Flask
-from flask.testing import FlaskClient
 import pytest
 from pytest_mock import MockFixture
 import requests
 from requests.exceptions import ConnectionError
 
 from altinn_model_publisher import create_app
+from altinn_model_publisher.service.altinn_service import UPDATE_IN_PROGRESS
 from .test_data import test_altinn_catalog_turtle
 
 load_dotenv()
@@ -52,20 +52,13 @@ def docker_compose_file(pytestconfig: Any) -> Any:
     return os.path.join(str(pytestconfig.rootdir), "./", "docker-compose.yml")
 
 
-@pytest.mark.unit
-@pytest.fixture
-def app() -> Generator:
-    """Return a Flask app for unit testing."""
-    app = create_app({"TESTING": True})
-
-    yield app
-
-
-@pytest.mark.unit
-@pytest.fixture
-def client(app: Flask) -> FlaskClient:
-    """Return a client for unit testing."""
-    return app.test_client()
+@pytest.mark.integration
+@pytest.fixture(scope="function")
+def client(loop: AbstractEventLoop, aiohttp_client: Any) -> Any:
+    """Return an aiohttp client for testing."""
+    return loop.run_until_complete(
+        aiohttp_client(loop.run_until_complete(create_app()))
+    )
 
 
 @pytest.fixture
@@ -135,26 +128,6 @@ def mock_orgs_file(mocker: MockFixture) -> Mock:
 
 
 @pytest.fixture
-def mock_models_exist_in_db(mocker: MockFixture) -> Mock:
-    """Mock check models is present."""
-    mock = mocker.patch(
-        "altinn_model_publisher.service.altinn_service.no_altinn_models_in_database"
-    )
-    mock.return_value = False
-    return mock
-
-
-@pytest.fixture
-def mock_no_models_in_db(mocker: MockFixture) -> Mock:
-    """Mock check models is missing."""
-    mock = mocker.patch(
-        "altinn_model_publisher.service.altinn_service.no_altinn_models_in_database"
-    )
-    mock.return_value = True
-    return mock
-
-
-@pytest.fixture
 def mock_save_to_mongo(mocker: MockFixture) -> Mock:
     """Mock save catalog."""
     mock = mocker.patch(
@@ -174,9 +147,31 @@ def mock_load_rdf_from_mongo(mocker: MockFixture) -> Mock:
 
 
 @pytest.fixture
-def mock_update_on_startup(mocker: MockFixture) -> Mock:
-    """Mock update catalog on startup."""
-    mock = mocker.patch("altinn_model_publisher.update_if_not_ready")
+def mock_save_update_status(mocker: MockFixture) -> Mock:
+    """Mock set update status."""
+    mock = mocker.patch(
+        "altinn_model_publisher.service.altinn_service.save_update_status"
+    )
+    return mock
+
+
+@pytest.fixture
+def mock_not_running_update_status(mocker: MockFixture) -> Mock:
+    """Mock read ready update status."""
+    mock = mocker.patch(
+        "altinn_model_publisher.service.altinn_service.read_update_status"
+    )
+    mock.return_value = "ready_to_update"
+    return mock
+
+
+@pytest.fixture
+def mock_running_update_status(mocker: MockFixture) -> Mock:
+    """Mock read running update status."""
+    mock = mocker.patch(
+        "altinn_model_publisher.service.altinn_service.read_update_status"
+    )
+    mock.return_value = UPDATE_IN_PROGRESS
     return mock
 
 
@@ -185,7 +180,7 @@ def mock_find_one(mocker: MockFixture) -> Mock:
     """Mock find one from mongo."""
     mock = mocker.patch("pymongo.collection.Collection.find_one")
     mock.return_value = {
-        "_id": "",
+        "_id": "altinn-models",
         "catalog": gzip.compress(test_altinn_catalog_turtle.encode("utf-8")),
     }
     return mock
@@ -203,4 +198,23 @@ def mock_find_one_no_data(mocker: MockFixture) -> Mock:
 def mock_replace_one(mocker: MockFixture) -> Mock:
     """Mock find no data in mongo."""
     mock = mocker.patch("pymongo.collection.Collection.replace_one")
+    return mock
+
+
+@pytest.fixture
+def mock_find_one_update_status(mocker: MockFixture) -> Mock:
+    """Mock read update status from mongo."""
+    mock = mocker.patch("pymongo.collection.Collection.find_one")
+    mock.return_value = {
+        "_id": "update-status",
+        "value": "ready_to_update",
+    }
+    return mock
+
+
+@pytest.fixture
+def mock_non_test_environment(mocker: MockFixture) -> Mock:
+    """Mock test environment check as non test."""
+    mock = mocker.patch("os.getenv")
+    mock.return_value = "prod"
     return mock

@@ -34,6 +34,7 @@ def unit_tests(session: Session) -> None:
             "ALTINN_URI": "altinn-uri",
             "MONGO_USERNAME": "admin",
             "MONGO_PASSWORD": "admin",
+            "IS_TEST": "is_test",
         },
     )
 
@@ -59,6 +60,7 @@ def integration_tests(session: Session) -> None:
             "ALTINN_URI": "http://localhost:8000",
             "MONGO_USERNAME": "admin",
             "MONGO_PASSWORD": "admin",
+            "IS_TEST": "is_test",
         },
     )
 
@@ -76,6 +78,7 @@ def tests(session: Session) -> None:
         "pytest-docker",
         "requests-mock",
         "pytest-mock",
+        "pytest-aiohttp",
     )
     session.run(
         "pytest",
@@ -87,6 +90,7 @@ def tests(session: Session) -> None:
             "ORGANIZATION_CATALOGUE_URI": "https://organization-catalogue.staging.fellesdatakatalog.digdir.no",
             "MONGO_USERNAME": "admin",
             "MONGO_PASSWORD": "admin",
+            "IS_TEST": "is_test",
         },
     )
 

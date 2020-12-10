@@ -1,5 +1,4 @@
 """Service layer module for modelldcat-ap-no compliant information models from altinn."""
-import asyncio
 import logging
 import os
 from typing import Dict, List, Optional
@@ -14,23 +13,18 @@ from .altinn_client import (
 )
 from .altinn_model_mapper import map_model_from_dict
 from .altinn_mongo_service import (
-    no_altinn_models_in_database,
     read_catalog_from_mongo,
+    read_update_status,
     save_catalog_to_mongo,
+    save_update_status,
 )
 
 
+UPDATE_IN_PROGRESS = "update_in_progress"
 ORG_URI = os.getenv(
     "ORGANIZATION_CATALOGUE_URI",
     "https://organization-catalogue.fellesdatakatalog.digdir.no",
 )
-
-
-def update_if_not_ready() -> None:
-    """Update database if missing from database."""
-    if no_altinn_models_in_database():
-        logging.info("Application is not ready, updating database")
-        asyncio.run(update_altinn_models())
 
 
 def service_meta_data_filtered_by_type_form_task() -> List[Dict]:
@@ -101,12 +95,26 @@ def create_altinn_models_catalog(altinn_models: List[InformationModel]) -> Catal
     return catalog
 
 
-async def update_altinn_models() -> None:
-    """Update altinn models database."""
+async def update_altinn_models() -> str:
+    """Update altinn models catalog."""
+    if read_update_status() == UPDATE_IN_PROGRESS:
+        logging.info("Update already in progress, new update run is cancelled")
+        return UPDATE_IN_PROGRESS
+    else:
+        save_update_status(UPDATE_IN_PROGRESS)
+        fetch_altinn_models_and_update_database()
+        save_update_status("ready_to_update")
+        return "updated"
+
+
+def fetch_altinn_models_and_update_database() -> None:
+    """Fetch information models from Altinn and update database."""
+    logging.info("Starting update from Altinn")
     all_form_tasks = service_meta_data_filtered_by_type_form_task()
     form_tasks = filter_form_tasks_by_edition(all_form_tasks)
-    combined_meta_data = []
+    logging.info("Form tasks metadata fetched from Altinn")
 
+    combined_meta_data = []
     for service_code in form_tasks:
         metadata = fetch_metadata_with_task_forms(
             service_code, form_tasks[service_code].get("ServiceEditionCode")
@@ -121,6 +129,7 @@ async def update_altinn_models() -> None:
                     "forms_meta": forms_meta[format_id],
                 }
             )
+    logging.info("Form task services metadata fetched from Altinn")
 
     models_data = []
 
@@ -134,6 +143,7 @@ async def update_altinn_models() -> None:
         if parsed_response:
             data["elements"] = parsed_response
             models_data.append(data)
+    logging.info("Form task services xsd data fetched from Altinn")
 
     altinn_models = [map_model_from_dict(model_dict) for model_dict in models_data]
     altinn_catalog = create_altinn_models_catalog(altinn_models)
@@ -142,6 +152,7 @@ async def update_altinn_models() -> None:
     logging.info("Altinn model catalog successfully updated")
 
 
-def all_altinn_models() -> str:
+async def all_altinn_models() -> str:
     """Return altinn models from database."""
+    logging.info("Fetching models catalog from database")
     return read_catalog_from_mongo()
