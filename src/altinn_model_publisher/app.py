@@ -4,6 +4,7 @@ import os
 
 from aiohttp import web
 
+from altinn_model_publisher.security.auth import auth_middleware
 from altinn_model_publisher.service.altinn_mongo_service import save_update_status
 from .resources.models import Models
 from .resources.ping import Ping
@@ -31,7 +32,7 @@ def setup_routes(app: web.Application) -> None:
 
 async def create_app() -> web.Application:
     """Create aiohttp application."""
-    app = web.Application()
+    app = web.Application(middlewares=[auth_middleware])
     app.on_startup.append(set_ready_to_update_on_startup)
     logging.basicConfig(level=logging.INFO)
     setup_routes(app)
