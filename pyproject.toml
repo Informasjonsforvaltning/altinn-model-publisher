@@ -16,13 +16,13 @@ classifiers=[
 [tool.poetry.dependencies]
 python = "^3.8"
 gunicorn = "^20.0.4"
-python-dotenv = "^0.14.0"
+python-dotenv = "^0.15.0"
 requests = "^2.24.0"
 xmltodict = "^0.12.0"
-modelldcatnotordf = "^0.0.4"
+modelldcatnotordf = "^0.0.10"
 datacatalogtordf = "^1.2.0"
-pymongo = "3.11.2"
 aiohttp = "^3.7.3"
+aiocache = {extras = ["redis"], version = "^0.11.1"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.1"
@@ -54,7 +54,7 @@ source = ["src", "*/site-packages"]
 [tool.coverage.run]
 branch = false
 source = ["altinn_model_publisher"]
-omit = ["*__init__.py", "*gunicorn_config.py", "*altinn_file_service.py"]
+omit = ["*__init__.py", "*gunicorn_config.py", "*altinn_file_service.py", "*altinn_cache_service.py"]
 
 [tool.coverage.report]
 show_missing = true

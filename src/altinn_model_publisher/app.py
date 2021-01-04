@@ -5,7 +5,7 @@ import os
 from aiohttp import web
 
 from altinn_model_publisher.security.auth import auth_middleware
-from altinn_model_publisher.service.altinn_mongo_service import save_update_status
+from altinn_model_publisher.service.altinn_cache_service import save_update_status
 from .resources.models import Models, MODELS_ROUTE
 from .resources.ping import Ping, PING_ROUTE
 from .resources.ready import Ready, READY_ROUTE
@@ -15,7 +15,7 @@ from .resources.update import Update, UPDATE_ROUTE
 async def set_ready_to_update_on_startup(app: web.Application) -> None:
     """Set ready to update status on startup in non test environments."""
     if os.getenv("IS_TEST") != "is_test":
-        save_update_status("ready_to_update")
+        await save_update_status("ready_to_update")
 
 
 def setup_routes(app: web.Application) -> None:

@@ -6,18 +6,18 @@ from typing import Dict, List, Optional
 from datacatalogtordf.catalog import Catalog
 from modelldcatnotordf.modelldcatno import InformationModel
 
+from .altinn_cache_service import (
+    read_catalog_from_cache,
+    read_update_status,
+    save_catalog_to_cache,
+    save_update_status,
+)
 from .altinn_client import (
     fetch_altinn_metadata,
     fetch_metadata_with_task_forms,
     get_xsd_data,
 )
 from .altinn_model_mapper import map_model_from_dict
-from .altinn_mongo_service import (
-    read_catalog_from_mongo,
-    read_update_status,
-    save_catalog_to_mongo,
-    save_update_status,
-)
 
 
 UPDATE_IN_PROGRESS = "update_in_progress"
@@ -97,17 +97,17 @@ def create_altinn_models_catalog(altinn_models: List[InformationModel]) -> Catal
 
 async def update_altinn_models() -> str:
     """Update altinn models catalog."""
-    if read_update_status() == UPDATE_IN_PROGRESS:
+    if await read_update_status() == UPDATE_IN_PROGRESS:
         logging.info("Update already in progress, new update run is cancelled")
         return UPDATE_IN_PROGRESS
     else:
-        save_update_status(UPDATE_IN_PROGRESS)
-        fetch_altinn_models_and_update_database()
-        save_update_status("ready_to_update")
+        await save_update_status(UPDATE_IN_PROGRESS)
+        await fetch_altinn_models_and_update_database()
+        await save_update_status("ready_to_update")
         return "updated"
 
 
-def fetch_altinn_models_and_update_database() -> None:
+async def fetch_altinn_models_and_update_database() -> None:
     """Fetch information models from Altinn and update database."""
     logging.info("Starting update from Altinn")
     all_form_tasks = service_meta_data_filtered_by_type_form_task()
@@ -147,7 +147,7 @@ def fetch_altinn_models_and_update_database() -> None:
 
     altinn_models = [map_model_from_dict(model_dict) for model_dict in models_data]
     altinn_catalog = create_altinn_models_catalog(altinn_models)
-    save_catalog_to_mongo(altinn_catalog)
+    await save_catalog_to_cache(altinn_catalog)
 
     logging.info("Altinn model catalog successfully updated")
 
@@ -155,4 +155,4 @@ def fetch_altinn_models_and_update_database() -> None:
 async def all_altinn_models() -> str:
     """Return altinn models from database."""
     logging.info("Fetching models catalog from database")
-    return read_catalog_from_mongo()
+    return await read_catalog_from_cache()

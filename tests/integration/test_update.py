@@ -13,7 +13,7 @@ from ..test_data import create_altinn_test_catalog
 async def test_update(
     client: TestClient,
     docker_service: str,
-    mock_save_to_mongo: Mock,
+    mock_save_to_cache: Mock,
     mock_save_update_status: Mock,
     mock_not_running_update_status: Mock,
 ) -> None:
@@ -27,10 +27,10 @@ async def test_update(
     set_update_status_calls = [call("update_in_progress"), call("ready_to_update")]
     mock_save_update_status.assert_has_calls(set_update_status_calls)
 
-    mock_save_to_mongo.assert_called_once()
+    mock_save_to_cache.assert_called_once()
 
     expected = create_altinn_test_catalog()
-    saved = mock_save_to_mongo.call_args_list.pop()[0][0]
+    saved = mock_save_to_cache.call_args_list.pop()[0][0]
 
     expected_graph = Graph().parse(data=expected.to_rdf(), format="turtle")
     saved_graph = Graph().parse(data=saved.to_rdf(), format="turtle")

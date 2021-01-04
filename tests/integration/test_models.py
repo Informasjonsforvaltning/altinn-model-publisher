@@ -8,7 +8,7 @@ from ..test_data import test_altinn_catalog_turtle
 
 
 @pytest.mark.integration
-async def test_models(client: TestClient, mock_load_rdf_from_mongo: Mock) -> None:
+async def test_models(client: TestClient, mock_load_rdf_from_cache: Mock) -> None:
     """Should return OK."""
     response = await client.get("/models")
     response_content = await response.content.read()
