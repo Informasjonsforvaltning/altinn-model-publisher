@@ -9,6 +9,9 @@ from altinn_model_publisher.service.altinn_service import (
 )
 
 
+UPDATE_ROUTE = "/update"
+
+
 class Update(View):
     """Class representing update resource."""
 

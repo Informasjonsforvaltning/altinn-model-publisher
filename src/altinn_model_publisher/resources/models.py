@@ -7,6 +7,9 @@ from aiohttp.web import Response, View
 from altinn_model_publisher.service.altinn_service import all_altinn_models
 
 
+MODELS_ROUTE = "/models"
+
+
 class Models(View):
     """Class representing models resource."""
 
