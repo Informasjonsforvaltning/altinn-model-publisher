@@ -90,6 +90,7 @@ def tests(session: Session) -> None:
             "ORGANIZATION_CATALOGUE_URI": "https://organization-catalogue.staging.fellesdatakatalog.digdir.no",
             "MONGO_USERNAME": "admin",
             "MONGO_PASSWORD": "admin",
+            "API_KEY": "api-test-secret",
             "IS_TEST": "is_test",
         },
     )

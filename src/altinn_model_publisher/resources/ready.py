@@ -2,6 +2,9 @@
 from aiohttp.web import Response, View
 
 
+READY_ROUTE = "/ready"
+
+
 class Ready(View):
     """Class representing ready resource."""
 

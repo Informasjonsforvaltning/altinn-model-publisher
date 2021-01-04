@@ -18,7 +18,7 @@ async def test_update(
     mock_not_running_update_status: Mock,
 ) -> None:
     """Saved models are updated on post request to /update."""
-    response = await client.post("/update")
+    response = await client.post("/update", headers={"X-API-KEY": "api-test-secret"})
     response_content = await response.content.read()
 
     assert response.status == 200
@@ -41,12 +41,31 @@ async def test_update(
 @pytest.mark.integration
 async def test_update_cancelled_if_other_update_running(
     client: TestClient,
-    docker_service: str,
     mock_running_update_status: Mock,
 ) -> None:
-    """Saved models are updated on startup."""
-    response = await client.post("/update")
+    """Update is cancelled when already running."""
+    response = await client.post("/update", headers={"X-API-KEY": "api-test-secret"})
     response_content = await response.content.read()
 
     assert response.status == 429
     assert response_content.decode() == "Too Many Requests"
+
+
+@pytest.mark.integration
+async def test_update_forbidden_when_key_header_missing(client: TestClient) -> None:
+    """Forbidden when header X-API-KEY is missing."""
+    response = await client.post("/update")
+    response_content = await response.content.read()
+
+    assert response.status == 403
+    assert "Forbidden" in response_content.decode()
+
+
+@pytest.mark.integration
+async def test_update_forbidden_when_key_header_wrong(client: TestClient) -> None:
+    """Forbidden when header X-API-KEY is wrong."""
+    response = await client.post("/update", headers={"X-API-KEY": "wrong-secret"})
+    response_content = await response.content.read()
+
+    assert response.status == 403
+    assert "Forbidden" in response_content.decode()
