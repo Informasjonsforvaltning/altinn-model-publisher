@@ -10,19 +10,14 @@ services:
       - ALTINN_URI=http://wiremock:8080
       - ALTINN_MODEL_PUBLISHER_URI=http://altinn-model-publisher:8080
       - ORGANIZATION_CATALOGUE_URI=https://organization-catalogue.fellesdatakatalog.digdir.no
-      - MONGO_USERNAME=admin
-      - MONGO_PASSWORD=admin
     depends_on:
-      - mongodb
+      - publishers-cache
       - wiremock
 
-  mongodb:
-    image: mongo:latest
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=admin
+  publishers-cache:
+    image: redis:latest
     ports:
-      - 27017:27017
+      - 6379:6379
 
   wiremock:
     image: rodolpheche/wiremock

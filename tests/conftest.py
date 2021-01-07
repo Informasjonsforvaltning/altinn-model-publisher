@@ -1,6 +1,5 @@
 """Conftest module."""
 from asyncio import AbstractEventLoop
-import gzip
 import json
 import os
 from os import environ as env
@@ -128,19 +127,19 @@ def mock_orgs_file(mocker: MockFixture) -> Mock:
 
 
 @pytest.fixture
-def mock_save_to_mongo(mocker: MockFixture) -> Mock:
+def mock_save_to_cache(mocker: MockFixture) -> Mock:
     """Mock save catalog."""
     mock = mocker.patch(
-        "altinn_model_publisher.service.altinn_service.save_catalog_to_mongo"
+        "altinn_model_publisher.service.altinn_service.save_catalog_to_cache"
     )
     return mock
 
 
 @pytest.fixture
-def mock_load_rdf_from_mongo(mocker: MockFixture) -> Mock:
+def mock_load_rdf_from_cache(mocker: MockFixture) -> Mock:
     """Mock load catalog."""
     mock = mocker.patch(
-        "altinn_model_publisher.service.altinn_service.read_catalog_from_mongo"
+        "altinn_model_publisher.service.altinn_service.read_catalog_from_cache"
     )
     mock.return_value = test_altinn_catalog_turtle
     return mock
@@ -176,39 +175,9 @@ def mock_running_update_status(mocker: MockFixture) -> Mock:
 
 
 @pytest.fixture
-def mock_find_one(mocker: MockFixture) -> Mock:
-    """Mock find one from mongo."""
-    mock = mocker.patch("pymongo.collection.Collection.find_one")
-    mock.return_value = {
-        "_id": "altinn-models",
-        "catalog": gzip.compress(test_altinn_catalog_turtle.encode("utf-8")),
-    }
-    return mock
-
-
-@pytest.fixture
-def mock_find_one_no_data(mocker: MockFixture) -> Mock:
-    """Mock find no data in mongo."""
-    mock = mocker.patch("pymongo.collection.Collection.find_one")
-    mock.return_value = None
-    return mock
-
-
-@pytest.fixture
-def mock_replace_one(mocker: MockFixture) -> Mock:
-    """Mock find no data in mongo."""
-    mock = mocker.patch("pymongo.collection.Collection.replace_one")
-    return mock
-
-
-@pytest.fixture
-def mock_find_one_update_status(mocker: MockFixture) -> Mock:
-    """Mock read update status from mongo."""
-    mock = mocker.patch("pymongo.collection.Collection.find_one")
-    mock.return_value = {
-        "_id": "update-status",
-        "value": "ready_to_update",
-    }
+def mock_startup_save_status(mocker: MockFixture) -> Mock:
+    """Mock set data in cache."""
+    mock = mocker.patch("altinn_model_publisher.app.save_update_status")
     return mock
 
 
