@@ -4,7 +4,7 @@ import os
 from typing import Dict, List, Optional
 
 import requests
-import xmltodict
+from xmlschema import XMLSchema
 
 from .altinn_endpoints import API_METADATA_ENDPOINT, forms_task_uri, xsd_uri
 
@@ -49,21 +49,19 @@ def get_xsd_data(
     service_edition_code: str,
     data_format_id: str,
     data_format_version: str,
-) -> Dict:
+) -> Optional[XMLSchema]:
     """Fetch Altinn model in xsd format."""
-    uri = xsd_uri(
+    xsd_endpoint = xsd_uri(
         service_code, service_edition_code, data_format_id, data_format_version
     )
-    if uri:
+    if xsd_endpoint:
         try:
-            response = altinn_get_request(uri, headers={"Accept": "application/xml"})
-            asd = xmltodict.parse(response.content) if response else {}
-            return asd
-
+            schema = XMLSchema(f"{ALTINN_URI}{xsd_endpoint}")
+            return schema
         except Exception as err:
-            logging.error(f"Error occurred when parsing xsd from {uri}: {err}")
+            logging.error(f"Error occurred when parsing xsd from {xsd_endpoint}: {err}")
 
-    return {}
+    return None
 
 
 def altinn_get_request(

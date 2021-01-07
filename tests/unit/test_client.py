@@ -60,4 +60,4 @@ def test_get_xsd_data_parse_error(mock_altinn_client_xml_parse_error: Mock) -> N
     """Should return empty dict when parse failed."""
     _result = get_xsd_data("1", "2", "3", "4")
 
-    assert _result == {}
+    assert _result is None

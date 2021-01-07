@@ -1,0 +1,27 @@
+{
+  "id" : "79ec7c90-28e2-4cbb-827c-bafee2b6ec24",
+  "name" : "api_metadata_formtask_2365_6",
+  "request" : {
+    "url" : "/api/metadata/formtask/2365/6",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"ServiceOwnerCode\":\"KRT\",\"ServiceOwnerName\":\"Financial Supervisory Authority of Norway\",\"ServiceName\":\"KRT-1003 Rapportering fra utstederforetak ved Oslo Børs\",\"ServiceCode\":\"2365\",\"ServiceEditionCode\":6,\"ValidFrom\":\"2020-05-12T09:37:16.607\",\"ValidTo\":\"2049-12-31T00:38:00\",\"ServiceType\":\"FormTask\",\"RestEnabled\":false,\"FormsMetaData\":[{\"FormID\":16405,\"FormName\":\"Report from an issuer listed on Oslo Børs/Oslo Axess (KRT-1003)\",\"DataFormatProviderType\":\"Seres\",\"DataFormatID\":\"3442\",\"DataFormatVersion\":45350,\"IsOnlyXsdValidation\":false,\"FormType\":\"MainForm\"}],\"EUSEnabled\":true,\"EnterpriseUserEnabled\":true,\"ProcessSteps\":[{\"SequenceNumber\":1,\"Name\":\"FormFilling\",\"SecurityLevel\":1},{\"SequenceNumber\":2,\"Name\":\"SendIn\",\"SecurityLevel\":1}]}",
+    "headers" : {
+      "Cache-Control" : "no-cache",
+      "Pragma" : "no-cache",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Expires" : "-1",
+      "Vary" : "Accept-Encoding",
+      "Server" : "Microsoft-IIS/8.5",
+      "P3P" : "CP=\"CAO PSA OUR LEG NAV\"",
+      "Strict-Transport-Security" : "max-age=31536000",
+      "Date" : "Fri, 08 Jan 2021 08:08:41 GMT",
+      "Set-Cookie" : "BIGipServer~autoprov~aiport.ai-pr-port.ai-prod.osl.basefarm.net-85=rd1o00000000000000000000ffff0a2b4464o85; path=/; Httponly; Secure"
+    }
+  },
+  "uuid" : "79ec7c90-28e2-4cbb-827c-bafee2b6ec24",
+  "persistent" : true,
+  "insertionIndex" : 10
+}

@@ -1,7 +1,16 @@
 """Unit test cases for the model mapper service module."""
+from modelldcatnotordf.modelldcatno import (
+    ObjectType,
+    SimpleType,
+)
 import pytest
+from xmlschema import XMLSchema
 
-from altinn_model_publisher.service.altinn_model_mapper import extract_title
+from altinn_model_publisher.service.altinn_model_mapper import (
+    create_model_element,
+    extract_title,
+)
+from ..test_data import test_xsd
 
 
 @pytest.mark.unit
@@ -25,3 +34,23 @@ def test_service_name_added_as_title_when_form_name_missing() -> None:
     )
 
     assert endpoint == {"nb": "Service name"}
+
+
+@pytest.mark.unit
+def test_sets_correct_class_for_different_xsd_types() -> None:
+    """Should set correct class for the different types."""
+    schema = XMLSchema(test_xsd)
+
+    simple_type = create_model_element(schema.types["Dato"], "http://namespace.no/")
+    complex_type = create_model_element(schema.types["Tidsrom"], "http://namespace.no/")
+    complex_list_type = create_model_element(
+        schema.types["TidsromListe"], "http://namespace.no/"
+    )
+    extension_type = create_model_element(
+        schema.types["DatoExtension"], "http://namespace.no/"
+    )
+
+    assert isinstance(simple_type, SimpleType)
+    assert isinstance(complex_type, ObjectType)
+    assert isinstance(complex_list_type, ObjectType)
+    assert isinstance(extension_type, ObjectType)

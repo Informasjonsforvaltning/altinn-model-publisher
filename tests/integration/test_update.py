@@ -5,7 +5,7 @@ from aiohttp.test_utils import TestClient
 import pytest
 from rdflib import Graph
 
-from ..test_data import create_altinn_test_catalog
+from ..test_data import test_altinn_catalog_turtle
 
 
 @pytest.mark.integration
@@ -28,12 +28,11 @@ async def test_update(
     mock_save_update_status.assert_has_calls(set_update_status_calls)
 
     mock_save_to_cache.assert_called_once()
-
-    expected = create_altinn_test_catalog()
     saved = mock_save_to_cache.call_args_list.pop()[0][0]
+    saved_rdf = saved.to_rdf().decode()
 
-    expected_graph = Graph().parse(data=expected.to_rdf(), format="turtle")
-    saved_graph = Graph().parse(data=saved.to_rdf(), format="turtle")
+    expected_graph = Graph().parse(data=test_altinn_catalog_turtle, format="turtle")
+    saved_graph = Graph().parse(data=saved_rdf, format="turtle")
 
     assert expected_graph.isomorphic(saved_graph)
 
