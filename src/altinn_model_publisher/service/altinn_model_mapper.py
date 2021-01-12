@@ -101,7 +101,8 @@ def extract_publisher(data: Dict) -> Optional[Agent]:
 
 
 def uri_safe_string(input: str) -> str:
-    match_non_safe = "[^-\]_.~!*'();:@&=+$,/?%#[A-z0-9]"
+    """Remove unsafe characters from input."""
+    match_non_safe = "[^-\]_.~!*'();:@&=+$,/?%#[A-z0-9]"  # noqa: W605
     return re.sub(match_non_safe, "", input) if isinstance(input, str) else ""
 
 
