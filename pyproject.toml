@@ -18,8 +18,8 @@ python = "^3.8"
 gunicorn = "^20.0.4"
 python-dotenv = "^0.15.0"
 requests = "^2.24.0"
-xmltodict = "^0.12.0"
-modelldcatnotordf = "^0.0.10"
+xmlschema = "^1.3.1"
+modelldcatnotordf = "^0.0.12"
 datacatalogtordf = "^1.2.0"
 aiohttp = "^3.7.3"
 aiocache = {extras = ["redis"], version = "^0.11.1"}
@@ -58,7 +58,7 @@ omit = ["*__init__.py", "*gunicorn_config.py", "*altinn_file_service.py", "*alti
 
 [tool.coverage.report]
 show_missing = true
-fail_under = 100
+fail_under = 90
 
 [build-system]
 requires = ["poetry>=0.12"]

@@ -134,14 +134,14 @@ async def fetch_altinn_models_and_update_database() -> None:
     models_data = []
 
     for data in combined_meta_data:
-        parsed_response = get_xsd_data(
+        xml_schema = get_xsd_data(
             data["service_meta"].get("ServiceCode"),
             data["service_meta"].get("ServiceEditionCode"),
             data["forms_meta"].get("DataFormatID"),
             data["forms_meta"].get("DataFormatVersion"),
         )
-        if parsed_response:
-            data["elements"] = parsed_response
+        if xml_schema:
+            data["schema"] = xml_schema
             models_data.append(data)
     logging.info("Form task services xsd data fetched from Altinn")
 
