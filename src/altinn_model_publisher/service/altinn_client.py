@@ -56,8 +56,7 @@ def get_xsd_data(
     )
     if xsd_endpoint:
         try:
-            schema = XMLSchema(f"{ALTINN_URI}{xsd_endpoint}")
-            return schema
+            return XMLSchema(f"{ALTINN_URI}{xsd_endpoint}")
         except Exception as err:
             logging.error(f"Error occurred when parsing xsd from {xsd_endpoint}: {err}")
 

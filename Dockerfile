@@ -14,4 +14,4 @@ ADD src /app/src
 
 EXPOSE 8080
 
-CMD gunicorn --chdir src "altinn_model_publisher:create_app" --config=src/altinn_model_publisher/gunicorn_config.py --worker-class aiohttp.GunicornWebWorker --timeout 600
+CMD gunicorn --chdir src "altinn_model_publisher:create_app" --config=src/altinn_model_publisher/gunicorn_config.py --worker-class aiohttp.GunicornWebWorker --timeout 1800
