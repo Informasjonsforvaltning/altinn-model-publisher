@@ -33,7 +33,7 @@ jobs:
           pip install virtualenv==20.2.1
           pip install poetry==1.1.4
           pip install nox==2020.8.22
-          pip install nox-poetry==0.6.0
+          pip install nox-poetry==0.7.0
 
       - name: Build image and run tests with nox
         run: nox
