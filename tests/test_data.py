@@ -4702,7 +4702,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <https://altinn.fellesdatakatalog.digdir.no/models/2365-3442> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/840747972> ;
     dct:title "Report from an issuer listed on Oslo Børs/Oslo Axess (KRT-1003)"@nb ;
-    ns1:containsModelelement <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Adresselinje1_RestriksjonAdresselinje1>,
+    ns1:containsModelElement <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Adresselinje1_RestriksjonAdresselinje1>,
         <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon>,
         <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon>,
         <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon>,
@@ -5125,7 +5125,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <https://altinn.fellesdatakatalog.digdir.no/models/3314-245> a ns1:InformationModel ;
     dct:title "Sensitive role Reporting"@nb ;
-    ns1:containsModelelement <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Ar44-repformat-6>,
+    ns1:containsModelElement <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Ar44-repformat-6>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Avgiver-grp-1125>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BelopHeltall15-repformat-37>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilArsmodellSpesifisertBil-datadef-30560>,
@@ -5195,7 +5195,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <https://altinn.fellesdatakatalog.digdir.no/models/3357-4166> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> ;
     dct:title "A02 a-melding submission from system"@nb ;
-    ns1:containsModelelement <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/A02_a-melding_innsending_fra_system_M>,
+    ns1:containsModelElement <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/A02_a-melding_innsending_fra_system_M>,
         <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/AArOgMaaned>,
         <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/InformasjonOmInnsender>,
         <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/Innsender>,
@@ -5208,7 +5208,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <https://altinn.fellesdatakatalog.digdir.no/models/3736-4685> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> ;
     dct:title "A06 a-melding version 3.1.0 order reconciliation information"@nb ;
-    ns1:containsModelelement <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/A06AOrdningenBestillAvstemmingsinformasjon>,
+    ns1:containsModelElement <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/A06AOrdningenBestillAvstemmingsinformasjon>,
         <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/Bestilling>,
         <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/Boolsk>,
         <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/Heltall>,
@@ -5223,7 +5223,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <https://altinn.fellesdatakatalog.digdir.no/models/3906-3940> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> ;
     dct:title "A01 a-melding"@nb ;
-    ns1:containsModelelement <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AArOgMaaned>,
+    ns1:containsModelElement <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AArOgMaaned>,
         <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AArstall>,
         <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon>,
         <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjonGruppe>,
