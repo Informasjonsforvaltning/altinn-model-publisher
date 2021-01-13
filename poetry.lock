@@ -551,7 +551,7 @@ python-versions = "*"
 
 [[package]]
 name = "modelldcatnotordf"
-version = "0.0.13"
+version = "0.0.14"
 description = "A library for mapping a modelldcatno model to rdf"
 category = "main"
 optional = false
@@ -929,7 +929,7 @@ test = ["fixtures", "mock", "purl", "pytest", "sphinx", "testrepository (>=0.0.1
 
 [[package]]
 name = "safety"
-version = "1.10.2"
+version = "1.10.2.post1"
 description = "Checks installed dependencies for known vulnerabilities."
 category = "dev"
 optional = false
@@ -1058,7 +1058,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "5cd6550668a857978e6f973c29b0e52d31f832c5689f5efa66654c59b0ab3e59"
+content-hash = "5fbf702b8f37a88da11a27b3246b817b0e83f471384eded8a1b4327bd0527180"
 
 [metadata.files]
 aiocache = [
@@ -1413,8 +1413,8 @@ mccabe = [
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
 modelldcatnotordf = [
-    {file = "modelldcatnotordf-0.0.13-py3-none-any.whl", hash = "sha256:bf4af6455b0401023e8e0b82ee5dd95ae3f5ac0ad5624cfc86ba07cc1a8368e7"},
-    {file = "modelldcatnotordf-0.0.13.tar.gz", hash = "sha256:12bef9bf90ce79b2193139e39df65384310649d836663de58bd676957d1bae2a"},
+    {file = "modelldcatnotordf-0.0.14-py3-none-any.whl", hash = "sha256:a8ccd4647f95ec7c97961f1fd97a32e26375155e73bd2661e485b847fa2991eb"},
+    {file = "modelldcatnotordf-0.0.14.tar.gz", hash = "sha256:88e3812d174ee5379e32e257fb26ddb6b7466e699ea597cbe53a2a58878f7eb1"},
 ]
 multidict = [
     {file = "multidict-5.1.0-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:b7993704f1a4b204e71debe6095150d43b2ee6150fa4f44d6d966ec356a8d61f"},
@@ -1660,8 +1660,8 @@ requests-mock = [
     {file = "requests_mock-1.8.0-py2.py3-none-any.whl", hash = "sha256:11215c6f4df72702aa357f205cf1e537cffd7392b3e787b58239bde5fb3db53b"},
 ]
 safety = [
-    {file = "safety-1.10.2-py2.py3-none-any.whl", hash = "sha256:66972e94bc7252d156386ffbe89ceeecdf82cebe1f2bf4e1375cc7fe473b54fe"},
-    {file = "safety-1.10.2.tar.gz", hash = "sha256:9e35be579f7589cde300faaf947eefb6a4c1a63ae2a79edb370805ef99487c5f"},
+    {file = "safety-1.10.2.post1-py2.py3-none-any.whl", hash = "sha256:6f50edff1c5162d096cacd9557406b32c021c77fe8d2229750eeff22a3e10dfe"},
+    {file = "safety-1.10.2.post1.tar.gz", hash = "sha256:1d8f904c7df7c99f094154a6d2c3ae9703fd2fa58914bd80e005e860a9f4045c"},
 ]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
