@@ -1,5 +1,6 @@
 """Mappers to create InformationModel from altinn data."""
 import os
+import re
 from typing import Dict, List, Optional
 
 from datacatalogtordf import Agent
@@ -99,12 +100,18 @@ def extract_publisher(data: Dict) -> Optional[Agent]:
     return None
 
 
+def uri_safe_string(input: str) -> str:
+    """Remove unsafe characters from input."""
+    match_non_safe = "[^-\]_.~!*'();:@&=+$,/?%#[A-z0-9æÆøØåÅ]"  # noqa: W605
+    return re.sub(match_non_safe, "", input) if isinstance(input, str) else ""
+
+
 def xsd_uri_identifier(data: XMLSchema) -> str:
     """Create URI-identifier for XSD-types."""
     if data.content_type_label and "simple" in data.content_type_label:
-        return f"{data.primitive_type.target_namespace}#{data.primitive_type.id}"
+        return f"{data.primitive_type.target_namespace}#{uri_safe_string(data.primitive_type.id)}"
     else:
-        return f"{data.target_namespace}#{data.id}"
+        return f"{data.target_namespace}#{uri_safe_string(data.id)}"
 
 
 def extract_seres_guid(data: XMLSchema) -> Optional[str]:
@@ -116,7 +123,7 @@ def extract_seres_guid(data: XMLSchema) -> Optional[str]:
     ):
         for attrib_key in data.schema_elem.attrib:
             if "seres" in attrib_key and "guid" in attrib_key:
-                return data.schema_elem.attrib[attrib_key]
+                return uri_safe_string(data.schema_elem.attrib[attrib_key])
     return None
 
 
@@ -131,15 +138,13 @@ def uri_identifier(data: XMLSchema, model_namespace: str) -> Optional[str]:
         if "xs:" in data.prefixed_name or "xsd:" in data.prefixed_name:
             identifier = xsd_uri_identifier(data)
         else:
-            identifier_name = data.prefixed_name.replace(" ", "")
-            identifier = f"{model_namespace}{identifier_name}"
+            identifier = f"{model_namespace}{uri_safe_string(data.prefixed_name)}"
     elif (
         hasattr(data, "base_type")
         and hasattr(data.base_type, "prefixed_name")
         and data.base_type.prefixed_name
     ):
-        identifier_name = data.base_type.prefixed_name.replace(" ", "")
-        identifier = f"{model_namespace}{identifier_name}"
+        identifier = f"{model_namespace}{uri_safe_string(data.base_type.prefixed_name)}"
 
     return identifier
 
