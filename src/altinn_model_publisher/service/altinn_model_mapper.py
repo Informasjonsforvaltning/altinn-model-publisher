@@ -15,7 +15,6 @@ from modelldcatnotordf.modelldcatno import (
 from xmlschema import XMLSchema
 from xmlschema.validators import (
     XsdAttribute,
-    XsdComplexType,
     XsdElement,
     XsdGroup,
 )
@@ -144,17 +143,47 @@ def uri_identifier(data: XMLSchema, model_namespace: str) -> Optional[str]:
         and hasattr(data.base_type, "prefixed_name")
         and data.base_type.prefixed_name
     ):
-        identifier = f"{model_namespace}{uri_safe_string(data.base_type.prefixed_name)}"
+        if (
+            "xs:" in data.base_type.prefixed_name
+            or "xsd:" in data.base_type.prefixed_name
+        ):
+            identifier = xsd_uri_identifier(data.base_type)
+        else:
+            identifier = (
+                f"{model_namespace}{uri_safe_string(data.base_type.prefixed_name)}"
+            )
 
     return identifier
 
 
-def create_simple_type(data: XMLSchema) -> SimpleType:
+def create_simple_type(input_data: XMLSchema, model_namespace: str) -> SimpleType:
     """Create Model Element - Simple Type."""
     simple_type = SimpleType()
-    simple_type.type_definition_reference = (
-        f"{data.primitive_type.target_namespace}#{data.primitive_type.id}"
-    )
+    if (
+        hasattr(input_data, "base_type")
+        and hasattr(input_data.base_type, "prefixed_name")
+        and input_data.base_type.prefixed_name
+        and (
+            not hasattr(input_data, "prefixed_name") or input_data.prefixed_name is None
+        )
+    ):
+        data = input_data.base_type
+    else:
+        data = input_data
+
+    identifier = uri_identifier(data, model_namespace)
+    if identifier and "http://www.w3.org/2001/XMLSchema#" in identifier:
+        simple_type.identifier = f"{SELF_URI}#{data.id}"
+        simple_type.dct_identifier = f"{SELF_URI}#{data.id}"
+        simple_type.title = {"en": data.id}
+        simple_type.type_definition_reference = identifier
+    else:
+        simple_type.identifier = identifier
+        simple_type.dct_identifier = identifier
+        simple_type.title = {"nb": data.prefixed_name}
+        simple_type.type_definition_reference = (
+            f"{data.primitive_type.target_namespace}#{data.primitive_type.id}"
+        )
     simple_type.min_length = data.min_length
     simple_type.max_length = data.max_length
 
@@ -190,16 +219,13 @@ def create_model_element(
     model_element = None
     identifier = uri_identifier(data, model_namespace)
     if identifier:
-        if isinstance(data, XsdComplexType):
-            model_element = ObjectType()
-        elif hasattr(data, "primitive_type"):
-            model_element = create_simple_type(data)
+        if hasattr(data, "primitive_type"):
+            model_element = create_simple_type(data, model_namespace)
         else:
             model_element = ObjectType()
-
-        model_element.identifier = identifier
-        model_element.dct_identifier = identifier
-        model_element.title = {"nb": data.prefixed_name}
+            model_element.identifier = identifier
+            model_element.dct_identifier = identifier
+            model_element.title = {"nb": data.prefixed_name}
 
         if hasattr(data, "attributes"):
             for attribute_key in data.attributes:
@@ -241,9 +267,13 @@ def create_model_property(
                 type_ref_data = data.ref
 
             if hasattr(type_ref_data, "primitive_type"):
-                type_ref = SimpleType()
-                type_ref.identifier = uri_identifier(type_ref_data, model_namespace)
-                if type_ref.identifier:
+                type_ref_identifier = uri_identifier(type_ref_data, model_namespace)
+                if type_ref_identifier:
+                    if "http://www.w3.org/2001/XMLSchema#" in type_ref_identifier:
+                        type_ref = create_simple_type(type_ref_data, model_namespace)
+                    else:
+                        type_ref = SimpleType()
+                        type_ref.identifier = type_ref_identifier
                     model_property.has_simple_type = type_ref
             elif type_ref_data and type_ref_data.prefixed_name:
                 type_ref = ObjectType()

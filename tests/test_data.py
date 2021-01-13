@@ -1098,15 +1098,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/melding/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/melding/dataFormatProvider> a ns1:Attribute ;
     dct:title "dataFormatProvider"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/melding/dataFormatVersion> a ns1:Attribute ;
     dct:title "dataFormatVersion"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Ar44-repformat-6> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Ar44-repformat-6" ;
@@ -1120,7 +1120,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Avgiver-grp-1125/gruppeid> a ns1:Attribute ;
     dct:title "gruppeid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BelopHeltall15-repformat-37> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BelopHeltall15-repformat-37" ;
@@ -1134,7 +1134,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilArsmodellSpesifisertBil-datadef-30560/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerAdresseSpesifisertBil-datadef-7587> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerAdresseSpesifisertBil-datadef-7587" ;
@@ -1143,7 +1143,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerAdresseSpesifisertBil-datadef-7587/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerFodselsnummerSpesifisertBil-datadef-7586> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerFodselsnummerSpesifisertBil-datadef-7586" ;
@@ -1152,7 +1152,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerFodselsnummerSpesifisertBil-datadef-7586/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerNavnSpesifisertBil-datadef-7585> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerNavnSpesifisertBil-datadef-7585" ;
@@ -1161,7 +1161,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerNavnSpesifisertBil-datadef-7585/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerPostnummerSpesifisertBil-datadef-7588> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerPostnummerSpesifisertBil-datadef-7588" ;
@@ -1170,7 +1170,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerPostnummerSpesifisertBil-datadef-7588/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerPoststedSpesifisertBil-datadef-7589> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerPoststedSpesifisertBil-datadef-7589" ;
@@ -1179,7 +1179,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBrukerPoststedSpesifisertBil-datadef-7589/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBruksomradeSpesifisertBil-datadef-7584> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBruksomradeSpesifisertBil-datadef-7584" ;
@@ -1188,7 +1188,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilBruksomradeSpesifisertBil-datadef-7584/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKilometerstandFjoraretSpesifisertBil-datadef-7582> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKilometerstandFjoraretSpesifisertBil-datadef-7582" ;
@@ -1197,7 +1197,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKilometerstandFjoraretSpesifisertBil-datadef-7582/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKilometerstandSpesifisertBil-datadef-7581> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKilometerstandSpesifisertBil-datadef-7581" ;
@@ -1206,7 +1206,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKilometerstandSpesifisertBil-datadef-7581/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKjorebokSpesifisertBil-datadef-3118> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKjorebokSpesifisertBil-datadef-3118" ;
@@ -1215,7 +1215,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKjorebokSpesifisertBil-datadef-3118/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKjorelengdeYrkesmessigSpesifisertBil-datadef-3116> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKjorelengdeYrkesmessigSpesifisertBil-datadef-3116" ;
@@ -1224,7 +1224,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilKjorelengdeYrkesmessigSpesifisertBil-datadef-3116/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilListeprisSpesifisertBil-datadef-3114> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilListeprisSpesifisertBil-datadef-3114" ;
@@ -1233,7 +1233,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilListeprisSpesifisertBil-datadef-3114/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilMerkeTypeSpesifisertBil-datadef-7580> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilMerkeTypeSpesifisertBil-datadef-7580" ;
@@ -1242,7 +1242,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilMerkeTypeSpesifisertBil-datadef-7580/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilParkeringAdresseSpesifisertBil-datadef-30405> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilParkeringAdresseSpesifisertBil-datadef-30405" ;
@@ -1251,7 +1251,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilParkeringAdresseSpesifisertBil-datadef-30405/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilParkeringAnnetStedSpesifisertBil-datadef-7667> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilParkeringAnnetStedSpesifisertBil-datadef-7667" ;
@@ -1260,7 +1260,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilParkeringAnnetStedSpesifisertBil-datadef-7667/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilParkeringVarierendeStedSpesifisertBil-datadef-30406> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilParkeringVarierendeStedSpesifisertBil-datadef-30406" ;
@@ -1269,7 +1269,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilParkeringVarierendeStedSpesifisertBil-datadef-30406/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilRegistreringsnummerSpesifisertBil-datadef-7579> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilRegistreringsnummerSpesifisertBil-datadef-7579" ;
@@ -1278,7 +1278,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilRegistreringsnummerSpesifisertBil-datadef-7579/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilgodtgjorelseMottattSpesifisertBil-datadef-3115> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilgodtgjorelseMottattSpesifisertBil-datadef-3115" ;
@@ -1287,7 +1287,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilgodtgjorelseMottattSpesifisertBil-datadef-3115/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkategoriSpesifisertBil-datadef-7576> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkategoriSpesifisertBil-datadef-7576" ;
@@ -1296,7 +1296,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkategoriSpesifisertBil-datadef-7576/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkostnaderPrivatTilbakefortSpesifisertBil-datadef-7591> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkostnaderPrivatTilbakefortSpesifisertBil-datadef-7591" ;
@@ -1305,7 +1305,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkostnaderPrivatTilbakefortSpesifisertBil-datadef-7591/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkostnaderTilbakeforingsgrunnlagSamletKostnadSpesifisertBil-datadef-11250> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkostnaderTilbakeforingsgrunnlagSamletKostnadSpesifisertBil-datadef-11250" ;
@@ -1314,7 +1314,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkostnaderTilbakeforingsgrunnlagSamletKostnadSpesifisertBil-datadef-11250/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkostnaderVerdiforringelseSaldoSpesifisertBil-datadef-11249> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkostnaderVerdiforringelseSaldoSpesifisertBil-datadef-11249" ;
@@ -1323,7 +1323,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/BilkostnaderVerdiforringelseSaldoSpesifisertBil-datadef-11249/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderDrivstoffSpesifisertBil-datadef-7596> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderDrivstoffSpesifisertBil-datadef-7596" ;
@@ -1332,7 +1332,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderDrivstoffSpesifisertBil-datadef-7596/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderForsikringAvgifterSpesifisertBil-datadef-7590> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderForsikringAvgifterSpesifisertBil-datadef-7590" ;
@@ -1341,7 +1341,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderForsikringAvgifterSpesifisertBil-datadef-7590/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderLeasingleieSpesifisertBil-datadef-11252> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderLeasingleieSpesifisertBil-datadef-11252" ;
@@ -1350,7 +1350,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderLeasingleieSpesifisertBil-datadef-11252/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderOverskuddSpesifisertBil-datadef-7594> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderOverskuddSpesifisertBil-datadef-7594" ;
@@ -1359,7 +1359,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderOverskuddSpesifisertBil-datadef-7594/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderSpesifisertBil-datadef-34484> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderSpesifisertBil-datadef-34484" ;
@@ -1368,7 +1368,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderSpesifisertBil-datadef-34484/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderSpesifisertBil-datadef-7578> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderSpesifisertBil-datadef-7578" ;
@@ -1377,7 +1377,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderSpesifisertBil-datadef-7578/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderUnderskuddSpesifisertBil-datadef-7595> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderUnderskuddSpesifisertBil-datadef-7595" ;
@@ -1386,7 +1386,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderUnderskuddSpesifisertBil-datadef-7595/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderVedlikeholdSpesifisertBil-datadef-11251> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderVedlikeholdSpesifisertBil-datadef-11251" ;
@@ -1395,7 +1395,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderVedlikeholdSpesifisertBil-datadef-11251/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderYrketSpesifisertBil-datadef-11254> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderYrketSpesifisertBil-datadef-11254" ;
@@ -1404,7 +1404,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/DriftskostnaderYrketSpesifisertBil-datadef-11254/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetAdresse-datadef-15> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetAdresse-datadef-15" ;
@@ -1413,7 +1413,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetAdresse-datadef-15/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetNavn-datadef-1> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetNavn-datadef-1" ;
@@ -1422,7 +1422,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetNavn-datadef-1/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetOrganisasjonsnummer-datadef-18> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetOrganisasjonsnummer-datadef-18" ;
@@ -1431,7 +1431,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetOrganisasjonsnummer-datadef-18/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetPostnummer-datadef-6673> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetPostnummer-datadef-6673" ;
@@ -1440,7 +1440,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetPostnummer-datadef-6673/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetPoststed-datadef-6674> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetPoststed-datadef-6674" ;
@@ -1449,7 +1449,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/EnhetPoststed-datadef-6674/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/GenerellInformasjon-grp-1124> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/GenerellInformasjon-grp-1124" ;
@@ -1458,7 +1458,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/GenerellInformasjon-grp-1124/gruppeid> a ns1:Attribute ;
     dct:title "gruppeid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Heltall7-repformat-116> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Heltall7-repformat-116" ;
@@ -1472,7 +1472,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/HvemBrukerBilenUtenomArbeidstiden-grp-1139/gruppeid> a ns1:Attribute ;
     dct:title "gruppeid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBil-grp-3497> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBil-grp-3497" ;
@@ -1481,7 +1481,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBil-grp-3497/gruppeid> a ns1:Attribute ;
     dct:title "gruppeid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBilOgSpesifikasjonAvDriftskostnader-grp-2771> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBilOgSpesifikasjonAvDriftskostnader-grp-2771" ;
@@ -1490,7 +1490,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBilOgSpesifikasjonAvDriftskostnader-grp-2771/gruppeid> a ns1:Attribute ;
     dct:title "gruppeid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4" ;
@@ -1520,7 +1520,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/OppgavegiverFodselsnummer-datadef-26/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Regnskapsforer-grp-2633> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Regnskapsforer-grp-2633" ;
@@ -1529,7 +1529,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Regnskapsforer-grp-2633/gruppeid> a ns1:Attribute ;
     dct:title "gruppeid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerAdresse-datadef-281> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerAdresse-datadef-281" ;
@@ -1538,7 +1538,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerAdresse-datadef-281/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerNavn-datadef-280> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerNavn-datadef-280" ;
@@ -1547,7 +1547,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerNavn-datadef-280/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerPostnummer-datadef-6678> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerPostnummer-datadef-6678" ;
@@ -1556,7 +1556,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerPostnummer-datadef-6678/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerPoststed-datadef-6679> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerPoststed-datadef-6679" ;
@@ -1565,7 +1565,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/RegnskapsforerPoststed-datadef-6679/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/SaldoavskrivningSpesifisertBil-datadef-11253> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/SaldoavskrivningSpesifisertBil-datadef-11253" ;
@@ -1574,7 +1574,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/SaldoavskrivningSpesifisertBil-datadef-11253/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema" ;
@@ -1588,29 +1588,27 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema/blankettnummer> a ns1:Attribute ;
     dct:title "blankettnummer"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema/etatid> a ns1:Attribute ;
     dct:title "etatid"@nb ;
-    ns1:hasSimpleType <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema/xs:string> .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema/gruppeid> a ns1:Attribute ;
     dct:title "gruppeid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema/skjemanummer> a ns1:Attribute ;
     dct:title "skjemanummer"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#integer> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema/spesifikasjonsnummer> a ns1:Attribute ;
     dct:title "spesifikasjonsnummer"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#integer> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema/tittel> a ns1:Attribute ;
     dct:title "tittel"@nb ;
-    ns1:hasSimpleType xsd:string .
-
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Skjema/xs:string> a ns1:SimpleType .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/SkjemaVedleggTilSelvangivelseNaringsoppgave-datadef-30404> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/SkjemaVedleggTilSelvangivelseNaringsoppgave-datadef-30404" ;
@@ -1619,7 +1617,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/SkjemaVedleggTilSelvangivelseNaringsoppgave-datadef-30404/orid> a ns1:Attribute ;
     dct:title "orid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/SpesifikasjonAvDriftskostnaderForPrivatBrukAvYrkesbil-grp-1150> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/SpesifikasjonAvDriftskostnaderForPrivatBrukAvYrkesbil-grp-1150" ;
@@ -1628,7 +1626,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/SpesifikasjonAvDriftskostnaderForPrivatBrukAvYrkesbil-grp-1150/gruppeid> a ns1:Attribute ;
     dct:title "gruppeid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Tekst1000-repformat-77> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Tekst1000-repformat-77" ;
@@ -1687,7 +1685,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/omBil-grp-5667/gruppeid> a ns1:Attribute ;
     dct:title "gruppeid"@nb ;
-    ns1:hasSimpleType xsd:decimal .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#positiveInteger> .
 
 <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/A02_a-melding_innsending_fra_system_M> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/A02_a-melding_innsending_fra_system_M" ;
@@ -1700,15 +1698,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/A02_a-melding_innsending_fra_system_M/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/A02_a-melding_innsending_fra_system_M/dataFormatProvider> a ns1:Attribute ;
     dct:title "dataFormatProvider"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/A02_a-melding_innsending_fra_system_M/dataFormatVersion> a ns1:Attribute ;
     dct:title "dataFormatVersion"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/AArOgMaaned> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/AArOgMaaned" ;
@@ -1767,15 +1765,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/melding/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/melding/dataFormatProvider> a ns1:Attribute ;
     dct:title "dataFormatProvider"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3357/130429/forms/4166/35895/melding/dataFormatVersion> a ns1:Attribute ;
     dct:title "dataFormatVersion"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/A06AOrdningenBestillAvstemmingsinformasjon> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/A06AOrdningenBestillAvstemmingsinformasjon" ;
@@ -1794,15 +1792,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/A06AOrdningenBestillAvstemmingsinformasjon/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/A06AOrdningenBestillAvstemmingsinformasjon/dataFormatProvider> a ns1:Attribute ;
     dct:title "dataFormatProvider"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/A06AOrdningenBestillAvstemmingsinformasjon/dataFormatVersion> a ns1:Attribute ;
     dct:title "dataFormatVersion"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/Bestilling> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/Bestilling" ;
@@ -1865,15 +1863,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/melding/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/melding/dataFormatProvider> a ns1:Attribute ;
     dct:title "dataFormatProvider"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3736/170607/forms/4685/1706091129/melding/dataFormatVersion> a ns1:Attribute ;
     dct:title "dataFormatVersion"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AArOgMaaned> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AArOgMaaned" ;
@@ -2082,15 +2080,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EDAG_M/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EDAG_M/dataFormatProvider> a ns1:Attribute ;
     dct:title "dataFormatProvider"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EDAG_M/dataFormatVersion> a ns1:Attribute ;
     dct:title "dataFormatVersion"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode" ;
@@ -2344,7 +2342,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/tilleggsinformasjon> a ns1:Attribute ;
     dct:title "tilleggsinformasjon"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/utenlandskArtist> a ns1:Attribute ;
     dct:title "utenlandskArtist"@nb ;
@@ -2353,19 +2351,19 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa1> a ns1:Attribute ;
     dct:title "valgNivaa1"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa2> a ns1:Attribute ;
     dct:title "valgNivaa2"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa3> a ns1:Attribute ;
     dct:title "valgNivaa3"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa4> a ns1:Attribute ;
     dct:title "valgNivaa4"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker" ;
@@ -2782,15 +2780,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/melding/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/melding/dataFormatProvider> a ns1:Attribute ;
     dct:title "dataFormatProvider"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/melding/dataFormatVersion> a ns1:Attribute ;
     dct:title "dataFormatVersion"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utstedertype/445918> a ns1:Attribute ;
     dct:title "utstedertype"@nb ;
@@ -2804,7 +2802,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S01/637664> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S01/637664" ;
@@ -2813,7 +2811,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S01/637664/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S02/637663> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S02/637663" ;
@@ -2822,7 +2820,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S02/637663/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Foretaksnavn/639250> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Foretaksnavn/639250" ;
@@ -2831,7 +2829,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Foretaksnavn/639250/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S03/602942> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S03/602942" ;
@@ -2840,7 +2838,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S03/602942/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S04/602941> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S04/602941" ;
@@ -2849,7 +2847,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S04/602941/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S05/602940> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S05/602940" ;
@@ -2858,7 +2856,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S05/602940/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S06/602939> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S06/602939" ;
@@ -2867,7 +2865,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S06/602939/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S07/602938> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S07/602938" ;
@@ -2876,7 +2874,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S07/602938/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S08/602937> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S08/602937" ;
@@ -2885,7 +2883,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S08/602937/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S1/488797> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S1/488797" ;
@@ -2894,7 +2892,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S1/488797/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S2/488798> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S2/488798" ;
@@ -2903,7 +2901,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S2/488798/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_2_S01/493616> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_2_S01/493616" ;
@@ -2912,7 +2910,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_2_S01/493616/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/LEI-nummer/660277> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/LEI-nummer/660277" ;
@@ -2921,7 +2919,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/LEI-nummer/660277/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Målform/660674> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Målform/660674" ;
@@ -2930,7 +2928,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Målform/660674/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S01/637662> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S01/637662" ;
@@ -2939,7 +2937,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S01/637662/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S02/637661> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S02/637661" ;
@@ -2948,7 +2946,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S02/637661/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnummer/638574> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnummer/638574" ;
@@ -2957,7 +2955,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnummer/638574/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Periodetype/660275> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Periodetype/660275" ;
@@ -2966,7 +2964,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Periodetype/660275/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Postnummer/660288> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Postnummer/660288" ;
@@ -2975,7 +2973,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Postnummer/660288/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Poststed/660287> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Poststed/660287" ;
@@ -2984,7 +2982,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Poststed/660287/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/RapporteringsId/636854> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/RapporteringsId/636854" ;
@@ -2993,7 +2991,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/RapporteringsId/636854/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_10_S1/488631> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_10_S1/488631" ;
@@ -3002,7 +3000,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_10_S1/488631/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_S10/600714> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_S10/600714" ;
@@ -3011,7 +3009,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_S10/600714/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T01/658952> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T01/658952" ;
@@ -3020,7 +3018,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T01/658952/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T02/658951> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T02/658951" ;
@@ -3029,7 +3027,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T02/658951/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T03/658950> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T03/658950" ;
@@ -3038,7 +3036,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T03/658950/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T04/658949> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T04/658949" ;
@@ -3047,7 +3045,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T04/658949/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T05/658948> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T05/658948" ;
@@ -3056,7 +3054,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T05/658948/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T06/658947> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T06/658947" ;
@@ -3065,7 +3063,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T06/658947/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T07/658946> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T07/658946" ;
@@ -3074,7 +3072,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T07/658946/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T08/658945> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T08/658945" ;
@@ -3083,7 +3081,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T08/658945/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T09/658944> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T09/658944" ;
@@ -3092,7 +3090,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T09/658944/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T10/658943> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T10/658943" ;
@@ -3101,7 +3099,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T10/658943/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T11/658942> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T11/658942" ;
@@ -3110,7 +3108,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T11/658942/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T12/658941> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T12/658941" ;
@@ -3119,7 +3117,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T12/658941/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T13/658940> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T13/658940" ;
@@ -3128,7 +3126,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T13/658940/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S01/637660> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S01/637660" ;
@@ -3137,7 +3135,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S01/637660/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S02/637659> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S02/637659" ;
@@ -3146,7 +3144,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S02/637659/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S01/637658> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S01/637658" ;
@@ -3155,7 +3153,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S01/637658/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S02/637657> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S02/637657" ;
@@ -3164,7 +3162,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S02/637657/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S12/602705> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S12/602705" ;
@@ -3173,7 +3171,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S12/602705/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S13/602701> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S13/602701" ;
@@ -3182,7 +3180,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S13/602701/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S14/602697> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S14/602697" ;
@@ -3191,7 +3189,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S14/602697/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S15/602693> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S15/602693" ;
@@ -3200,7 +3198,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S15/602693/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S16/602689> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S16/602689" ;
@@ -3209,7 +3207,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S16/602689/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S17/602685> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S17/602685" ;
@@ -3218,7 +3216,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S17/602685/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S18/602677> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S18/602677" ;
@@ -3227,7 +3225,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S18/602677/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S19/602681> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S19/602681" ;
@@ -3236,7 +3234,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S19/602681/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S20/602673> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S20/602673" ;
@@ -3245,7 +3243,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S20/602673/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S21/622462> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S21/622462" ;
@@ -3254,7 +3252,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S21/622462/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S22/622458> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S22/622458" ;
@@ -3263,7 +3261,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S22/622458/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S23/632322> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S23/632322" ;
@@ -3272,7 +3270,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S23/632322/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S24/632318> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S24/632318" ;
@@ -3281,7 +3279,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S24/632318/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S25/634252> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S25/634252" ;
@@ -3290,7 +3288,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S25/634252/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S26/634248> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S26/634248" ;
@@ -3299,7 +3297,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S26/634248/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S27/634244> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S27/634244" ;
@@ -3308,7 +3306,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S27/634244/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S30/634232> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S30/634232" ;
@@ -3317,7 +3315,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S30/634232/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S31/634228> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S31/634228" ;
@@ -3326,7 +3324,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S31/634228/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S32/634224> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S32/634224" ;
@@ -3335,7 +3333,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S32/634224/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S33/665089> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S33/665089" ;
@@ -3344,7 +3342,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S33/665089/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S34/665085> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S34/665085" ;
@@ -3353,7 +3351,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S34/665085/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S35/665081> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S35/665081" ;
@@ -3362,7 +3360,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S35/665081/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S36/665077> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S36/665077" ;
@@ -3371,7 +3369,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S36/665077/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Ifrs16harforklartforskjeller/772068> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/Ifrs16harforklartforskjeller/772068" ;
@@ -3380,7 +3378,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/Ifrs16harforklartforskjeller/772068/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S07/517985> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S07/517985" ;
@@ -3389,7 +3387,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S07/517985/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S103/639331> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S103/639331" ;
@@ -3398,7 +3396,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S103/639331/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S104/639327> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S104/639327" ;
@@ -3407,7 +3405,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S104/639327/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S105/639323> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S105/639323" ;
@@ -3416,7 +3414,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S105/639323/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S106/639319> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S106/639319" ;
@@ -3425,7 +3423,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S106/639319/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S107/639315> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S107/639315" ;
@@ -3434,7 +3432,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S107/639315/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S88/517999> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S88/517999" ;
@@ -3443,7 +3441,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S88/517999/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S89/517995> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S89/517995" ;
@@ -3452,7 +3450,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S89/517995/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S91/518003> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S91/518003" ;
@@ -3461,7 +3459,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S91/518003/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S92/508213> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S92/508213" ;
@@ -3470,7 +3468,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S92/508213/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S93/508209> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S93/508209" ;
@@ -3479,7 +3477,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S93/508209/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S94/508205> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S94/508205" ;
@@ -3488,7 +3486,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S94/508205/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S95/600734> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S95/600734" ;
@@ -3497,7 +3495,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S95/600734/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S96/600730> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S96/600730" ;
@@ -3506,7 +3504,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S96/600730/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S97/600726> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S97/600726" ;
@@ -3515,7 +3513,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S97/600726/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S98/600722> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S98/600722" ;
@@ -3524,7 +3522,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S98/600722/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S99/600718> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S99/600718" ;
@@ -3533,7 +3531,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S99/600718/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S1/487467> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S1/487467" ;
@@ -3542,7 +3540,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S1/487467/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S11/488475> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S11/488475" ;
@@ -3551,7 +3549,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S11/488475/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S12/488673> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S12/488673" ;
@@ -3560,7 +3558,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S12/488673/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S13/488672> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S13/488672" ;
@@ -3569,7 +3567,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S13/488672/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S14/488671> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S14/488671" ;
@@ -3578,7 +3576,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S14/488671/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S15/488670> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S15/488670" ;
@@ -3587,7 +3585,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S15/488670/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S16/488669> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S16/488669" ;
@@ -3596,7 +3594,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S16/488669/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S17/488668> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S17/488668" ;
@@ -3605,7 +3603,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S17/488668/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S18/488667> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S18/488667" ;
@@ -3614,7 +3612,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S18/488667/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S19/488666> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S19/488666" ;
@@ -3623,7 +3621,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S19/488666/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S2/487466> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S2/487466" ;
@@ -3632,7 +3630,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S2/487466/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S20/488665> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S20/488665" ;
@@ -3641,7 +3639,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S20/488665/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S21/488664> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S21/488664" ;
@@ -3650,7 +3648,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S21/488664/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S22/488663> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S22/488663" ;
@@ -3659,7 +3657,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S22/488663/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S23/488662> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S23/488662" ;
@@ -3668,7 +3666,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S23/488662/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S3/487465> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S3/487465" ;
@@ -3677,7 +3675,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S3/487465/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S30/488655> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S30/488655" ;
@@ -3686,7 +3684,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S30/488655/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S31/488654> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S31/488654" ;
@@ -3695,7 +3693,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S31/488654/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S32/488653> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S32/488653" ;
@@ -3704,7 +3702,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S32/488653/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S33/488652> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S33/488652" ;
@@ -3713,7 +3711,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S33/488652/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S34/488651> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S34/488651" ;
@@ -3722,7 +3720,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S34/488651/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/488646> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/488646" ;
@@ -3731,7 +3729,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/488646/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/493187> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/493187" ;
@@ -3740,7 +3738,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/493187/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S4/487464> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S4/487464" ;
@@ -3749,7 +3747,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S4/487464/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S40/493186> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S40/493186" ;
@@ -3758,7 +3756,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S40/493186/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S41/493185> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S41/493185" ;
@@ -3767,7 +3765,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S41/493185/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S43/493184> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S43/493184" ;
@@ -3776,7 +3774,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S43/493184/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S44/493183> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S44/493183" ;
@@ -3785,7 +3783,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S44/493183/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S45/494012> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S45/494012" ;
@@ -3794,7 +3792,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S45/494012/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S46/494011> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S46/494011" ;
@@ -3803,7 +3801,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S46/494011/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S5/487463> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S5/487463" ;
@@ -3812,7 +3810,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S5/487463/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S50/494007> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S50/494007" ;
@@ -3821,7 +3819,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S50/494007/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S51/493169> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S51/493169" ;
@@ -3830,7 +3828,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S51/493169/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S52/493168> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S52/493168" ;
@@ -3839,7 +3837,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S52/493168/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S53/493167> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S53/493167" ;
@@ -3848,7 +3846,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S53/493167/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S54/493166> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S54/493166" ;
@@ -3857,7 +3855,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S54/493166/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S55/493165> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S55/493165" ;
@@ -3866,7 +3864,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S55/493165/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S56/493164> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S56/493164" ;
@@ -3875,7 +3873,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S56/493164/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S58/493179> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S58/493179" ;
@@ -3884,7 +3882,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S58/493179/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S59/493178> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S59/493178" ;
@@ -3893,7 +3891,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S59/493178/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S6/487462> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S6/487462" ;
@@ -3902,7 +3900,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S6/487462/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S60/493176> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S60/493176" ;
@@ -3911,7 +3909,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S60/493176/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S61/493177> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S61/493177" ;
@@ -3920,7 +3918,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S61/493177/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S62/493161> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S62/493161" ;
@@ -3929,7 +3927,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S62/493161/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S63/493162> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S63/493162" ;
@@ -3938,7 +3936,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S63/493162/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S64/493160> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S64/493160" ;
@@ -3947,7 +3945,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S64/493160/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S65/493159> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S65/493159" ;
@@ -3956,7 +3954,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S65/493159/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S66/493175> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S66/493175" ;
@@ -3965,7 +3963,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S66/493175/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S67/493174> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S67/493174" ;
@@ -3974,7 +3972,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S67/493174/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S86/494314> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S86/494314" ;
@@ -3983,7 +3981,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S86/494314/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S87/494313> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S87/494313" ;
@@ -3992,7 +3990,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S87/494313/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114" ;
@@ -4006,15 +4004,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatProvider> a ns1:Attribute ;
     dct:title "dataFormatProvider"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatVersion> a ns1:Attribute ;
     dct:title "dataFormatVersion"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDataenkeltype/RegnskapAr-17102/10757> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDataenkeltype/RegnskapAr-17102/10757" ;
@@ -4023,7 +4021,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDataenkeltype/RegnskapAr-17102/10757/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960/11494> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960/11494" ;
@@ -4032,7 +4030,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960/11494/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsresultatNegativSisteToAr-23744/11567> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsresultatNegativSisteToAr-23744/11567" ;
@@ -4041,7 +4039,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsresultatNegativSisteToAr-23744/11567/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering-23767/11529> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering-23767/11529" ;
@@ -4050,7 +4048,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering-23767/11529/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering25ResultatForSkatt-23769/11638> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering25ResultatForSkatt-23769/11638" ;
@@ -4059,7 +4057,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering25ResultatForSkatt-23769/11638/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering5ResultatForSkatt-23768/11495> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering5ResultatForSkatt-23768/11495" ;
@@ -4068,7 +4066,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering5ResultatForSkatt-23768/11495/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764/11598> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764/11598" ;
@@ -4077,7 +4075,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764/11598/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765/11452> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765/11452" ;
@@ -4086,7 +4084,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765/11452/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/DriftsresultatNegativSisteToAr-23742/11506> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/DriftsresultatNegativSisteToAr-23742/11506" ;
@@ -4095,7 +4093,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/DriftsresultatNegativSisteToAr-23742/11506/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalAndel10-23775/11448> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalAndel10-23775/11448" ;
@@ -4104,7 +4102,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalAndel10-23775/11448/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalKorrigertNegativ-23776/11616> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalKorrigertNegativ-23776/11616" ;
@@ -4113,7 +4111,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalKorrigertNegativ-23776/11616/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755/11609> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755/11609" ;
@@ -4122,7 +4120,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755/11609/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756/11527> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756/11527" ;
@@ -4131,7 +4129,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756/11527/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757/11539> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757/11539" ;
@@ -4140,7 +4138,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757/11539/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle10AvEgenkapital-23759/11540> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle10AvEgenkapital-23759/11540" ;
@@ -4149,7 +4147,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle10AvEgenkapital-23759/11540/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle50AvEgenkapital-23760/11571> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle50AvEgenkapital-23760/11571" ;
@@ -4158,7 +4156,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle50AvEgenkapital-23760/11571/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielleAndre-23758/11460> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielleAndre-23758/11460" ;
@@ -4167,7 +4165,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielleAndre-23758/11460/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetAksjerStorstKursoppgangKursnedgang-23724/11485> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetAksjerStorstKursoppgangKursnedgang-23724/11485" ;
@@ -4176,7 +4174,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetAksjerStorstKursoppgangKursnedgang-23724/11485/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBorsnotertOBXIndeksutvalg-23723/11580> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBorsnotertOBXIndeksutvalg-23723/11580" ;
@@ -4185,7 +4183,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBorsnotertOBXIndeksutvalg-23723/11580/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBransje-23719/11572> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBransje-23719/11572" ;
@@ -4194,7 +4192,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBransje-23719/11572/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEksternRevisorSkifteSisteToAr-23729/11488> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEksternRevisorSkifteSisteToAr-23729/11488" ;
@@ -4203,7 +4201,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEksternRevisorSkifteSisteToAr-23729/11488/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEtiskeRetningslinjerOffentliggjorte-23725/11602> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEtiskeRetningslinjerOffentliggjorte-23725/11602" ;
@@ -4212,7 +4210,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEtiskeRetningslinjerOffentliggjorte-23725/11602/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetKonsernregnskap-23722/11570> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetKonsernregnskap-23722/11570" ;
@@ -4221,7 +4219,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetKonsernregnskap-23722/11570/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726/11611> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726/11611" ;
@@ -4230,7 +4228,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726/11611/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/FinansielleInstrumenterUnoterteEidUtstedt-23752/11475> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/FinansielleInstrumenterUnoterteEidUtstedt-23752/11475" ;
@@ -4239,7 +4237,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/FinansielleInstrumenterUnoterteEidUtstedt-23752/11475/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754/11532> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754/11532" ;
@@ -4248,7 +4246,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754/11532/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753/11537> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753/11537" ;
@@ -4257,7 +4255,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753/11537/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/IFRSKravFraveketKravMedHensikt-31961/11526> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/IFRSKravFraveketKravMedHensikt-31961/11526" ;
@@ -4266,7 +4264,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/IFRSKravFraveketKravMedHensikt-31961/11526/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Inntektsvekst25SisteAr50TreSisteAr-23779/11590> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Inntektsvekst25SisteAr50TreSisteAr-23779/11590" ;
@@ -4275,7 +4273,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Inntektsvekst25SisteAr50TreSisteAr-23779/11590/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/InsentivordningAksjebasert-23730/11474> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/InsentivordningAksjebasert-23730/11474" ;
@@ -4284,7 +4282,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/InsentivordningAksjebasert-23730/11474/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740/11510> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740/11510" ;
@@ -4293,7 +4291,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740/11510/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739/11523> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739/11523" ;
@@ -4302,7 +4300,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739/11523/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/LanebetingelserBruddDispensasjon-23778/11610> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/LanebetingelserBruddDispensasjon-23778/11610" ;
@@ -4311,7 +4309,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/LanebetingelserBruddDispensasjon-23778/11610/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger-23745/11478> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger-23745/11478" ;
@@ -4320,7 +4318,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger-23745/11478/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger25ResultatForSkatt-23748/11484> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger25ResultatForSkatt-23748/11484" ;
@@ -4329,7 +4327,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger25ResultatForSkatt-23748/11484/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger5ResultatForSkatt-23747/11562> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger5ResultatForSkatt-23747/11562" ;
@@ -4338,7 +4336,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger5ResultatForSkatt-23747/11562/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/NedskrivningerNegativResultatForSkatt-23749/11560> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/NedskrivningerNegativResultatForSkatt-23749/11560" ;
@@ -4347,7 +4345,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/NedskrivningerNegativResultatForSkatt-23749/11560/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Regnskapsstandard-31959/11441> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Regnskapsstandard-31959/11441" ;
@@ -4356,7 +4354,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Regnskapsstandard-31959/11441/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SikringsbokføringFinansielleInstrumenter-23751/11591> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SikringsbokføringFinansielleInstrumenter-23751/11591" ;
@@ -4365,7 +4363,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SikringsbokføringFinansielleInstrumenter-23751/11591/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SkattesakerVesentligeTapteSisteToAr-23780/11453> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SkattesakerVesentligeTapteSisteToAr-23780/11453" ;
@@ -4374,7 +4372,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SkattesakerVesentligeTapteSisteToAr-23780/11453/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordel-23761/11473> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordel-23761/11473" ;
@@ -4383,7 +4381,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordel-23761/11473/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763/11535> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763/11535" ;
@@ -4392,7 +4390,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763/11535/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762/11490> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762/11490" ;
@@ -4401,7 +4399,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762/11490/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte10AvEgenkapital-23773/11566> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte10AvEgenkapital-23773/11566" ;
@@ -4410,7 +4408,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte10AvEgenkapital-23773/11566/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte50AvEgenkapital-23774/11636> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte50AvEgenkapital-23774/11636" ;
@@ -4419,7 +4417,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte50AvEgenkapital-23774/11636/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/VerdsettelsePrisBok1-23746/11588> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/VerdsettelsePrisBok1-23746/11588" ;
@@ -4428,7 +4426,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/VerdsettelsePrisBok1-23746/11588/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/adresse/664847> a ns1:Attribute ;
     dct:title "adresse"@nb ;
@@ -4627,7 +4625,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/ORDataenkeltype/EgenkapitalMorforetaketsAksjeeiere-34067/374150/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/ORDataenkeltype/ForetakBorsverdi-34065/374170> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/ORDataenkeltype/ForetakBorsverdi-34065/374170" ;
@@ -4636,7 +4634,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/ORDataenkeltype/ForetakBorsverdi-34065/374170/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/ORDataenkeltype/Grunnfondsbevis-34215/374128> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/ORDataenkeltype/Grunnfondsbevis-34215/374128" ;
@@ -4645,7 +4643,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/ORDataenkeltype/Grunnfondsbevis-34215/374128/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/ORDataenkeltype/Obligasjon-34214/374133> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/ORDataenkeltype/Obligasjon-34214/374133" ;
@@ -4654,7 +4652,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/ORDataenkeltype/Obligasjon-34214/374133/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/ORDataenkeltype/VerdipapirutstederAksje-34213/374215> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/ORDataenkeltype/VerdipapirutstederAksje-34213/374215" ;
@@ -4663,7 +4661,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/ORDataenkeltype/VerdipapirutstederAksje-34213/374215/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069/374118> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069/374118" ;
@@ -4672,7 +4670,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069/374118/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070/374197> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070/374197" ;
@@ -4681,7 +4679,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070/374197/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/ORDatakodeutvalg/RevisjonsberetningUtenAvvik-34066/374211> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/ORDatakodeutvalg/RevisjonsberetningUtenAvvik-34066/374211" ;
@@ -4690,7 +4688,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/ORDatakodeutvalg/RevisjonsberetningUtenAvvik-34066/374211/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <http://seres.no/guid/ORDatakodeutvalg/UtstederIdentifisertOvertakerOverdrager-34068/374089> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/ORDatakodeutvalg/UtstederIdentifisertOvertakerOverdrager-34068/374089" ;
@@ -4699,7 +4697,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://seres.no/guid/ORDatakodeutvalg/UtstederIdentifisertOvertakerOverdrager-34068/374089/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
-    ns1:hasSimpleType xsd:string .
+    ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#string> .
 
 <https://altinn.fellesdatakatalog.digdir.no/models/2365-3442> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/840747972> ;
@@ -5527,6 +5525,11 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/ifrs16leiekontrakterutleiereksterne/771975" ;
     dct:title "Ifrs16leiekontrakterutleiereksterne"@nb .
 
+<https://altinn.fellesdatakatalog.digdir.no#integer> a ns1:SimpleType ;
+    dct:identifier "https://altinn.fellesdatakatalog.digdir.no#integer" ;
+    dct:title "integer"@en ;
+    xsd:anyURI xsd:decimal .
+
 <http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953> a ns1:Attribute,
         ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953" ;
@@ -5575,6 +5578,12 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> a foaf:Agent ;
     foaf:name "Skatteetaten"@nb .
 
-xsd:decimal a ns1:SimpleType .
+<https://altinn.fellesdatakatalog.digdir.no#positiveInteger> a ns1:SimpleType ;
+    dct:identifier "https://altinn.fellesdatakatalog.digdir.no#positiveInteger" ;
+    dct:title "positiveInteger"@en ;
+    xsd:anyURI xsd:decimal .
 
-xsd:string a ns1:SimpleType ."""
+<https://altinn.fellesdatakatalog.digdir.no#string> a ns1:SimpleType ;
+    dct:identifier "https://altinn.fellesdatakatalog.digdir.no#string" ;
+    dct:title "string"@en ;
+    xsd:anyURI xsd:string ."""
