@@ -165,10 +165,11 @@ def create_model_property(
                     model_property.has_simple_type = type_ref
             elif type_ref_data and type_ref_data.prefixed_name:
                 type_ref = ObjectType()
-                type_ref.identifier = uri_identifier(
+                type_ref_identifier = uri_identifier(
                     type_ref_data, model_namespace, True
                 )
-                if type_ref.identifier:
+                if type_ref_identifier:
+                    type_ref.identifier = type_ref_identifier
                     model_property.has_type.append(type_ref)
 
             if hasattr(data, "occurs"):

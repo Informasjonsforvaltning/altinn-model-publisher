@@ -2841,8 +2841,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumentkopi/skannetDokument> a ns1:Attribute ;
     dct:title "skannetDokument"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType xsd: .
+    xsd:maxOccurs 1 .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumenttype> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumenttype" ;
@@ -5026,8 +5025,6 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://seres.no/guid/ORDatakodeutvalg/UtstederIdentifisertOvertakerOverdrager-34068/374089/guid> a ns1:Attribute ;
     dct:title "guid"@nb ;
     ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#String> .
-
-xsd: a ns1:ObjectType .
 
 <https://altinn.fellesdatakatalog.digdir.no/models/2365-3442> a ns1:InformationModel ;
     dct:publisher <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/840747972> ;

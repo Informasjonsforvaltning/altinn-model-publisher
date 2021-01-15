@@ -60,12 +60,13 @@ def uri_safe_string(input: str) -> str:
     return re.sub(match_non_safe, "", input) if isinstance(input, str) else ""
 
 
-def xsd_uri_identifier(data: XMLSchema) -> str:
+def xsd_uri_identifier(data: XMLSchema) -> Optional[str]:
     """Create URI-identifier for XSD-types."""
     if data.content_type_label and "simple" in data.content_type_label:
         return f"{data.primitive_type.target_namespace}#{uri_safe_string(data.primitive_type.id)}"
-    else:
+    elif data.id:
         return f"{data.target_namespace}#{uri_safe_string(data.id)}"
+    return None
 
 
 def extract_seres_guid(data: XMLSchema) -> Optional[str]:
