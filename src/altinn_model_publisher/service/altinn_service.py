@@ -6,6 +6,7 @@ from typing import Dict, List, Optional
 from datacatalogtordf.catalog import Catalog
 from modelldcatnotordf.modelldcatno import InformationModel
 
+from altinn_model_publisher.mapper.model_mapper import map_model_from_dict
 from .altinn_cache_service import (
     read_catalog_from_cache,
     read_update_status,
@@ -17,7 +18,6 @@ from .altinn_client import (
     fetch_metadata_with_task_forms,
     get_xsd_data,
 )
-from .altinn_model_mapper import map_model_from_dict
 
 
 UPDATE_IN_PROGRESS = "update_in_progress"
