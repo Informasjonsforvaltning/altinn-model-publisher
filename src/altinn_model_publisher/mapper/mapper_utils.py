@@ -81,7 +81,9 @@ def extract_seres_guid(data: XMLSchema) -> Optional[str]:
     return None
 
 
-def uri_identifier(data: XMLSchema, model_namespace: str) -> Optional[str]:
+def uri_identifier(
+    data: XMLSchema, model_namespace: str, capitalize: bool
+) -> Optional[str]:
     """Create URI-identifier from namespace and name."""
     identifier = None
     seres_guid = extract_seres_guid(data)
@@ -92,7 +94,13 @@ def uri_identifier(data: XMLSchema, model_namespace: str) -> Optional[str]:
         if "xs:" in data.prefixed_name or "xsd:" in data.prefixed_name:
             identifier = xsd_uri_identifier(data)
         else:
-            identifier = f"{model_namespace}{uri_safe_string(data.prefixed_name)}"
+            safe_name = uri_safe_string(data.prefixed_name)
+            capitalized_name = (
+                first_character_upper_case(safe_name)
+                if capitalize
+                else first_character_lower_case(safe_name)
+            )
+            identifier = f"{model_namespace}{capitalized_name}"
     elif (
         hasattr(data, "base_type")
         and hasattr(data.base_type, "prefixed_name")
@@ -104,9 +112,13 @@ def uri_identifier(data: XMLSchema, model_namespace: str) -> Optional[str]:
         ):
             identifier = xsd_uri_identifier(data.base_type)
         else:
-            identifier = (
-                f"{model_namespace}{uri_safe_string(data.base_type.prefixed_name)}"
+            safe_name = uri_safe_string(data.base_type.prefixed_name)
+            capitalized_name = (
+                first_character_upper_case(safe_name)
+                if capitalize
+                else first_character_lower_case(safe_name)
             )
+            identifier = f"{model_namespace}{capitalized_name}"
 
     return identifier
 
@@ -126,16 +138,17 @@ def create_simple_type(input_data: XMLSchema, model_namespace: str) -> SimpleTyp
     else:
         data = input_data
 
-    identifier = uri_identifier(data, model_namespace)
+    identifier = uri_identifier(data, model_namespace, True)
     if identifier and "http://www.w3.org/2001/XMLSchema#" in identifier:
-        simple_type.identifier = f"{SELF_URI}#{data.id}"
-        simple_type.dct_identifier = f"{SELF_URI}#{data.id}"
-        simple_type.title = {"en": data.id}
+        simple_type_name = first_character_upper_case(data.id)
+        simple_type.identifier = f"{SELF_URI}#{simple_type_name}"
+        simple_type.dct_identifier = f"{SELF_URI}#{simple_type_name}"
+        simple_type.title = {"en": simple_type_name}
         simple_type.type_definition_reference = identifier
     else:
         simple_type.identifier = identifier
         simple_type.dct_identifier = identifier
-        simple_type.title = {"nb": data.prefixed_name}
+        simple_type.title = {"nb": first_character_upper_case(data.prefixed_name)}
         simple_type.type_definition_reference = (
             f"{data.primitive_type.target_namespace}#{data.primitive_type.id}"
         )
@@ -146,3 +159,21 @@ def create_simple_type(input_data: XMLSchema, model_namespace: str) -> SimpleTyp
         simple_type.pattern = data.patterns.patterns[0].pattern
 
     return simple_type
+
+
+def first_character_lower_case(input: str) -> str:
+    """Ensure that the first character of the input string is lower case."""
+    if len(input) > 2:
+        return input[0].lower() + input[1:]
+    if len(input) == 1:
+        return input[0].lower()
+    return input
+
+
+def first_character_upper_case(input: str) -> str:
+    """Ensure that the first character of the input string is upper case."""
+    if len(input) > 2:
+        return input[0].upper() + input[1:]
+    if len(input) == 1:
+        return input[0].upper()
+    return input

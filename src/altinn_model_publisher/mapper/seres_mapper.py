@@ -16,7 +16,12 @@ from xmlschema.validators import (
     XsdGroup,
 )
 
-from .mapper_utils import create_simple_type, uri_identifier
+from .mapper_utils import (
+    create_simple_type,
+    first_character_lower_case,
+    first_character_upper_case,
+    uri_identifier,
+)
 
 
 def create_model_from_seres_xsd(xsd_data: XMLSchema) -> InformationModel:
@@ -69,7 +74,7 @@ def create_seres_model_element(
 ) -> Optional[ModelElement]:
     """Create Model Element."""
     model_element = None
-    identifier = uri_identifier(data, model_namespace)
+    identifier = uri_identifier(data, model_namespace, True)
     if identifier:
         if hasattr(data, "primitive_type"):
             model_element = create_simple_type(data, model_namespace)
@@ -77,7 +82,7 @@ def create_seres_model_element(
             model_element = ObjectType()
             model_element.identifier = identifier
             model_element.dct_identifier = identifier
-            model_element.title = {"nb": data.prefixed_name}
+            model_element.title = {"nb": first_character_upper_case(data.prefixed_name)}
 
         if hasattr(data, "attributes"):
             for attribute_key in data.attributes:
@@ -107,10 +112,12 @@ def create_seres_model_property(
         model_property = Attribute()
 
     if model_property and hasattr(data, "prefixed_name") and data.prefixed_name:
-        identifier = uri_identifier(data, model_namespace)
+        identifier = uri_identifier(data, model_namespace, False)
         if identifier:
             model_property.identifier = identifier
-            model_property.title = {"nb": data.prefixed_name}
+            model_property.title = {
+                "nb": first_character_lower_case(data.prefixed_name)
+            }
 
             type_ref_data = None
             if hasattr(data, "type") and data.type is not None:
@@ -119,7 +126,9 @@ def create_seres_model_property(
                 type_ref_data = data.ref
 
             if hasattr(type_ref_data, "primitive_type"):
-                type_ref_identifier = uri_identifier(type_ref_data, model_namespace)
+                type_ref_identifier = uri_identifier(
+                    type_ref_data, model_namespace, True
+                )
                 if type_ref_identifier:
                     if "http://www.w3.org/2001/XMLSchema#" in type_ref_identifier:
                         type_ref = create_simple_type(type_ref_data, model_namespace)
@@ -129,7 +138,9 @@ def create_seres_model_property(
                     model_property.has_simple_type = type_ref
             elif type_ref_data and type_ref_data.prefixed_name:
                 type_ref = ObjectType()
-                type_ref.identifier = uri_identifier(type_ref_data, model_namespace)
+                type_ref.identifier = uri_identifier(
+                    type_ref_data, model_namespace, True
+                )
                 if type_ref.identifier:
                     model_property.has_type.append(type_ref)
 
