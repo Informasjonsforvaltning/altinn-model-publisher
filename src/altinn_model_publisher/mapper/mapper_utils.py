@@ -86,11 +86,8 @@ def uri_identifier(
 ) -> Optional[str]:
     """Create URI-identifier from namespace and name."""
     identifier = None
-    seres_guid = extract_seres_guid(data)
 
-    if seres_guid:
-        identifier = seres_guid
-    elif hasattr(data, "prefixed_name") and data.prefixed_name:
+    if hasattr(data, "prefixed_name") and data.prefixed_name:
         if "xs:" in data.prefixed_name or "xsd:" in data.prefixed_name:
             identifier = xsd_uri_identifier(data)
         else:

@@ -3112,11 +3112,6 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     xsd:maxOccurs 1 ;
     ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/Poststed> .
 
-<http://seres.no/guid/Finanstilsynet/Dataegenskap/utstedertype/445918> a ns1:Attribute ;
-    dct:title "utstedertype"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Datakomplekstype/Verdipapirutsteder/446029> .
-
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286" ;
     dct:title "Adresselinje1"@nb ;
@@ -4314,6 +4309,180 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "guid"@nb ;
     ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#String> .
 
+<http://seres.no/guid/Finanstilsynet/Datakomplekstype/Verdipapirutsteder/446029> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Datakomplekstype/Verdipapirutsteder/446029" ;
+    dct:title "Verdipapirutsteder"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Adresse/660282> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Adresse/660282" ;
+    dct:title "Adresse"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/AlternativeResultatmål/664869> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/AlternativeResultatmål/664869" ;
+    dct:title "AlternativeResultatmaal"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/AndreForhold/445989> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/AndreForhold/445989" ;
+    dct:title "AndreForhold"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Egenkapital/445957> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Egenkapital/445957" ;
+    dct:title "Egenkapital"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/ForpliktelseAvsetning/445999> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/ForpliktelseAvsetning/445999" ;
+    dct:title "ForpliktelseAvsetning"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771887> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771887" ;
+    dct:title "Ifrs15vurderinger"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771901> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771901" ;
+    dct:title "Ifrs15"@nb ;
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15kategorier/771957>,
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15vurderinger/771900> .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15kategorier/771966> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15kategorier/771966" ;
+    dct:title "Ifrs15kategorier"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16/771886> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16/771886" ;
+    dct:title "Ifrs16"@nb ;
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterleietaker/771981>,
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterutleiereksterne/771983> .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16leiekontrakterleietaker/771971> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16leiekontrakterleietaker/771971" ;
+    dct:title "Ifrs16leiekontrakterleietaker"@nb ;
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurderinger/771970>,
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurdertikkeeffekt/771976> .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16utleiereksterne/771938> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16utleiereksterne/771938" ;
+    dct:title "Ifrseffekt"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16vurdertikkeeffekt/771917> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16vurdertikkeeffekt/771917" ;
+    dct:title "Ifrs16vurdertikkeeffekt"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs9/771943> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs9/771943" ;
+    dct:title "Ifrs9"@nb ;
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrseffekt/771942> .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrsandre/771941> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrsandre/771941" ;
+    dct:title "Ifrsandre"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifsr16vurderinger/771929> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifsr16vurderinger/771929" ;
+    dct:title "Ifrs16vurderinger"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/ImmateriellEiendel/445946> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/ImmateriellEiendel/445946" ;
+    dct:title "ImmateriellEiendel"@nb ;
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utsattSkattefordel/445942>,
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utviklingsutgift/445941> .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Innsender/664850> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Innsender/664850" ;
+    dct:title "Innsender"@nb ;
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/adresse/664847> .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson1/637652> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson1/637652" ;
+    dct:title "Kontaktperson1"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson2/637647> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson2/637647" ;
+    dct:title "Kontaktperson2"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontantstrøm/445910> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontantstrøm/445910" ;
+    dct:title "Kontantstroem"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/MarkedsverdibasertEiendel/445974> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/MarkedsverdibasertEiendel/445974" ;
+    dct:title "MarkedsverdibasertEiendel"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Nedskriving/445929> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Nedskriving/445929" ;
+    dct:title "Nedskriving"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Organisasjonsforhold/445936> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Organisasjonsforhold/445936" ;
+    dct:title "Organisasjonsforhold"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Periode/664925> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Periode/664925" ;
+    dct:title "Periode"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapportering/664846> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapportering/664846" ;
+    dct:title "Rapportering"@nb ;
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson1/664845>,
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson2/664844>,
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/periode/664926>,
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapporteringsregisteret/664900> .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapporteringsregsregisteret/660291> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapporteringsregsregisteret/660291" ;
+    dct:title "Rapporteringsregisteret"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Regnskap/445940> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Regnskap/445940" ;
+    dct:title "Regnskap"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/RentepapirerType/665072> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/RentepapirerType/665072" ;
+    dct:title "RentepapirerType"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Restruktureringsavsetning/446014> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Restruktureringsavsetning/446014" ;
+    dct:title "Restruktureringsavsetning"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Resultatpost/445965> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Resultatpost/445965" ;
+    dct:title "Resultatpost"@nb ;
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontantstrøm/445962>,
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/nedskriving/445958> .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsberetning/600181> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsberetning/600181" ;
+    dct:title "Revisjonsberetning"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsutvalg/622409> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsutvalg/622409" ;
+    dct:title "Revisjonsutvalg"@nb ;
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgFaktorer/622399>,
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgKriterier/622403> .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgFaktorer/622389> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgFaktorer/622389" ;
+    dct:title "RevisjonsutvalgFaktorer"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgKriterier/622398> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgKriterier/622398" ;
+    dct:title "RevisjonsutvalgKriterier"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Skattefordel/445982> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Skattefordel/445982" ;
+    dct:title "Skattefordel"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Utviklingsutgift/446018> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Utviklingsutgift/446018" ;
+    dct:title "Utviklingsutgift"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Virksomhetssammenslutninger/445923> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Virksomhetssammenslutninger/445923" ;
+    dct:title "Virksomhetssammenslutninger"@nb .
+
+<http://seres.no/guid/Finanstilsynet/Dataobjekttype/ifrs16leiekontrakterutleiereksterne/771975> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/ifrs16leiekontrakterutleiereksterne/771975" ;
+    dct:title "Ifrs16leiekontrakterutleiereksterne"@nb .
+
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114" ;
     dct:title "KRT-1003v3_M"@nb ;
@@ -4750,229 +4919,32 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "guid"@nb ;
     ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#String> .
 
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/adresse/664847> a ns1:Attribute ;
-    dct:title "adresse"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Adresse/660282> .
+<http://seres.no/guid/NAV/Datakomplekstype/data/634511> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/NAV/Datakomplekstype/data/634511" ;
+    dct:title "Data"@nb .
 
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/alternativeResultatmål/664901> a ns1:Attribute ;
-    dct:title "alternativeResultatmaal"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/AlternativeResultatmål/664869> .
+<http://seres.no/guid/NAV/Datakomplekstype/dato/634507> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/NAV/Datakomplekstype/dato/634507" ;
+    dct:title "Dato"@nb .
 
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/andreForhold/446000> a ns1:Attribute ;
-    dct:title "andreForhold"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/AndreForhold/445989> .
+<http://seres.no/guid/NAV/Datakomplekstype/geografiskOmraadeMedIndikatordata/634503> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/NAV/Datakomplekstype/geografiskOmraadeMedIndikatordata/634503" ;
+    dct:title "GeografiskOmraadeMedIndikatordata"@nb ;
+    ns1:hasProperty <http://seres.no/guid/NAV/DataTypeegenskap/identikatordata/634501> .
 
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/egenkapital/446002> a ns1:Attribute ;
-    dct:title "egenkapital"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Egenkapital/445957> .
+<http://seres.no/guid/NAV/Datakomplekstype/identikatordata/634500> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/NAV/Datakomplekstype/identikatordata/634500" ;
+    dct:title "Indikatordata"@nb ;
+    ns1:hasProperty <http://seres.no/guid/NAV/DataTypeegenskap/data/634499> .
 
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/forpliktelseAvsetning/446004> a ns1:Attribute ;
-    dct:title "forpliktelseAvsetning"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/ForpliktelseAvsetning/445999> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15/771902> a ns1:Attribute ;
-    dct:title "ifrs15"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771901> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15kategorier/771957> a ns1:Attribute ;
-    dct:title "ifrs15kategorier"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15kategorier/771966> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15vurderinger/771900> a ns1:Attribute ;
-    dct:title "ifrs15vurderinger"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771887> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16/771888> a ns1:Attribute ;
-    dct:title "ifrs16"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16/771886> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterleietaker/771981> a ns1:Attribute ;
-    dct:title "ifrs16leiekontrakterleietaker"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16leiekontrakterleietaker/771971> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterutleiereksterne/771983> a ns1:Attribute ;
-    dct:title "ifrs16leiekontrakterutleiereksterne"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/ifrs16leiekontrakterutleiereksterne/771975> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurderinger/771970> a ns1:Attribute ;
-    dct:title "ifrs16vurderinger"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifsr16vurderinger/771929> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurdertikkeeffekt/771976> a ns1:Attribute ;
-    dct:title "ifrs16vurdertikkeeffekt"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16vurdertikkeeffekt/771917> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs9/771947> a ns1:Attribute ;
-    dct:title "ifrs9"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs9/771943> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrsandre/771950> a ns1:Attribute ;
-    dct:title "ifrsandre"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrsandre/771941> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrseffekt/771942> a ns1:Attribute ;
-    dct:title "ifrseffekt"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16utleiereksterne/771938> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/immatriellEiendel/446005> a ns1:Attribute ;
-    dct:title "immatriellEiendel"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/ImmateriellEiendel/445946> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/innsender/664852> a ns1:Attribute ;
-    dct:title "innsender"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Innsender/664850> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson1/664845> a ns1:Attribute ;
-    dct:title "kontaktperson1"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson1/637652> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson2/664844> a ns1:Attribute ;
-    dct:title "kontaktperson2"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson2/637647> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontantstrøm/445962> a ns1:Attribute ;
-    dct:title "kontantstroem"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontantstrøm/445910> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/markedsverdibasertEiendel/446006> a ns1:Attribute ;
-    dct:title "markedsverdibasertEiendel"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/MarkedsverdibasertEiendel/445974> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/nedskriving/445958> a ns1:Attribute ;
-    dct:title "nedskriving"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Nedskriving/445929> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/organisasjonsforhold/446008> a ns1:Attribute ;
-    dct:title "organisasjonsforhold"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Organisasjonsforhold/445936> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/periode/664926> a ns1:Attribute ;
-    dct:title "periode"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Periode/664925> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapportering/664851> a ns1:Attribute ;
-    dct:title "rapportering"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapportering/664846> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapporteringsregisteret/664900> a ns1:Attribute ;
-    dct:title "rapporteringsregisteret"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapporteringsregsregisteret/660291> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/regnskap/445951> a ns1:Attribute ;
-    dct:title "regnskap"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Regnskap/445940> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rentepapirertype/665073> a ns1:Attribute ;
-    dct:title "rentepapirertype"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/RentepapirerType/665072> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/restruktureringsavsetning/446003> a ns1:Attribute ;
-    dct:title "restruktureringsavsetning"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Restruktureringsavsetning/446014> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/resultatpost/446007> a ns1:Attribute ;
-    dct:title "resultatpost"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Resultatpost/445965> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsberetning/600187> a ns1:Attribute ;
-    dct:title "revisjonsberetning"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsberetning/600181> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalg/622454> a ns1:Attribute ;
-    dct:title "revisjonsutvalg"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsutvalg/622409> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgFaktorer/622399> a ns1:Attribute ;
-    dct:title "revisjonsutvalgFaktorer"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgFaktorer/622389> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgKriterier/622403> a ns1:Attribute ;
-    dct:title "revisjonsutvalgKriterier"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgKriterier/622398> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utsattSkattefordel/445942> a ns1:Attribute ;
-    dct:title "utsattSkattefordel"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Skattefordel/445982> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utviklingsutgift/445941> a ns1:Attribute ;
-    dct:title "utviklingsutgift"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Utviklingsutgift/446018> .
-
-<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/virksomhetssammenslutninger/446001> a ns1:Attribute ;
-    dct:title "virksomhetssammenslutninger"@nb ;
-    xsd:maxOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Virksomhetssammenslutninger/445923> .
-
-<http://seres.no/guid/NAV/DataTypeegenskap/data/634499> a ns1:Attribute ;
-    dct:title "data"@nb ;
-    xsd:minOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/NAV/Datakomplekstype/data/634511> .
-
-<http://seres.no/guid/NAV/DataTypeegenskap/identikatordata/634501> a ns1:Attribute ;
-    dct:title "indikatordata"@nb ;
-    xsd:maxOccurs 1 ;
-    xsd:minOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/NAV/Datakomplekstype/identikatordata/634500> .
-
-<http://seres.no/guid/NAV/Dataegenskap/dato/634644> a ns1:Attribute ;
-    dct:title "dato"@nb ;
-    xsd:maxOccurs 1 ;
-    xsd:minOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/NAV/Datakomplekstype/dato/634507> .
-
-<http://seres.no/guid/NAV/Dataegenskap/geografiskOmraadeMedIndikatordata/634643> a ns1:Attribute ;
-    dct:title "geografiskOmraadeMedIndikatordata"@nb ;
-    xsd:maxOccurs 1 ;
-    xsd:minOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/NAV/Datakomplekstype/geografiskOmraadeMedIndikatordata/634503> .
+<http://seres.no/guid/NAV/Dataobjekttype/fagsystem/634498> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/NAV/Dataobjekttype/fagsystem/634498" ;
+    dct:title "Fagsystem"@nb .
 
 <http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513" ;
     dct:title "Maalekort_M"@nb ;
     ns1:hasProperty <http://seres.no/guid/NAV/Meldingsdel/skjema/634646> .
-
-<http://seres.no/guid/NAV/Relasjonsegenskap/fagsystem/634645> a ns1:Attribute ;
-    dct:title "fagsystem"@nb ;
-    xsd:maxOccurs 1 ;
-    xsd:minOccurs 1 ;
-    ns1:hasType <http://seres.no/guid/NAV/Dataobjekttype/fagsystem/634498> .
 
 <http://seres.no/guid/ORDataenkeltype/EgenkapitalMorforetaketsAksjeeiere-34067/374150> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/ORDataenkeltype/EgenkapitalMorforetaketsAksjeeiere-34067/374150" ;
@@ -5734,201 +5706,273 @@ xsd: a ns1:ObjectType .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/Kontaktadresse> a ns1:ObjectType .
 
-<http://seres.no/guid/Finanstilsynet/Datakomplekstype/Verdipapirutsteder/446029> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Datakomplekstype/Verdipapirutsteder/446029" ;
-    dct:title "Verdipapirutsteder"@nb .
+<http://seres.no/guid/Finanstilsynet/Dataegenskap/utstedertype/445918> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "utstedertype"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Dataegenskap/utstedertype/445918> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Adresse/660282> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Adresse/660282" ;
-    dct:title "Adresse"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/adresse/664847> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "adresse"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/adresse/664847> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/AlternativeResultatmål/664869> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/AlternativeResultatmål/664869" ;
-    dct:title "AlternativeResultatmaal"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/alternativeResultatmål/664901> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "alternativeResultatmaal"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/alternativeResultatmål/664901> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/AndreForhold/445989> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/AndreForhold/445989" ;
-    dct:title "AndreForhold"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/andreForhold/446000> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "andreForhold"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/andreForhold/446000> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Egenkapital/445957> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Egenkapital/445957" ;
-    dct:title "Egenkapital"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/egenkapital/446002> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "egenkapital"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/egenkapital/446002> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/ForpliktelseAvsetning/445999> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/ForpliktelseAvsetning/445999" ;
-    dct:title "ForpliktelseAvsetning"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/forpliktelseAvsetning/446004> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "forpliktelseAvsetning"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/forpliktelseAvsetning/446004> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771887> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771887" ;
-    dct:title "Ifrs15vurderinger"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15/771902> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrs15"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15/771902> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771901> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771901" ;
-    dct:title "Ifrs15"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15kategorier/771957>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15vurderinger/771900> .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15kategorier/771957> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrs15kategorier"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15kategorier/771957> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15kategorier/771966> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15kategorier/771966" ;
-    dct:title "Ifrs15kategorier"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15vurderinger/771900> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrs15vurderinger"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15vurderinger/771900> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16/771886> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16/771886" ;
-    dct:title "Ifrs16"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterleietaker/771981>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterutleiereksterne/771983> .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16/771888> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrs16"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16/771888> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16leiekontrakterleietaker/771971> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16leiekontrakterleietaker/771971" ;
-    dct:title "Ifrs16leiekontrakterleietaker"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurderinger/771970>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurdertikkeeffekt/771976> .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterleietaker/771981> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrs16leiekontrakterleietaker"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterleietaker/771981> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16utleiereksterne/771938> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16utleiereksterne/771938" ;
-    dct:title "Ifrseffekt"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterutleiereksterne/771983> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrs16leiekontrakterutleiereksterne"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterutleiereksterne/771983> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16vurdertikkeeffekt/771917> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16vurdertikkeeffekt/771917" ;
-    dct:title "Ifrs16vurdertikkeeffekt"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurderinger/771970> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrs16vurderinger"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurderinger/771970> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs9/771943> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs9/771943" ;
-    dct:title "Ifrs9"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrseffekt/771942> .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurdertikkeeffekt/771976> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrs16vurdertikkeeffekt"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurdertikkeeffekt/771976> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrsandre/771941> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrsandre/771941" ;
-    dct:title "Ifrsandre"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs9/771947> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrs9"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs9/771947> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifsr16vurderinger/771929> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifsr16vurderinger/771929" ;
-    dct:title "Ifrs16vurderinger"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrsandre/771950> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrsandre"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrsandre/771950> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/ImmateriellEiendel/445946> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/ImmateriellEiendel/445946" ;
-    dct:title "ImmateriellEiendel"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utsattSkattefordel/445942>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utviklingsutgift/445941> .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrseffekt/771942> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "ifrseffekt"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrseffekt/771942> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Innsender/664850> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Innsender/664850" ;
-    dct:title "Innsender"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/adresse/664847> .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/immatriellEiendel/446005> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "immatriellEiendel"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/immatriellEiendel/446005> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson1/637652> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson1/637652" ;
-    dct:title "Kontaktperson1"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/innsender/664852> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "innsender"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/innsender/664852> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson2/637647> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson2/637647" ;
-    dct:title "Kontaktperson2"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson1/664845> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "kontaktperson1"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson1/664845> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontantstrøm/445910> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontantstrøm/445910" ;
-    dct:title "Kontantstroem"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson2/664844> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "kontaktperson2"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson2/664844> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/MarkedsverdibasertEiendel/445974> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/MarkedsverdibasertEiendel/445974" ;
-    dct:title "MarkedsverdibasertEiendel"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontantstrøm/445962> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "kontantstroem"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontantstrøm/445962> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Nedskriving/445929> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Nedskriving/445929" ;
-    dct:title "Nedskriving"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/markedsverdibasertEiendel/446006> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "markedsverdibasertEiendel"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/markedsverdibasertEiendel/446006> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Organisasjonsforhold/445936> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Organisasjonsforhold/445936" ;
-    dct:title "Organisasjonsforhold"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/nedskriving/445958> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "nedskriving"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/nedskriving/445958> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Periode/664925> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Periode/664925" ;
-    dct:title "Periode"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/organisasjonsforhold/446008> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "organisasjonsforhold"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/organisasjonsforhold/446008> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapportering/664846> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapportering/664846" ;
-    dct:title "Rapportering"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson1/664845>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson2/664844>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/periode/664926>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapporteringsregisteret/664900> .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/periode/664926> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "periode"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/periode/664926> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapporteringsregsregisteret/660291> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapporteringsregsregisteret/660291" ;
-    dct:title "Rapporteringsregisteret"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapportering/664851> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "rapportering"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapportering/664851> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Regnskap/445940> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Regnskap/445940" ;
-    dct:title "Regnskap"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapporteringsregisteret/664900> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "rapporteringsregisteret"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapporteringsregisteret/664900> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/RentepapirerType/665072> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/RentepapirerType/665072" ;
-    dct:title "RentepapirerType"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/regnskap/445951> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "regnskap"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/regnskap/445951> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Restruktureringsavsetning/446014> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Restruktureringsavsetning/446014" ;
-    dct:title "Restruktureringsavsetning"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rentepapirertype/665073> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "rentepapirertype"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rentepapirertype/665073> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Resultatpost/445965> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Resultatpost/445965" ;
-    dct:title "Resultatpost"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontantstrøm/445962>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/nedskriving/445958> .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/restruktureringsavsetning/446003> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "restruktureringsavsetning"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/restruktureringsavsetning/446003> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsberetning/600181> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsberetning/600181" ;
-    dct:title "Revisjonsberetning"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/resultatpost/446007> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "resultatpost"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/resultatpost/446007> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsutvalg/622409> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsutvalg/622409" ;
-    dct:title "Revisjonsutvalg"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgFaktorer/622399>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgKriterier/622403> .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsberetning/600187> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "revisjonsberetning"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsberetning/600187> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgFaktorer/622389> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgFaktorer/622389" ;
-    dct:title "RevisjonsutvalgFaktorer"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalg/622454> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "revisjonsutvalg"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalg/622454> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgKriterier/622398> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgKriterier/622398" ;
-    dct:title "RevisjonsutvalgKriterier"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgFaktorer/622399> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "revisjonsutvalgFaktorer"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgFaktorer/622399> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Skattefordel/445982> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Skattefordel/445982" ;
-    dct:title "Skattefordel"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgKriterier/622403> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "revisjonsutvalgKriterier"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgKriterier/622403> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Utviklingsutgift/446018> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Utviklingsutgift/446018" ;
-    dct:title "Utviklingsutgift"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utsattSkattefordel/445942> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "utsattSkattefordel"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utsattSkattefordel/445942> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/Virksomhetssammenslutninger/445923> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/Virksomhetssammenslutninger/445923" ;
-    dct:title "Virksomhetssammenslutninger"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utviklingsutgift/445941> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "utviklingsutgift"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utviklingsutgift/445941> .
 
-<http://seres.no/guid/Finanstilsynet/Dataobjekttype/ifrs16leiekontrakterutleiereksterne/771975> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/ifrs16leiekontrakterutleiereksterne/771975" ;
-    dct:title "Ifrs16leiekontrakterutleiereksterne"@nb .
+<http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/virksomhetssammenslutninger/446001> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "virksomhetssammenslutninger"@nb ;
+    xsd:maxOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/virksomhetssammenslutninger/446001> .
 
-<http://seres.no/guid/NAV/Datakomplekstype/data/634511> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/NAV/Datakomplekstype/data/634511" ;
-    dct:title "Data"@nb .
+<http://seres.no/guid/NAV/DataTypeegenskap/data/634499> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "data"@nb ;
+    xsd:minOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/NAV/DataTypeegenskap/data/634499> .
 
-<http://seres.no/guid/NAV/Datakomplekstype/dato/634507> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/NAV/Datakomplekstype/dato/634507" ;
-    dct:title "Dato"@nb .
+<http://seres.no/guid/NAV/DataTypeegenskap/identikatordata/634501> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "indikatordata"@nb ;
+    xsd:maxOccurs 1 ;
+    xsd:minOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/NAV/DataTypeegenskap/identikatordata/634501> .
 
-<http://seres.no/guid/NAV/Datakomplekstype/geografiskOmraadeMedIndikatordata/634503> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/NAV/Datakomplekstype/geografiskOmraadeMedIndikatordata/634503" ;
-    dct:title "GeografiskOmraadeMedIndikatordata"@nb ;
-    ns1:hasProperty <http://seres.no/guid/NAV/DataTypeegenskap/identikatordata/634501> .
+<http://seres.no/guid/NAV/Dataegenskap/dato/634644> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "dato"@nb ;
+    xsd:maxOccurs 1 ;
+    xsd:minOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/NAV/Dataegenskap/dato/634644> .
 
-<http://seres.no/guid/NAV/Datakomplekstype/identikatordata/634500> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/NAV/Datakomplekstype/identikatordata/634500" ;
-    dct:title "Indikatordata"@nb ;
-    ns1:hasProperty <http://seres.no/guid/NAV/DataTypeegenskap/data/634499> .
+<http://seres.no/guid/NAV/Dataegenskap/geografiskOmraadeMedIndikatordata/634643> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "geografiskOmraadeMedIndikatordata"@nb ;
+    xsd:maxOccurs 1 ;
+    xsd:minOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/NAV/Dataegenskap/geografiskOmraadeMedIndikatordata/634643> .
 
-<http://seres.no/guid/NAV/Dataobjekttype/fagsystem/634498> a ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/NAV/Dataobjekttype/fagsystem/634498" ;
-    dct:title "Fagsystem"@nb .
+<http://seres.no/guid/NAV/Relasjonsegenskap/fagsystem/634645> a ns1:Attribute,
+        ns1:ObjectType ;
+    dct:title "fagsystem"@nb ;
+    xsd:maxOccurs 1 ;
+    xsd:minOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/NAV/Relasjonsegenskap/fagsystem/634645> .
 
 <https://altinn.fellesdatakatalog.digdir.no#Integer> a ns1:SimpleType ;
     dct:identifier "https://altinn.fellesdatakatalog.digdir.no#Integer" ;
