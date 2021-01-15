@@ -149,12 +149,13 @@ def create_seres_model_property(
             elif type_ref_data and type_ref_data.prefixed_name:
                 type_ref = ObjectType()
                 seres_guid = extract_seres_guid(data)
-                type_ref.identifier = (
+                type_ref_identifier = (
                     seres_guid
                     if seres_guid
                     else uri_identifier(type_ref_data, model_namespace, True)
                 )
-                if type_ref.identifier:
+                if type_ref_identifier:
+                    type_ref.identifier = type_ref_identifier
                     model_property.has_type.append(type_ref)
 
             if hasattr(data, "occurs"):
