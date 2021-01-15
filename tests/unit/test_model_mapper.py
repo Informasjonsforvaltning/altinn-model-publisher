@@ -6,18 +6,20 @@ from modelldcatnotordf.modelldcatno import (
 import pytest
 from xmlschema import XMLSchema
 
-from altinn_model_publisher.service.altinn_model_mapper import (
-    create_model_element,
-    extract_title,
+from altinn_model_publisher.mapper.mapper_utils import (
+    extract_model_title,
     uri_safe_string,
 )
+from altinn_model_publisher.mapper.model_mapper import create_model_element
+from altinn_model_publisher.mapper.or_mapper import create_or_model_element
+from altinn_model_publisher.mapper.seres_mapper import create_seres_model_element
 from ..test_data import test_xsd
 
 
 @pytest.mark.unit
 def test_form_name_prioritized_as_title() -> None:
     """Should return form name."""
-    endpoint = extract_title(
+    endpoint = extract_model_title(
         {
             "forms_meta": {"FormName": "Form name"},
             "service_meta": {"ServiceName": "Service name"},
@@ -30,7 +32,7 @@ def test_form_name_prioritized_as_title() -> None:
 @pytest.mark.unit
 def test_service_name_added_as_title_when_form_name_missing() -> None:
     """Should return service name when form name missing."""
-    endpoint = extract_title(
+    endpoint = extract_model_title(
         {"forms_meta": {}, "service_meta": {"ServiceName": "Service name"}}
     )
 
@@ -51,10 +53,44 @@ def test_sets_correct_class_for_different_xsd_types() -> None:
         schema.types["DatoExtension"], "http://namespace.no/"
     )
 
+    or_simple_type = create_or_model_element(
+        schema.types["Dato"], "http://namespace.no/"
+    )
+    or_complex_type = create_or_model_element(
+        schema.types["Tidsrom"], "http://namespace.no/"
+    )
+    or_complex_list_type = create_or_model_element(
+        schema.types["TidsromListe"], "http://namespace.no/"
+    )
+    or_extension_type = create_or_model_element(
+        schema.types["DatoExtension"], "http://namespace.no/"
+    )
+
+    seres_simple_type = create_seres_model_element(
+        schema.types["Dato"], "http://namespace.no/"
+    )
+    seres_complex_type = create_seres_model_element(
+        schema.types["Tidsrom"], "http://namespace.no/"
+    )
+    seres_complex_list_type = create_seres_model_element(
+        schema.types["TidsromListe"], "http://namespace.no/"
+    )
+    seres_extension_type = create_seres_model_element(
+        schema.types["DatoExtension"], "http://namespace.no/"
+    )
+
     assert isinstance(simple_type, SimpleType)
+    assert isinstance(or_simple_type, SimpleType)
+    assert isinstance(seres_simple_type, SimpleType)
     assert isinstance(complex_type, ObjectType)
+    assert isinstance(or_complex_type, ObjectType)
+    assert isinstance(seres_complex_type, ObjectType)
     assert isinstance(complex_list_type, ObjectType)
+    assert isinstance(or_complex_list_type, ObjectType)
+    assert isinstance(seres_complex_list_type, ObjectType)
     assert isinstance(extension_type, ObjectType)
+    assert isinstance(or_extension_type, ObjectType)
+    assert isinstance(seres_extension_type, ObjectType)
 
 
 @pytest.mark.unit

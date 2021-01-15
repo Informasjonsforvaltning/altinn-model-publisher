@@ -1,0 +1,27 @@
+{
+  "id" : "3fdc21c1-1fc1-401e-990c-bad2ac60cab5",
+  "name" : "api_metadata_formtask_4711_1",
+  "request" : {
+    "url" : "/api/metadata/formtask/4711/1",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"ServiceOwnerCode\":\"NAV\",\"ServiceOwnerName\":\"NAV (Arbeids- og velferdforvaltinga)\",\"ServiceName\":\"Målekort\",\"ServiceCode\":\"4711\",\"ServiceEditionCode\":1,\"ValidFrom\":\"2017-11-20T12:00:00\",\"ValidTo\":\"2199-12-06T12:30:00\",\"ServiceType\":\"FormTask\",\"RestEnabled\":false,\"FormsMetaData\":[{\"FormID\":10523,\"FormName\":\"Målekortskjema \",\"DataFormatProviderType\":\"Altinn\",\"DataFormatID\":\"5466\",\"DataFormatVersion\":41779,\"IsOnlyXsdValidation\":false,\"FormType\":\"MainForm\"}],\"EUSEnabled\":true,\"EnterpriseUserEnabled\":true,\"ProcessSteps\":[{\"SequenceNumber\":1,\"Name\":\"FormFilling\",\"SecurityLevel\":3},{\"SequenceNumber\":2,\"Name\":\"SendIn\",\"SecurityLevel\":3}]}",
+    "headers" : {
+      "Cache-Control" : "no-cache",
+      "Pragma" : "no-cache",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Expires" : "-1",
+      "Vary" : "Accept-Encoding",
+      "Server" : "Microsoft-IIS/8.5",
+      "P3P" : "CP=\"CAO PSA OUR LEG NAV\"",
+      "Strict-Transport-Security" : "max-age=31536000",
+      "Date" : "Thu, 14 Jan 2021 14:04:56 GMT",
+      "Set-Cookie" : "BIGipServer~autoprov~aiport.ai-pr-port.ai-prod.osl.basefarm.net-85=rd1o00000000000000000000ffff0a2b4460o85; path=/; Httponly; Secure"
+    }
+  },
+  "uuid" : "3fdc21c1-1fc1-401e-990c-bad2ac60cab5",
+  "persistent" : true,
+  "insertionIndex" : 10
+}
