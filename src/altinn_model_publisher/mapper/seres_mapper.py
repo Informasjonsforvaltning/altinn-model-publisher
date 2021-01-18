@@ -154,7 +154,7 @@ def create_seres_model_property(
                     model_property.has_simple_type = type_ref
             elif type_ref_data and type_ref_data.prefixed_name:
                 type_ref = ObjectType()
-                seres_guid = extract_seres_guid(data)
+                seres_guid = extract_seres_guid(type_ref_data)
                 type_ref_identifier = (
                     seres_guid
                     if seres_guid
