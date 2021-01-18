@@ -14,7 +14,7 @@ import requests
 from requests.exceptions import ConnectionError
 
 from altinn_model_publisher import create_app
-from altinn_model_publisher.service.altinn_service import UPDATE_IN_PROGRESS
+from altinn_model_publisher.config import Config
 from .test_data import test_altinn_catalog_turtle
 
 load_dotenv()
@@ -170,7 +170,7 @@ def mock_running_update_status(mocker: MockFixture) -> Mock:
     mock = mocker.patch(
         "altinn_model_publisher.service.altinn_service.read_update_status"
     )
-    mock.return_value = UPDATE_IN_PROGRESS
+    mock.return_value = Config.update_in_progress()
     return mock
 
 
@@ -184,6 +184,6 @@ def mock_startup_save_status(mocker: MockFixture) -> Mock:
 @pytest.fixture
 def mock_non_test_environment(mocker: MockFixture) -> Mock:
     """Mock test environment check as non test."""
-    mock = mocker.patch("os.getenv")
-    mock.return_value = "prod"
+    mock = mocker.patch("altinn_model_publisher.config.Config.is_test")
+    mock.return_value = False
     return mock
