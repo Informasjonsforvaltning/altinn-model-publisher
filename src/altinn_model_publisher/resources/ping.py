@@ -2,9 +2,6 @@
 from aiohttp.web import Response, View
 
 
-PING_ROUTE = "/ping"
-
-
 class Ping(View):
     """Class representing ping resource."""
 

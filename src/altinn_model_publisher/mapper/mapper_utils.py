@@ -1,5 +1,4 @@
 """Utility methods for mapping process."""
-import os
 import re
 from typing import Dict, Optional
 
@@ -7,22 +6,15 @@ from datacatalogtordf import Agent
 from modelldcatnotordf.modelldcatno import SimpleType
 from xmlschema import XMLSchema
 
+from altinn_model_publisher.config import Config
 from altinn_model_publisher.organizations.organizations import map_shortname_to_org
-
-ORG_URI = os.getenv(
-    "ORGANIZATION_CATALOGUE_URI",
-    "https://organization-catalogue.fellesdatakatalog.digdir.no",
-)
-SELF_URI = os.getenv(
-    "ALTINN_MODEL_PUBLISHER_URI", "https://altinn-model-publisher.digdir.no"
-)
 
 
 def create_model_uri_identifier(data: Dict) -> str:
     """Create a URI identifier for the model from relevant codes."""
     service = data["service_meta"]["ServiceCode"]
     data_format = data["forms_meta"]["DataFormatID"]
-    return f"""{SELF_URI}/models/{service}-{data_format}"""
+    return f"""{Config.self_uri()}/models/{service}-{data_format}"""
 
 
 def extract_model_title(data: Dict) -> Dict[str, str]:
@@ -42,7 +34,9 @@ def extract_model_publisher(data: Dict) -> Optional[Agent]:
         org = map_shortname_to_org(shortname)
         if org:
             publisher = Agent()
-            publisher.identifier = f"""{ORG_URI}/organizations/{org.orgnr}"""
+            publisher.identifier = (
+                f"""{Config.organizations_uri()}/organizations/{org.orgnr}"""
+            )
 
             publisher.name = {"nb": org.name}
             publisher.orgnr = org.orgnr
@@ -140,8 +134,8 @@ def create_simple_type(input_data: XMLSchema, model_namespace: str) -> SimpleTyp
     identifier = uri_identifier(data, model_namespace, True)
     if identifier and "http://www.w3.org/2001/XMLSchema#" in identifier:
         simple_type_name = first_character_upper_case(data.id)
-        simple_type.identifier = f"{SELF_URI}#{simple_type_name}"
-        simple_type.dct_identifier = f"{SELF_URI}#{simple_type_name}"
+        simple_type.identifier = f"{Config.self_uri()}#{simple_type_name}"
+        simple_type.dct_identifier = f"{Config.self_uri()}#{simple_type_name}"
         simple_type.title = {"en": simple_type_name}
         simple_type.type_definition_reference = identifier
     else:

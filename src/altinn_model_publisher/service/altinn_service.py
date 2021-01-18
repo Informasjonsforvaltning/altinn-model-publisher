@@ -1,11 +1,11 @@
 """Service layer module for modelldcat-ap-no compliant information models from altinn."""
 import logging
-import os
 from typing import Dict, List, Optional
 
 from datacatalogtordf.catalog import Catalog
 from modelldcatnotordf.modelldcatno import InformationModel
 
+from altinn_model_publisher.config import Config
 from altinn_model_publisher.mapper.model_mapper import map_model_from_dict
 from .altinn_cache_service import (
     read_catalog_from_cache,
@@ -17,13 +17,6 @@ from .altinn_client import (
     fetch_altinn_metadata,
     fetch_metadata_with_task_forms,
     get_xsd_data,
-)
-
-
-UPDATE_IN_PROGRESS = "update_in_progress"
-ORG_URI = os.getenv(
-    "ORGANIZATION_CATALOGUE_URI",
-    "https://organization-catalogue.fellesdatakatalog.digdir.no",
 )
 
 
@@ -88,7 +81,7 @@ def create_altinn_models_catalog(altinn_models: List[InformationModel]) -> Catal
     catalog = Catalog()
     catalog.identifier = "https://www.altinn.no/models/catalog"
     catalog.title = {"nb": "Altinn informasjonsmodellkatalog"}
-    catalog.publisher = f"""{ORG_URI}/organizations/991825827"""
+    catalog.publisher = f"""{Config.organizations_uri()}/organizations/991825827"""
 
     catalog.models = altinn_models
 
@@ -97,13 +90,13 @@ def create_altinn_models_catalog(altinn_models: List[InformationModel]) -> Catal
 
 async def update_altinn_models() -> str:
     """Update altinn models catalog."""
-    if await read_update_status() == UPDATE_IN_PROGRESS:
+    if await read_update_status() == Config.update_in_progress():
         logging.info("Update already in progress, new update run is cancelled")
-        return UPDATE_IN_PROGRESS
+        return Config.update_in_progress()
     else:
-        await save_update_status(UPDATE_IN_PROGRESS)
+        await save_update_status(Config.update_in_progress())
         await fetch_altinn_models_and_update_database()
-        await save_update_status("ready_to_update")
+        await save_update_status(Config.ready_to_update())
         return "updated"
 
 

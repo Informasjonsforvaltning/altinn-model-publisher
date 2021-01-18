@@ -1,15 +1,12 @@
 """Service layer module for http connections to altinn."""
 import logging
-import os
 from typing import Dict, List, Optional
 
 import requests
 from xmlschema import XMLSchema
 
+from altinn_model_publisher.config import Config
 from .altinn_endpoints import API_METADATA_ENDPOINT, forms_task_uri, xsd_uri
-
-
-ALTINN_URI = os.getenv("ALTINN_URI", "https://www.altinn.no")
 
 
 def fetch_altinn_metadata() -> List[Dict]:
@@ -56,7 +53,7 @@ def get_xsd_data(
     )
     if xsd_endpoint:
         try:
-            return XMLSchema(f"{ALTINN_URI}{xsd_endpoint}")
+            return XMLSchema(f"{Config.altinn_uri()}{xsd_endpoint}")
         except Exception as err:
             logging.error(f"Error occurred when parsing xsd from {xsd_endpoint}: {err}")
 
@@ -69,7 +66,9 @@ def altinn_get_request(
     """Altinn GET request for specified endpoint and headers."""
     if endpoint:
         try:
-            response = requests.get(f"""{ALTINN_URI}{endpoint}""", headers=headers)
+            response = requests.get(
+                f"""{Config.altinn_uri()}{endpoint}""", headers=headers
+            )
 
             response.raise_for_status()
 
