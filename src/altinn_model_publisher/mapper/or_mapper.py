@@ -3,6 +3,7 @@ from typing import List, Optional
 
 from modelldcatnotordf.modelldcatno import (
     Attribute,
+    Composition,
     InformationModel,
     ModelElement,
     ModelProperty,
@@ -58,11 +59,10 @@ def or_model_properties_from_content(
     if content_data:
         if isinstance(content_data, XsdGroup):
             for group_data in content_data:
-                model_properties.extend(
-                    or_model_properties_from_content(
-                        group_data, model_namespace, element_namespace
-                    )
+                group_prop = create_or_group_model_property(
+                    group_data, model_namespace, element_namespace
                 )
+                model_properties.append(group_prop)
         elif hasattr(content_data, "prefixed_name"):
             prop = create_or_model_property(
                 content_data, model_namespace, element_namespace
@@ -104,6 +104,19 @@ def create_or_model_element(
                 data.content, model_namespace, f"{identifier}/"
             )
             model_element.has_property.extend(content_properties)
+
+        if (
+            hasattr(data, "type")
+            and hasattr(data.type, "model_group")
+            and data.type.model_group
+        ):
+            for model_group_data in data.type.model_group:
+                model_property = create_or_group_model_property(
+                    model_group_data, model_namespace, f"{identifier}/"
+                )
+                if model_property:
+                    model_element.has_property.append(model_property)
+
     return model_element
 
 
@@ -154,4 +167,32 @@ def create_or_model_property(
             if hasattr(data, "occurs"):
                 model_property.min_occurs = data.occurs[0]
                 model_property.max_occurs = data.occurs[1]
+    return model_property
+
+
+def create_or_group_model_property(
+    data: XMLSchema, model_namespace: str, element_namespace: str
+) -> Optional[ModelProperty]:
+    """Create group Model Property."""
+    model_property = None
+    if hasattr(data, "prefixed_name") and data.prefixed_name:
+        if "-grp-" in data.prefixed_name:
+            model_property = Composition()
+        elif "-datadef-" in data.prefixed_name:
+            model_property = Attribute()
+
+        if model_property:
+            identifier = uri_identifier(data, element_namespace, False)
+            if identifier:
+                model_property.identifier = identifier
+                model_property.title = {
+                    "nb": first_character_lower_case(data.prefixed_name)
+                }
+
+                if hasattr(data, "primitive_type"):
+                    type_ref = SimpleType()
+                else:
+                    type_ref = ObjectType()
+                type_ref.identifier = uri_identifier(data, model_namespace, True)
+                model_property.has_type.append(type_ref)
     return model_property
