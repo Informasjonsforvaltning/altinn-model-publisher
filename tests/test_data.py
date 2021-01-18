@@ -1697,94 +1697,55 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "AArstall"@nb ;
     xsd:anyURI xsd:gYear .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon" ;
-    dct:title "AldersUfoereEtterlatteAvtalefestetOgKrigspensjon"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon/tidsrom> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon/Periode> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon/tidsrom> a ns1:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon/Periode> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjonGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjonGruppe" ;
     dct:title "AldersUfoereEtterlatteAvtalefestetOgKrigspensjonGruppe"@nb .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold" ;
-    dct:title "Arbeidsforhold"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/fartoey>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/permisjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/Fartoey> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/Permisjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/fartoey> a ns1:Attribute ;
     dct:title "fartoey"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/Fartoey> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fartoey> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/permisjon> a ns1:Attribute ;
     dct:title "permisjon"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/Permisjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Permisjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforholdstype> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforholdstype" ;
     dct:title "Arbeidsforholdstype"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift" ;
-    dct:title "Arbeidsgiveravgift"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/fradragIGrunnlagetForSone>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/fradragIGrunnlagetForUtenlandsk>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/loennOgGodtgjoerelse>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/tilskuddOgPremieTilPensjon>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/utenlandskeMedFastAvgiftsbeloep>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/utenlandskeMedSaerskiltProsentsats> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/FradragIGrunnlaget> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/FradragIGrunnlagetForUtenlandsk> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/UtenlandskeMedFastAvgiftsbeloep> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/UtenlandskeMedSaerskiltProsentsats> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/fradragIGrunnlagetForSone> a ns1:Attribute ;
     dct:title "fradragIGrunnlagetForSone"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/FradragIGrunnlaget> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlaget> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/fradragIGrunnlagetForUtenlandsk> a ns1:Attribute ;
     dct:title "fradragIGrunnlagetForUtenlandsk"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/FradragIGrunnlagetForUtenlandsk> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlagetForUtenlandsk> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/loennOgGodtgjoerelse> a ns1:Attribute ;
     dct:title "loennOgGodtgjoerelse"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/Arbeidsgiveravgiftsgrunnlag> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/tilskuddOgPremieTilPensjon> a ns1:Attribute ;
     dct:title "tilskuddOgPremieTilPensjon"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/Arbeidsgiveravgiftsgrunnlag> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/utenlandskeMedFastAvgiftsbeloep> a ns1:Attribute ;
     dct:title "utenlandskeMedFastAvgiftsbeloep"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/UtenlandskeMedFastAvgiftsbeloep> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedFastAvgiftsbeloep> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/utenlandskeMedSaerskiltProsentsats> a ns1:Attribute ;
     dct:title "utenlandskeMedSaerskiltProsentsats"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/UtenlandskeMedSaerskiltProsentsats> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag" ;
-    dct:title "Arbeidsgiveravgiftsgrunnlag"@nb .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedSaerskiltProsentsats> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsone> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsone" ;
@@ -1820,37 +1781,19 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BeskrivelseGruppe" ;
     dct:title "BeskrivelseGruppe"@nb .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Betalingsinformasjon> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Betalingsinformasjon" ;
-    dct:title "Betalingsinformasjon"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat" ;
-    dct:title "BilOgBaat"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat/spesifikasjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat/Spesifikasjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat/spesifikasjon> a ns1:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat/Spesifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaatGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaatGruppe" ;
     dct:title "BilOgBaatGruppe"@nb .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret" ;
-    dct:title "BonusFraForsvaret"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret/spesifikasjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret/Spesifikasjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret/spesifikasjon> a ns1:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret/Spesifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaretGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaretGruppe" ;
@@ -1860,10 +1803,6 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Boolsk" ;
     dct:title "Boolsk"@nb ;
     xsd:anyURI xsd:boolean .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/DagmammaIEgenBolig> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/DagmammaIEgenBolig" ;
-    dct:title "DagmammaIEgenBolig"@nb .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/DagmammaIEgenBoligGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/DagmammaIEgenBoligGruppe" ;
@@ -1892,8 +1831,6 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
         <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EDAG_M/dataFormatVersion>,
         <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EDAG_M/leveranse> .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EDAG_M/Leveranse> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EDAG_M/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
     ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#String> .
@@ -1910,27 +1847,16 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "leveranse"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EDAG_M/Leveranse> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode" ;
-    dct:title "Etterbetalingsperiode"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode/tidsrom> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode/Periode> a ns1:ObjectType .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode/tidsrom> a ns1:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode/Periode> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EtterbetalingsperiodeGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/EtterbetalingsperiodeGruppe" ;
     dct:title "EtterbetalingsperiodeGruppe"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fartoey> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fartoey" ;
-    dct:title "Fartoey"@nb .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fartsomraade> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fartsomraade" ;
@@ -1942,26 +1868,10 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Fordel"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Forskuddstrekk> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Forskuddstrekk" ;
-    dct:title "Forskuddstrekk"@nb .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Forskuddstrekksbeskrivelse> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Forskuddstrekksbeskrivelse" ;
     dct:title "Forskuddstrekksbeskrivelse"@nb ;
     xsd:anyURI xsd:string .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fradrag> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fradrag" ;
-    dct:title "Fradrag"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlaget> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlaget" ;
-    dct:title "FradragIGrunnlaget"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlagetForUtenlandsk> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlagetForUtenlandsk" ;
-    dct:title "FradragIGrunnlagetForUtenlandsk"@nb .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fradragsbeskrivelse> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fradragsbeskrivelse" ;
@@ -1993,24 +1903,9 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Identifikator"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/IdentifiserendeInformasjon> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/IdentifiserendeInformasjon" ;
-    dct:title "IdentifiserendeInformasjon"@nb .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntekt> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntekt" ;
     dct:title "Inntekt"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle" ;
-    dct:title "InntektAlle"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/bilinformasjon>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/spesifikasjon>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/tidsrom> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/Periode> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/Spesifikasjon> a ns1:ObjectType .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/bilinformasjon> a ns1:Attribute ;
     dct:title "bilinformasjon"@nb ;
@@ -2019,148 +1914,91 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/spesifikasjon> a ns1:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/Spesifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/tidsrom> a ns1:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/Periode> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektGruppe" ;
     dct:title "InntektGruppe"@nb .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet" ;
-    dct:title "Inntektsentitet"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/alleFelter>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/bilOgBaat>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/bonusFraForsvaret>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/dagmammaIEgenBolig>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/etterbetalingsperiode>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/inntektPaaNorskKontinentalsokkel>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/inntjeningsforhold>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/livrente>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/loennsinntekt>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/lottOgPart>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/naeringsinntekt>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/nettoloenn>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/pensjon>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/pensjonEllerTrygd>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/reiseKostOgLosji>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/tilleggsinformasjon>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/utenlandskArtist>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa1>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa2>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa3>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa4> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/BilOgBaat> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/BonusFraForsvaret> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/DagmammaIEgenBolig> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Etterbetalingsperiode> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/InntektAlle> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Inntjeningsforhold> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Livrente> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Loennsinntekt> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/LottOgPartInnenFiske> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Naeringsinntekt> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Nettoloennsordning> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/NorskKontinentalsokkel> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/PensjonEllerTrygd> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/ReiseKostOgLosji> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/UtenlandskArtist> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/alleFelter> a ns1:Attribute ;
     dct:title "alleFelter"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/InntektAlle> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/bilOgBaat> a ns1:Attribute ;
     dct:title "bilOgBaat"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/BilOgBaat> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/bonusFraForsvaret> a ns1:Attribute ;
     dct:title "bonusFraForsvaret"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/BonusFraForsvaret> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/dagmammaIEgenBolig> a ns1:Attribute ;
     dct:title "dagmammaIEgenBolig"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/DagmammaIEgenBolig> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/DagmammaIEgenBolig> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/etterbetalingsperiode> a ns1:Attribute ;
     dct:title "etterbetalingsperiode"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Etterbetalingsperiode> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/inntektPaaNorskKontinentalsokkel> a ns1:Attribute ;
     dct:title "inntektPaaNorskKontinentalsokkel"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/NorskKontinentalsokkel> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/inntjeningsforhold> a ns1:Attribute ;
     dct:title "inntjeningsforhold"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Inntjeningsforhold> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/livrente> a ns1:Attribute ;
     dct:title "livrente"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Livrente> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/loennsinntekt> a ns1:Attribute ;
     dct:title "loennsinntekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Loennsinntekt> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/lottOgPart> a ns1:Attribute ;
     dct:title "lottOgPart"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/LottOgPartInnenFiske> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LottOgPartInnenFiske> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/naeringsinntekt> a ns1:Attribute ;
     dct:title "naeringsinntekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Naeringsinntekt> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Naeringsinntekt> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/nettoloenn> a ns1:Attribute ;
     dct:title "nettoloenn"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/Nettoloennsordning> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/pensjon> a ns1:Attribute ;
     dct:title "pensjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/pensjonEllerTrygd> a ns1:Attribute ;
     dct:title "pensjonEllerTrygd"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/PensjonEllerTrygd> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygd> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/reiseKostOgLosji> a ns1:Attribute ;
     dct:title "reiseKostOgLosji"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/ReiseKostOgLosji> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/tilleggsinformasjon> a ns1:Attribute ;
     dct:title "tilleggsinformasjon"@nb ;
@@ -2169,7 +2007,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/utenlandskArtist> a ns1:Attribute ;
     dct:title "utenlandskArtist"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/UtenlandskArtist> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa1> a ns1:Attribute ;
     dct:title "valgNivaa1"@nb ;
@@ -2187,150 +2025,84 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "valgNivaa4"@nb ;
     ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#String> .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker" ;
-    dct:title "Inntektsmottaker"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/arbeidsforhold>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/forskuddstrekk>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/fradrag>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/identifiserendeInformasjon>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/inntekt>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/internasjonalIdentifikator>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/oppholdPaaSvalbardJanMayenOgBilandene>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/sjoefolksrelatertInformasjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/Arbeidsforhold> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/Forskuddstrekk> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/Fradrag> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/IdentifiserendeInformasjon> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/Inntektsentitet> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/InternasjonalIdentifikator> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/OppholdPaaSvalbardJanMayenOgBilandene> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/SjoefolksrelatertInformasjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/arbeidsforhold> a ns1:Attribute ;
     dct:title "arbeidsforhold"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/Arbeidsforhold> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/forskuddstrekk> a ns1:Attribute ;
     dct:title "forskuddstrekk"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/Forskuddstrekk> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Forskuddstrekk> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/fradrag> a ns1:Attribute ;
     dct:title "fradrag"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/Fradrag> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fradrag> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/identifiserendeInformasjon> a ns1:Attribute ;
     dct:title "identifiserendeInformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/IdentifiserendeInformasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/IdentifiserendeInformasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/inntekt> a ns1:Attribute ;
     dct:title "inntekt"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/Inntektsentitet> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/internasjonalIdentifikator> a ns1:Attribute ;
     dct:title "internasjonalIdentifikator"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/InternasjonalIdentifikator> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InternasjonalIdentifikator> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/oppholdPaaSvalbardJanMayenOgBilandene> a ns1:Attribute ;
     dct:title "oppholdPaaSvalbardJanMayenOgBilandene"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/OppholdPaaSvalbardJanMayenOgBilandene> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/OppholdPaaSvalbardJanMayenOgBilandene> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/sjoefolksrelatertInformasjon> a ns1:Attribute ;
     dct:title "sjoefolksrelatertInformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/SjoefolksrelatertInformasjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold" ;
-    dct:title "Inntjeningsforhold"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold/spesifikasjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold/Spesifikasjon> a ns1:ObjectType .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/SjoefolksrelatertInformasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold/spesifikasjon> a ns1:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold/Spesifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntjeningsforholdGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntjeningsforholdGruppe" ;
     dct:title "InntjeningsforholdGruppe"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InternasjonalIdentifikator> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InternasjonalIdentifikator" ;
-    dct:title "InternasjonalIdentifikator"@nb .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InternasjonalIdentifikatortype> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InternasjonalIdentifikatortype" ;
     dct:title "InternasjonalIdentifikatortype"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet" ;
-    dct:title "JuridiskEntitet"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/betalingsinformasjon>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/virksomhet> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/Betalingsinformasjon> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/Virksomhet> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/betalingsinformasjon> a ns1:Attribute ;
     dct:title "betalingsinformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/Betalingsinformasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Betalingsinformasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/virksomhet> a ns1:Attribute ;
     dct:title "virksomhet"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/Virksomhet> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Landkode> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Landkode" ;
     dct:title "Landkode"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse" ;
-    dct:title "Leveranse"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/oppgave>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/opplysningspliktig> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/JuridiskEntitet> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/Opplysningspliktig> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/oppgave> a ns1:Attribute ;
     dct:title "oppgave"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/JuridiskEntitet> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/opplysningspliktig> a ns1:Attribute ;
     dct:title "opplysningspliktig"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/Opplysningspliktig> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente" ;
-    dct:title "Livrente"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente/tidsrom> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente/Periode> a ns1:ObjectType .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Opplysningspliktig> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente/tidsrom> a ns1:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente/Periode> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LivrenteGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LivrenteGruppe" ;
@@ -2341,25 +2113,14 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Loennsbeskrivelse"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt" ;
-    dct:title "Loennsinntekt"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt/spesifikasjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt/Spesifikasjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt/spesifikasjon> a ns1:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt/Spesifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LoennsinntektGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LoennsinntektGruppe" ;
     dct:title "LoennsinntektGruppe"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LottOgPartInnenFiske> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LottOgPartInnenFiske" ;
-    dct:title "LottOgPartInnenFiske"@nb .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LottOgPartInnenFiskeGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LottOgPartInnenFiskeGruppe" ;
@@ -2384,10 +2145,6 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "dataFormatVersion"@nb ;
     ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#String> .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Naeringsinntekt> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Naeringsinntekt" ;
-    dct:title "Naeringsinntekt"@nb .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NaeringsinntektGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NaeringsinntektGruppe" ;
     dct:title "NaeringsinntektGruppe"@nb .
@@ -2397,25 +2154,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Naeringsinntektsbeskrivelse"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning" ;
-    dct:title "Nettoloennsordning"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/bilinformasjon>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/spesifikasjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/BilOgBaat> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/Spesifikasjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/bilinformasjon> a ns1:Attribute ;
     dct:title "bilinformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/BilOgBaat> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/spesifikasjon> a ns1:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/Spesifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NettoloennsordningGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NettoloennsordningGruppe" ;
@@ -2426,46 +2173,24 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "NorskIdentifikator"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel" ;
-    dct:title "NorskKontinentalsokkel"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/spesifikasjon>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/tidsrom> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/Periode> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/Spesifikasjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/spesifikasjon> a ns1:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/Spesifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/tidsrom> a ns1:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/Periode> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkelGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkelGruppe" ;
     dct:title "NorskKontinentalsokkelGruppe"@nb .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/OppholdPaaSvalbardJanMayenOgBilandene> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/OppholdPaaSvalbardJanMayenOgBilandene" ;
-    dct:title "OppholdPaaSvalbardJanMayenOgBilandene"@nb .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/OppholdsbeskrivelseForSvalbardJanMayenOgBilandene> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/OppholdsbeskrivelseForSvalbardJanMayenOgBilandene" ;
     dct:title "OppholdsbeskrivelseForSvalbardJanMayenOgBilandene"@nb ;
     xsd:anyURI xsd:string .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Opplysningspliktig> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Opplysningspliktig" ;
-    dct:title "Opplysningspliktig"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygd> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygd" ;
-    dct:title "PensjonEllerTrygd"@nb .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygdGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygdGruppe" ;
@@ -2475,14 +2200,6 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygdebeskrivelse" ;
     dct:title "PensjonEllerTrygdebeskrivelse"@nb ;
     xsd:anyURI xsd:string .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode" ;
-    dct:title "Periode"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Permisjon> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Permisjon" ;
-    dct:title "Permisjon"@nb .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PermisjonsOgPermitteringsBeskrivelse> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PermisjonsOgPermitteringsBeskrivelse" ;
@@ -2494,17 +2211,10 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "PersontypeForReiseKostLosji"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji" ;
-    dct:title "ReiseKostOgLosji"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji/spesifikasjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji/Spesifikasjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji/spesifikasjon> a ns1:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji/Spesifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosjiGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosjiGruppe" ;
@@ -2521,10 +2231,6 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "RestriksjonTekstfelt"@nb ;
     xsd:anyURI xsd:string ;
     xsd:maxLength 255 .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/SjoefolksrelatertInformasjon> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/SjoefolksrelatertInformasjon" ;
-    dct:title "SjoefolksrelatertInformasjon"@nb .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/SkatteOgAvgiftsregel> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/SkatteOgAvgiftsregel" ;
@@ -2546,10 +2252,6 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "SpesielleInntjeningsforhold"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon" ;
-    dct:title "Spesifikasjon"@nb .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak" ;
     dct:title "Spraak"@nb ;
@@ -2565,47 +2267,22 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "TekstMedRestriksjon"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist" ;
-    dct:title "UtenlandskArtist"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist/spesifikasjon> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist/Spesifikasjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist/spesifikasjon> a ns1:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist/Spesifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtistGruppe> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtistGruppe" ;
     dct:title "UtenlandskArtistGruppe"@nb .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedFastAvgiftsbeloep> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedFastAvgiftsbeloep" ;
-    dct:title "UtenlandskeMedFastAvgiftsbeloep"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedSaerskiltProsentsats> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedSaerskiltProsentsats" ;
-    dct:title "UtenlandskeMedSaerskiltProsentsats"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet" ;
-    dct:title "Virksomhet"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/arbeidsgiveravgift>,
-        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/inntektsmottaker> .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/Arbeidsgiveravgift> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/Inntektsmottaker> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/arbeidsgiveravgift> a ns1:Attribute ;
     dct:title "arbeidsgiveravgift"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/Arbeidsgiveravgift> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/inntektsmottaker> a ns1:Attribute ;
     dct:title "inntektsmottaker"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/Inntektsmottaker> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Yrke> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Yrke" ;
@@ -2641,113 +2318,58 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Adressebrukskategori"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Adressenummer> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Adressenummer" ;
-    dct:title "Adressenummer"@nb .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Antall> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Antall" ;
     dct:title "Antall"@nb ;
     xsd:anyURI xsd:decimal .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge" ;
-    dct:title "ArbeidsoppholdINorge"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/oppholdSomArbeidstaker>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/oppholdSomSelvstendigNaeringsdrivende> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/ArbeidsoppholdSomArbeidstaker> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/ArbeidsoppholdSomSelvstendigNaeringsdrivende> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/oppholdSomArbeidstaker> a ns1:Attribute ;
     dct:title "oppholdSomArbeidstaker"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/ArbeidsoppholdSomArbeidstaker> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/oppholdSomSelvstendigNaeringsdrivende> a ns1:Attribute ;
     dct:title "oppholdSomSelvstendigNaeringsdrivende"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/ArbeidsoppholdSomSelvstendigNaeringsdrivende> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker" ;
-    dct:title "ArbeidsoppholdSomArbeidstaker"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker/arbeidskontraktreferanse> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker/Vedleggsreferanse> a ns1:ObjectType .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomSelvstendigNaeringsdrivende> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker/arbeidskontraktreferanse> a ns1:Attribute ;
     dct:title "arbeidskontraktreferanse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker/Vedleggsreferanse> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomSelvstendigNaeringsdrivende> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomSelvstendigNaeringsdrivende" ;
-    dct:title "ArbeidsoppholdSomSelvstendigNaeringsdrivende"@nb .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vedleggsreferanse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidsstedsbeliggenhet> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidsstedsbeliggenhet" ;
     dct:title "Arbeidsstedsbeliggenhet"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon" ;
-    dct:title "Arbeidstakerinformasjon"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/arbeidsopphold>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/arbeidstaker>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/identifikasjon>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/kontaktinformasjon>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/norskPersonidentifikator>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/referanseTilIdentifikasjonsdokument> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/ArbeidsoppholdINorge> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Folkeregisterkandidat> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Kontaktinformasjon> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Personidentifikasjon> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Personidentifikator> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Vedleggsreferanse> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/arbeidsopphold> a ns1:Attribute ;
     dct:title "arbeidsopphold"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/ArbeidsoppholdINorge> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/arbeidstaker> a ns1:Attribute ;
     dct:title "arbeidstaker"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Folkeregisterkandidat> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/identifikasjon> a ns1:Attribute ;
     dct:title "identifikasjon"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Personidentifikasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/kontaktinformasjon> a ns1:Attribute ;
     dct:title "kontaktinformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Kontaktinformasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktinformasjon> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/norskPersonidentifikator> a ns1:Attribute ;
     dct:title "norskPersonidentifikator"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Personidentifikator> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikator> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/referanseTilIdentifikasjonsdokument> a ns1:Attribute ;
     dct:title "referanseTilIdentifikasjonsdokument"@nb ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/Vedleggsreferanse> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftelsePaaManglendeIdentifikasjonsdokument> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftelsePaaManglendeIdentifikasjonsdokument" ;
-    dct:title "BekreftelsePaaManglendeIdentifikasjonsdokument"@nb .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftetIdentitet> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftetIdentitet" ;
-    dct:title "BekreftetIdentitet"@nb .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vedleggsreferanse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BeloepSomHeltall> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BeloepSomHeltall" ;
@@ -2785,59 +2407,35 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Foedselsnummer"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat" ;
-    dct:title "Folkeregisterkandidat"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/navn>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/oppholdsadresse>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/postadresse>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/postadresseIUtlandet> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/OffisiellOppholdsadresse> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/Personnavn> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/navn> a ns1:Attribute ;
     dct:title "navn"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/Personnavn> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personnavn> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/oppholdsadresse> a ns1:Attribute ;
     dct:title "oppholdsadresse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/OffisiellOppholdsadresse> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/postadresse> a ns1:Attribute ;
     dct:title "postadresse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/Kontaktadresse> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/postadresseIUtlandet> a ns1:Attribute ;
     dct:title "postadresseIUtlandet"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/Kontaktadresse> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Heltall> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Heltall" ;
     dct:title "Heltall"@nb ;
     xsd:anyURI xsd:decimal .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument" ;
-    dct:title "Identifikasjonsdokument"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument/dokumentkopi> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument/Identifikasjonsdokumentkopi> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument/dokumentkopi> a ns1:Attribute ;
     dct:title "dokumentkopi"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument/Identifikasjonsdokumentkopi> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumentkopi> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumentkopi" ;
-    dct:title "Identifikasjonsdokumentkopi"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumentkopi/skannetDokument> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumentkopi> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumentkopi/skannetDokument> a ns1:Attribute ;
     dct:title "skannetDokument"@nb ;
@@ -2853,10 +2451,6 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Identifikatortype"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/InternasjonalAdresse> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/InternasjonalAdresse" ;
-    dct:title "InternasjonalAdresse"@nb .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kjoenn> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kjoenn" ;
     dct:title "Kjoenn"@nb ;
@@ -2867,45 +2461,25 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Kommunenummer"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse" ;
-    dct:title "Kontaktadresse"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/matrikkeladresse>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/postboksadresse>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/utenlandskPostadresse>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/vegadresse> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/InternasjonalAdresse> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/Matrikkeladresse> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/Postboksadresse> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/Vegadresse> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/matrikkeladresse> a ns1:Attribute ;
     dct:title "matrikkeladresse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/Matrikkeladresse> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/postboksadresse> a ns1:Attribute ;
     dct:title "postboksadresse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/Postboksadresse> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/utenlandskPostadresse> a ns1:Attribute ;
     dct:title "utenlandskPostadresse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/InternasjonalAdresse> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/InternasjonalAdresse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/vegadresse> a ns1:Attribute ;
     dct:title "vegadresse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/Vegadresse> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktinformasjon> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktinformasjon" ;
-    dct:title "Kontaktinformasjon"@nb .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Landkode> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Landkode" ;
@@ -2918,21 +2492,10 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     xsd:anyURI xsd:string ;
     xsd:maxLength 3 .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse" ;
-    dct:title "Matrikkeladresse"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse/matrikkelnummer> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse/Matrikkelnummer> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse/matrikkelnummer> a ns1:Attribute ;
     dct:title "matrikkelnummer"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse/Matrikkelnummer> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkelnummer> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkelnummer" ;
-    dct:title "Matrikkelnummer"@nb .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkelnummer> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Navn> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Navn" ;
@@ -2941,25 +2504,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     xsd:maxLength 200 ;
     xsd:minLength 1 .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse" ;
-    dct:title "OffisiellOppholdsadresse"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/matrikkeladresse>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/vegadresse> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/Matrikkeladresse> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/Vegadresse> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/matrikkeladresse> a ns1:Attribute ;
     dct:title "matrikkeladresse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/Matrikkeladresse> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/vegadresse> a ns1:Attribute ;
     dct:title "vegadresse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/Vegadresse> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Organisasjonsnavn> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Organisasjonsnavn" ;
@@ -2977,67 +2530,35 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Partsnummer"@nb ;
     xsd:anyURI xsd:decimal .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon" ;
-    dct:title "Personidentifikasjon"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/dokumentgrunnlag>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/identitetsbekreftelse>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/manglendeDokumentgrunnlag> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/BekreftelsePaaManglendeIdentifikasjonsdokument> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/BekreftetIdentitet> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/Identifikasjonsdokument> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/dokumentgrunnlag> a ns1:Attribute ;
     dct:title "dokumentgrunnlag"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/Identifikasjonsdokument> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/identitetsbekreftelse> a ns1:Attribute ;
     dct:title "identitetsbekreftelse"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/BekreftetIdentitet> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftetIdentitet> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/manglendeDokumentgrunnlag> a ns1:Attribute ;
     dct:title "manglendeDokumentgrunnlag"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/BekreftelsePaaManglendeIdentifikasjonsdokument> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikator> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikator" ;
-    dct:title "Personidentifikator"@nb .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftelsePaaManglendeIdentifikasjonsdokument> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikatortype> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikatortype" ;
     dct:title "Personidentifikatortype"@nb ;
     xsd:anyURI xsd:string .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personnavn> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personnavn" ;
-    dct:title "Personnavn"@nb .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse" ;
-    dct:title "Postboksadresse"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse/poststed> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse/Poststed> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse/poststed> a ns1:Attribute ;
     dct:title "poststed"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse/Poststed> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Poststed> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postnummer> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postnummer" ;
     dct:title "Postnummer"@nb ;
     xsd:anyURI xsd:string .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Poststed> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Poststed" ;
-    dct:title "Poststed"@nb .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger" ;
@@ -3048,15 +2569,11 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
         <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger/dataFormatVersion>,
         <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger/innsendersKontaktinformasjon> .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger/Arbeidstakerinformasjon> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger/Kontaktinformasjon> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger/arbeidstakerinformasjon> a ns1:Attribute ;
     dct:title "arbeidstakerinformasjon"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger/Arbeidstakerinformasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
@@ -3073,7 +2590,7 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger/innsendersKontaktinformasjon> a ns1:Attribute ;
     dct:title "innsendersKontaktinformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/SoeknadOmSkattekortForUtenlandskBorger/Kontaktinformasjon> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktinformasjon> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Tekst> a ns1:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Tekst" ;
@@ -3087,29 +2604,15 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     xsd:anyURI xsd:string ;
     xsd:maxLength 20 .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vedleggsreferanse> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vedleggsreferanse" ;
-    dct:title "Vedleggsreferanse"@nb .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse" ;
-    dct:title "Vegadresse"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/adressenummer>,
-        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/poststed> .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/Adressenummer> a ns1:ObjectType .
-
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/Poststed> a ns1:ObjectType .
-
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/adressenummer> a ns1:Attribute ;
     dct:title "adressenummer"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/Adressenummer> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Adressenummer> .
 
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/poststed> a ns1:Attribute ;
     dct:title "poststed"@nb ;
     xsd:maxOccurs 1 ;
-    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/Poststed> .
+    ns1:hasType <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Poststed> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286" ;
@@ -5699,9 +5202,296 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/889640782> a foaf:Agent ;
     foaf:name "Arbeids- og velferdsetaten"@nb .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/Arbeidsgiveravgiftsgrunnlag> a ns1:ObjectType .
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon" ;
+    dct:title "AldersUfoereEtterlatteAvtalefestetOgKrigspensjon"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon/tidsrom> .
 
-<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/Kontaktadresse> a ns1:ObjectType .
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold" ;
+    dct:title "Arbeidsforhold"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/fartoey>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/permisjon> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift" ;
+    dct:title "Arbeidsgiveravgift"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/fradragIGrunnlagetForSone>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/fradragIGrunnlagetForUtenlandsk>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/loennOgGodtgjoerelse>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/tilskuddOgPremieTilPensjon>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/utenlandskeMedFastAvgiftsbeloep>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/utenlandskeMedSaerskiltProsentsats> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Betalingsinformasjon> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Betalingsinformasjon" ;
+    dct:title "Betalingsinformasjon"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret" ;
+    dct:title "BonusFraForsvaret"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret/spesifikasjon> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/DagmammaIEgenBolig> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/DagmammaIEgenBolig" ;
+    dct:title "DagmammaIEgenBolig"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode" ;
+    dct:title "Etterbetalingsperiode"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode/tidsrom> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fartoey> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fartoey" ;
+    dct:title "Fartoey"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Forskuddstrekk> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Forskuddstrekk" ;
+    dct:title "Forskuddstrekk"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fradrag> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fradrag" ;
+    dct:title "Fradrag"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlaget> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlaget" ;
+    dct:title "FradragIGrunnlaget"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlagetForUtenlandsk> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlagetForUtenlandsk" ;
+    dct:title "FradragIGrunnlagetForUtenlandsk"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/IdentifiserendeInformasjon> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/IdentifiserendeInformasjon" ;
+    dct:title "IdentifiserendeInformasjon"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle" ;
+    dct:title "InntektAlle"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/bilinformasjon>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/spesifikasjon>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/tidsrom> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet" ;
+    dct:title "Inntektsentitet"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/alleFelter>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/bilOgBaat>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/bonusFraForsvaret>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/dagmammaIEgenBolig>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/etterbetalingsperiode>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/inntektPaaNorskKontinentalsokkel>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/inntjeningsforhold>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/livrente>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/loennsinntekt>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/lottOgPart>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/naeringsinntekt>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/nettoloenn>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/pensjon>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/pensjonEllerTrygd>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/reiseKostOgLosji>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/tilleggsinformasjon>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/utenlandskArtist>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa1>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa2>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa3>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa4> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker" ;
+    dct:title "Inntektsmottaker"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/arbeidsforhold>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/forskuddstrekk>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/fradrag>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/identifiserendeInformasjon>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/inntekt>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/internasjonalIdentifikator>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/oppholdPaaSvalbardJanMayenOgBilandene>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/sjoefolksrelatertInformasjon> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold" ;
+    dct:title "Inntjeningsforhold"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold/spesifikasjon> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InternasjonalIdentifikator> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InternasjonalIdentifikator" ;
+    dct:title "InternasjonalIdentifikator"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet" ;
+    dct:title "JuridiskEntitet"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/betalingsinformasjon>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/virksomhet> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse" ;
+    dct:title "Leveranse"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/oppgave>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/opplysningspliktig> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente" ;
+    dct:title "Livrente"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente/tidsrom> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt" ;
+    dct:title "Loennsinntekt"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt/spesifikasjon> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LottOgPartInnenFiske> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LottOgPartInnenFiske" ;
+    dct:title "LottOgPartInnenFiske"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Naeringsinntekt> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Naeringsinntekt" ;
+    dct:title "Naeringsinntekt"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning" ;
+    dct:title "Nettoloennsordning"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/bilinformasjon>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/spesifikasjon> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel" ;
+    dct:title "NorskKontinentalsokkel"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/spesifikasjon>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/tidsrom> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/OppholdPaaSvalbardJanMayenOgBilandene> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/OppholdPaaSvalbardJanMayenOgBilandene" ;
+    dct:title "OppholdPaaSvalbardJanMayenOgBilandene"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Opplysningspliktig> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Opplysningspliktig" ;
+    dct:title "Opplysningspliktig"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygd> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygd" ;
+    dct:title "PensjonEllerTrygd"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Permisjon> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Permisjon" ;
+    dct:title "Permisjon"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji" ;
+    dct:title "ReiseKostOgLosji"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji/spesifikasjon> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/SjoefolksrelatertInformasjon> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/SjoefolksrelatertInformasjon" ;
+    dct:title "SjoefolksrelatertInformasjon"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist" ;
+    dct:title "UtenlandskArtist"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist/spesifikasjon> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedFastAvgiftsbeloep> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedFastAvgiftsbeloep" ;
+    dct:title "UtenlandskeMedFastAvgiftsbeloep"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedSaerskiltProsentsats> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedSaerskiltProsentsats" ;
+    dct:title "UtenlandskeMedSaerskiltProsentsats"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet" ;
+    dct:title "Virksomhet"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/arbeidsgiveravgift>,
+        <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/inntektsmottaker> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Adressenummer> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Adressenummer" ;
+    dct:title "Adressenummer"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge" ;
+    dct:title "ArbeidsoppholdINorge"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/oppholdSomArbeidstaker>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdINorge/oppholdSomSelvstendigNaeringsdrivende> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker" ;
+    dct:title "ArbeidsoppholdSomArbeidstaker"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomArbeidstaker/arbeidskontraktreferanse> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomSelvstendigNaeringsdrivende> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/ArbeidsoppholdSomSelvstendigNaeringsdrivende" ;
+    dct:title "ArbeidsoppholdSomSelvstendigNaeringsdrivende"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon" ;
+    dct:title "Arbeidstakerinformasjon"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/arbeidsopphold>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/arbeidstaker>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/identifikasjon>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/kontaktinformasjon>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/norskPersonidentifikator>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Arbeidstakerinformasjon/referanseTilIdentifikasjonsdokument> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftelsePaaManglendeIdentifikasjonsdokument> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftelsePaaManglendeIdentifikasjonsdokument" ;
+    dct:title "BekreftelsePaaManglendeIdentifikasjonsdokument"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftetIdentitet> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/BekreftetIdentitet" ;
+    dct:title "BekreftetIdentitet"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat" ;
+    dct:title "Folkeregisterkandidat"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/navn>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/oppholdsadresse>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/postadresse>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Folkeregisterkandidat/postadresseIUtlandet> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument" ;
+    dct:title "Identifikasjonsdokument"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokument/dokumentkopi> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumentkopi> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumentkopi" ;
+    dct:title "Identifikasjonsdokumentkopi"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Identifikasjonsdokumentkopi/skannetDokument> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/InternasjonalAdresse> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/InternasjonalAdresse" ;
+    dct:title "InternasjonalAdresse"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkelnummer> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkelnummer" ;
+    dct:title "Matrikkelnummer"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse" ;
+    dct:title "OffisiellOppholdsadresse"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/matrikkeladresse>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/OffisiellOppholdsadresse/vegadresse> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon" ;
+    dct:title "Personidentifikasjon"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/dokumentgrunnlag>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/identitetsbekreftelse>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikasjon/manglendeDokumentgrunnlag> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikator> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personidentifikator" ;
+    dct:title "Personidentifikator"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personnavn> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Personnavn" ;
+    dct:title "Personnavn"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse" ;
+    dct:title "Postboksadresse"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Postboksadresse/poststed> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utstedertype/445918> a ns1:Attribute,
         ns1:ObjectType ;
@@ -5979,6 +5769,46 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <https://organization-catalogue.staging.fellesdatakatalog.digdir.no/organizations/974761076> a foaf:Agent ;
     foaf:name "Skatteetaten"@nb .
 
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag" ;
+    dct:title "Arbeidsgiveravgiftsgrunnlag"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat" ;
+    dct:title "BilOgBaat"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat/spesifikasjon> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse" ;
+    dct:title "Kontaktadresse"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/matrikkeladresse>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/postboksadresse>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/utenlandskPostadresse>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse/vegadresse> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktinformasjon> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktinformasjon" ;
+    dct:title "Kontaktinformasjon"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse" ;
+    dct:title "Matrikkeladresse"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Matrikkeladresse/matrikkelnummer> .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Poststed> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Poststed" ;
+    dct:title "Poststed"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vedleggsreferanse> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vedleggsreferanse" ;
+    dct:title "Vedleggsreferanse"@nb .
+
+<http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse" ;
+    dct:title "Vegadresse"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/adressenummer>,
+        <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/poststed> .
+
 <http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953> a ns1:Attribute,
         ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953" ;
@@ -6038,6 +5868,14 @@ test_altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
         <http://seres.no/guid/NAV/Dataegenskap/geografiskOmraadeMedIndikatordata/634643>,
         <http://seres.no/guid/NAV/Relasjonsegenskap/fagsystem/634645> ;
     ns1:hasType <http://seres.no/guid/NAV/Meldingsdel/skjema/634646> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode" ;
+    dct:title "Periode"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon" ;
+    dct:title "Spesifikasjon"@nb .
 
 <https://altinn.fellesdatakatalog.digdir.no#PositiveInteger> a ns1:SimpleType ;
     dct:identifier "https://altinn.fellesdatakatalog.digdir.no#PositiveInteger" ;

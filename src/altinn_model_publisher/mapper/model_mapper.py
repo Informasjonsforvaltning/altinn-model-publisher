@@ -78,7 +78,7 @@ def create_model_from_xsd(xsd_data: XMLSchema) -> InformationModel:
 
 
 def model_properties_from_content(
-    content_data: Optional[XMLSchema], model_namespace: str
+    content_data: Optional[XMLSchema], model_namespace: str, element_namespace: str
 ) -> List[ModelProperty]:
     """Create list of properties from element content."""
     model_properties = []
@@ -86,10 +86,14 @@ def model_properties_from_content(
         if isinstance(content_data, XsdGroup):
             for group_data in content_data:
                 model_properties.extend(
-                    model_properties_from_content(group_data, model_namespace)
+                    model_properties_from_content(
+                        group_data, model_namespace, element_namespace
+                    )
                 )
         elif hasattr(content_data, "prefixed_name"):
-            prop = create_model_property(content_data, model_namespace)
+            prop = create_model_property(
+                content_data, model_namespace, element_namespace
+            )
             if prop:
                 model_properties.append(prop)
 
@@ -115,21 +119,23 @@ def create_model_element(
             for attribute_key in data.attributes:
                 if attribute_key:
                     model_property = create_model_property(
-                        data.attributes[attribute_key], f"{identifier}/"
+                        data.attributes[attribute_key],
+                        model_namespace,
+                        f"{identifier}/",
                     )
                     if model_property:
                         model_element.has_property.append(model_property)
 
         if hasattr(data, "content"):
             content_properties = model_properties_from_content(
-                data.content, f"{identifier}/"
+                data.content, model_namespace, f"{identifier}/"
             )
             model_element.has_property.extend(content_properties)
     return model_element
 
 
 def create_model_property(
-    data: XMLSchema, model_namespace: str
+    data: XMLSchema, model_namespace: str, element_namespace: str
 ) -> Optional[ModelProperty]:
     """Create Model Property."""
     model_property = None
@@ -139,7 +145,7 @@ def create_model_property(
         model_property = Attribute()
 
     if model_property and hasattr(data, "prefixed_name") and data.prefixed_name:
-        identifier = uri_identifier(data, model_namespace, False)
+        identifier = uri_identifier(data, element_namespace, False)
         if identifier:
             model_property.identifier = identifier
             model_property.title = {
