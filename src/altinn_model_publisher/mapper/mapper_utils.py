@@ -28,10 +28,11 @@ def create_model_uri_identifier(data: Dict) -> str:
 def extract_model_title(data: Dict) -> Dict[str, str]:
     """Extract form name as title, with service name as backup."""
     form_name = data["forms_meta"].get("FormName")
-    if form_name:
-        return {"nb": form_name}
-    else:
-        return {"nb": data["service_meta"].get("ServiceName")}
+    return (
+        {"nb": form_name}
+        if form_name
+        else {"nb": data["service_meta"].get("ServiceName")}
+    )
 
 
 def extract_model_publisher(data: Dict) -> Optional[Agent]:
@@ -163,7 +164,7 @@ def first_character_lower_case(input: str) -> str:
     """Ensure that the first character of the input string is lower case."""
     if len(input) > 2:
         return input[0].lower() + input[1:]
-    if len(input) == 1:
+    elif len(input) == 1:
         return input[0].lower()
     return input
 
@@ -172,6 +173,6 @@ def first_character_upper_case(input: str) -> str:
     """Ensure that the first character of the input string is upper case."""
     if len(input) > 2:
         return input[0].upper() + input[1:]
-    if len(input) == 1:
+    elif len(input) == 1:
         return input[0].upper()
     return input
