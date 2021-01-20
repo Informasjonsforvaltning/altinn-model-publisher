@@ -13,7 +13,7 @@ from altinn_model_publisher.mapper.mapper_utils import (
 from altinn_model_publisher.mapper.model_mapper import create_model_element
 from altinn_model_publisher.mapper.or_mapper import create_or_model_element
 from altinn_model_publisher.mapper.seres_mapper import create_seres_model_element
-from ..test_data import test_xsd
+from tests.test_data import test_xsd
 
 
 @pytest.mark.unit

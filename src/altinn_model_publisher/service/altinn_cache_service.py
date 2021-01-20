@@ -11,16 +11,16 @@ caches.set_config(Config.cache_config())
 cache = caches.get("default")
 
 
-async def save_catalog_to_cache(catalog: Catalog) -> None:
+async def save_catalog_to_cache(catalog: Catalog, catalog_type: str) -> None:
     """Zip and save catalog to cache."""
-    await cache.set(Config.altinn_models_id(), gzip.compress(bytes(catalog.to_rdf())))
+    await cache.set(catalog_type, gzip.compress(bytes(catalog.to_rdf())))
 
 
-async def read_catalog_from_cache() -> str:
+async def read_catalog_from_cache(catalog_type: str) -> str:
     """Read zipped catalog from cache."""
     return (
-        gzip.decompress(await cache.get(Config.altinn_models_id())).decode()
-        if await cache.exists(Config.altinn_models_id())
+        gzip.decompress(await cache.get(catalog_type)).decode()
+        if await cache.exists(catalog_type)
         else ""
     )
 

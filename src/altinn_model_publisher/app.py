@@ -6,10 +6,9 @@ from aiohttp import web
 from altinn_model_publisher.config import Config
 from altinn_model_publisher.security.auth import auth_middleware
 from altinn_model_publisher.service.altinn_cache_service import save_update_status
-from .resources.models import Models
+from .resources.catalogs import Altinn, OR, Seres
 from .resources.ping import Ping
 from .resources.ready import Ready
-from .resources.update import Update
 
 
 async def set_ready_to_update_on_startup(app: web.Application) -> None:
@@ -22,10 +21,11 @@ def setup_routes(app: web.Application) -> None:
     """Add active routes to application."""
     app.add_routes(
         [
-            web.get(Config.routes()["MODELS"], Models),
+            web.view(Config.routes()["ALTINN"], Altinn),
+            web.view(Config.routes()["OR"], OR),
             web.get(Config.routes()["PING"], Ping),
             web.get(Config.routes()["READY"], Ready),
-            web.view(Config.routes()["UPDATE"], Update),
+            web.view(Config.routes()["SERES"], Seres),
         ]
     )
 

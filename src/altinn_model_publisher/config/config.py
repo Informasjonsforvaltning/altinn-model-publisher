@@ -27,12 +27,22 @@ class Config:
         "UPDATE_STATUS_ID": "update-status",
     }
     _ROUTES = {
-        "MODELS": "/models",
+        "ALTINN": "/altinn",
+        "OR": "/or",
         "PING": "/ping",
         "READY": "/ready",
-        "UPDATE": "/update",
+        "SERES": "/seres",
     }
-    _PROTECTED_ROUTE_METHODS = {_ROUTES["UPDATE"]: {"POST"}}
+    _PROTECTED_ROUTE_METHODS = {
+        _ROUTES["ALTINN"]: {"POST"},
+        _ROUTES["OR"]: {"POST"},
+        _ROUTES["SERES"]: {"POST"},
+    }
+    _CATALOG_TYPES = {
+        "ALTINN": "altinn",
+        "SERES": "seres",
+        "OR": "or",
+    }
 
     @classmethod
     def altinn_uri(cls: Type[T]) -> str:
@@ -90,11 +100,6 @@ class Config:
         return config
 
     @classmethod
-    def altinn_models_id(cls: Type[T]) -> str:
-        """Cache id for Altinn models."""
-        return cls._CACHE_VALUES["ALTINN_MODELS_ID"]
-
-    @classmethod
     def update_status_id(cls: Type[T]) -> str:
         """Cache id for current update status."""
         return cls._CACHE_VALUES["UPDATE_STATUS_ID"]
@@ -108,3 +113,8 @@ class Config:
     def update_in_progress(cls: Type[T]) -> str:
         """Update status value when update in progress."""
         return cls._CACHE_VALUES["UPDATE_IN_PROGRESS"]
+
+    @classmethod
+    def catalog_types(cls: Type[T]) -> Dict[str, str]:
+        """Available catalog types."""
+        return cls._CATALOG_TYPES
