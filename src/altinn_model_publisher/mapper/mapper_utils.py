@@ -77,6 +77,20 @@ def extract_seres_guid(data: XMLSchema) -> Optional[str]:
     return None
 
 
+def data_is_seres_property_type(data: XMLSchema) -> bool:
+    """Check if seres:elementtype is Dataegenskap, DataTypeegenskap or Relasjonsegenskap."""
+    seres_property_types = ["Dataegenskap", "DataTypeegenskap", "Relasjonsegenskap"]
+    if (
+        hasattr(data, "schema_elem")
+        and hasattr(data.schema_elem, "attrib")
+        and data.schema_elem.attrib
+    ):
+        for attrib_key in data.schema_elem.attrib:
+            if "seres" in attrib_key and "elementtype" in attrib_key:
+                return data.schema_elem.attrib[attrib_key] in seres_property_types
+    return False
+
+
 def uri_identifier(
     data: XMLSchema, model_namespace: str, capitalize: bool
 ) -> Optional[str]:

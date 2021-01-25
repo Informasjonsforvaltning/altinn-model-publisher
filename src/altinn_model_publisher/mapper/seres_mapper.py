@@ -18,6 +18,7 @@ from xmlschema.validators import (
 
 from .mapper_utils import (
     create_simple_type,
+    data_is_seres_property_type,
     extract_seres_guid,
     first_character_lower_case,
     first_character_upper_case,
@@ -124,7 +125,9 @@ def create_seres_model_property(
     if model_property and hasattr(data, "prefixed_name") and data.prefixed_name:
         seres_guid = extract_seres_guid(data)
         identifier = (
-            seres_guid if seres_guid else uri_identifier(data, element_namespace, False)
+            seres_guid
+            if seres_guid and data_is_seres_property_type(data)
+            else uri_identifier(data, element_namespace, False)
         )
         if identifier:
             model_property.identifier = identifier
