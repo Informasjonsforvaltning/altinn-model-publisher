@@ -362,7 +362,13 @@ altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513" ;
     dct:title "Maalekort_M"@nb ;
-    ns1:hasProperty <http://seres.no/guid/NAV/Meldingsdel/skjema/634646> .
+    ns1:hasProperty <http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513/skjema> .
+
+<http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513/skjema> a ns1:Attribute ;
+    dct:title "skjema"@nb ;
+    xsd:maxOccurs 1 ;
+    xsd:minOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/NAV/Meldingsdel/skjema/634646> .
 
 <http://seres.no/guid/NAV/Relasjonsegenskap/fagsystem/634645> a ns1:Attribute ;
     dct:title "fagsystem"@nb ;
@@ -556,6 +562,13 @@ altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:identifier "http://seres.no/guid/NAV/Dataobjekttype/fagsystem/634498" ;
     dct:title "Fagsystem"@nb .
 
+<http://seres.no/guid/NAV/Meldingsdel/skjema/634646> a ns1:ObjectType ;
+    dct:identifier "http://seres.no/guid/NAV/Meldingsdel/skjema/634646" ;
+    dct:title "Skjema"@nb ;
+    ns1:hasProperty <http://seres.no/guid/NAV/Dataegenskap/dato/634644>,
+        <http://seres.no/guid/NAV/Dataegenskap/geografiskOmraadeMedIndikatordata/634643>,
+        <http://seres.no/guid/NAV/Relasjonsegenskap/fagsystem/634645> .
+
 <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Kontaktadresse" ;
     dct:title "Kontaktadresse"@nb ;
@@ -586,18 +599,6 @@ altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "Vegadresse"@nb ;
     ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/adressenummer>,
         <http://localhost:8000/api/metadata/formtask/4942/2017/forms/sofus/17091115/Vegadresse/poststed> .
-
-<http://seres.no/guid/NAV/Meldingsdel/skjema/634646> a ns1:Attribute,
-        ns1:ObjectType ;
-    dct:identifier "http://seres.no/guid/NAV/Meldingsdel/skjema/634646" ;
-    dct:title "Skjema"@nb,
-        "skjema"@nb ;
-    xsd:maxOccurs 1 ;
-    xsd:minOccurs 1 ;
-    ns1:hasProperty <http://seres.no/guid/NAV/Dataegenskap/dato/634644>,
-        <http://seres.no/guid/NAV/Dataegenskap/geografiskOmraadeMedIndikatordata/634643>,
-        <http://seres.no/guid/NAV/Relasjonsegenskap/fagsystem/634645> ;
-    ns1:hasType <http://seres.no/guid/NAV/Meldingsdel/skjema/634646> .
 
 <https://altinn.fellesdatakatalog.digdir.no#String> a ns1:SimpleType ;
     dct:identifier "https://altinn.fellesdatakatalog.digdir.no#String" ;

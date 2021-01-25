@@ -2825,12 +2825,12 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114" ;
     dct:title "KRT-1003v3_M"@nb ;
-    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953>,
-        <http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1003/446009>,
-        <http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/664853>,
-        <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatId>,
+    ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatId>,
         <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatProvider>,
-        <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatVersion> .
+        <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatVersion>,
+        <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/rapport>,
+        <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/rapportKRT-1003>,
+        <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/skjemainnholdKRT-1003> .
 
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatId> a ns1:Attribute ;
     dct:title "dataFormatId"@nb ;
@@ -2843,6 +2843,24 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/dataFormatVersion> a ns1:Attribute ;
     dct:title "dataFormatVersion"@nb ;
     ns1:hasSimpleType <https://altinn.fellesdatakatalog.digdir.no#String> .
+
+<http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/rapport> a ns1:Attribute ;
+    dct:title "rapport"@nb ;
+    xsd:maxOccurs 1 ;
+    xsd:minOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/664853> .
+
+<http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/rapportKRT-1003> a ns1:Attribute ;
+    dct:title "rapportKRT-1003"@nb ;
+    xsd:maxOccurs 1 ;
+    xsd:minOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953> .
+
+<http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/skjemainnholdKRT-1003> a ns1:Attribute ;
+    dct:title "skjemainnholdKRT-1003"@nb ;
+    xsd:maxOccurs 1 ;
+    xsd:minOccurs 1 ;
+    ns1:hasType <http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1003/446009> .
 
 <http://seres.no/guid/Finanstilsynet/ORDataenkeltype/RegnskapAr-17102/10757> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/ORDataenkeltype/RegnskapAr-17102/10757" ;
@@ -4440,34 +4458,16 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:identifier "http://seres.no/guid/Finanstilsynet/Dataobjekttype/ifrs16leiekontrakterutleiereksterne/771975" ;
     dct:title "Ifrs16leiekontrakterutleiereksterne"@nb .
 
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag" ;
-    dct:title "Arbeidsgiveravgiftsgrunnlag"@nb .
-
-<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> a ns1:ObjectType ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat" ;
-    dct:title "BilOgBaat"@nb ;
-    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat/spesifikasjon> .
-
-<http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953> a ns1:Attribute,
-        ns1:ObjectType ;
+<http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953" ;
-    dct:title "RapportKRT-1003"@nb,
-        "rapportKRT-1003"@nb ;
-    xsd:maxOccurs 1 ;
-    xsd:minOccurs 1 ;
+    dct:title "RapportKRT-1003"@nb ;
     ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Dataegenskap/utstedertype/445918>,
         <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/regnskap/445951>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rentepapirertype/665073> ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953> .
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rentepapirertype/665073> .
 
-<http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1003/446009> a ns1:Attribute,
-        ns1:ObjectType ;
+<http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1003/446009> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1003/446009" ;
-    dct:title "SkjemainnholdKRT-1003"@nb,
-        "skjemainnholdKRT-1003"@nb ;
-    xsd:maxOccurs 1 ;
-    xsd:minOccurs 1 ;
+    dct:title "SkjemainnholdKRT-1003"@nb ;
     ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/alternativeResultatmål/664901>,
         <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/andreForhold/446000>,
         <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/egenkapital/446002>,
@@ -4483,19 +4483,22 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
         <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/resultatpost/446007>,
         <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsberetning/600187>,
         <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalg/622454>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/virksomhetssammenslutninger/446001> ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1003/446009> .
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/virksomhetssammenslutninger/446001> .
 
-<http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/664853> a ns1:Attribute,
-        ns1:ObjectType ;
+<http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/664853> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/664853" ;
-    dct:title "Rapport"@nb,
-        "rapport"@nb ;
-    xsd:maxOccurs 1 ;
-    xsd:minOccurs 1 ;
+    dct:title "Rapport"@nb ;
     ns1:hasProperty <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/innsender/664852>,
-        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapportering/664851> ;
-    ns1:hasType <http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/664853> .
+        <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapportering/664851> .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag" ;
+    dct:title "Arbeidsgiveravgiftsgrunnlag"@nb .
+
+<http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> a ns1:ObjectType ;
+    dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat" ;
+    dct:title "BilOgBaat"@nb ;
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat/spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode" ;
