@@ -150,52 +150,57 @@ async def update_or_catalog() -> str:
 async def fetch_altinn_models_and_update_database(catalog_type: str) -> None:
     """Fetch information models from Altinn and update database."""
     logging.info(f"Starting update of {catalog_type} from Altinn")
-    all_form_tasks = service_meta_data_filtered_by_type_form_task()
-    form_tasks = filter_form_tasks_by_edition(all_form_tasks)
-    logging.info("Form tasks metadata fetched from Altinn")
+    try:
+        all_form_tasks = service_meta_data_filtered_by_type_form_task()
+        form_tasks = filter_form_tasks_by_edition(all_form_tasks)
+        logging.info("Form tasks metadata fetched from Altinn")
 
-    combined_meta_data_all_types = []
-    for service_code in form_tasks:
-        metadata = fetch_metadata_with_task_forms(
-            service_code, form_tasks[service_code].get("ServiceEditionCode")
-        )
-
-        forms_meta = filter_forms_meta_data(metadata.get("FormsMetaData"))
-
-        for format_id in forms_meta:
-            combined_meta_data_all_types.append(
-                {
-                    "service_meta": form_tasks[service_code],
-                    "forms_meta": forms_meta[format_id],
-                }
+        combined_meta_data_all_types = []
+        for service_code in form_tasks:
+            metadata = fetch_metadata_with_task_forms(
+                service_code, form_tasks[service_code].get("ServiceEditionCode")
             )
-    logging.info("Form task services metadata fetched from Altinn")
 
-    combined_meta_data = [
-        meta_data
-        for meta_data in combined_meta_data_all_types
-        if catalog_type_corresponds_with_data_format_provider(meta_data, catalog_type)
-    ]
+            forms_meta = filter_forms_meta_data(metadata.get("FormsMetaData"))
 
-    models_data = []
+            for format_id in forms_meta:
+                combined_meta_data_all_types.append(
+                    {
+                        "service_meta": form_tasks[service_code],
+                        "forms_meta": forms_meta[format_id],
+                    }
+                )
+        logging.info("Form task services metadata fetched from Altinn")
 
-    for data in combined_meta_data:
-        xml_schema = get_xsd_data(
-            data["service_meta"].get("ServiceCode"),
-            data["service_meta"].get("ServiceEditionCode"),
-            data["forms_meta"].get("DataFormatID"),
-            data["forms_meta"].get("DataFormatVersion"),
-        )
-        if xml_schema:
-            data["schema"] = xml_schema
-            models_data.append(data)
-    logging.info("Form task services xsd data fetched from Altinn")
+        combined_meta_data = [
+            meta_data
+            for meta_data in combined_meta_data_all_types
+            if catalog_type_corresponds_with_data_format_provider(
+                meta_data, catalog_type
+            )
+        ]
 
-    altinn_models = [map_model_from_dict(model_dict) for model_dict in models_data]
-    altinn_catalog = create_catalog(altinn_models, catalog_type)
-    await save_catalog_to_cache(altinn_catalog, catalog_type)
+        models_data = []
 
-    logging.info(f"Completed update of {catalog_type} catalog")
+        for data in combined_meta_data:
+            xml_schema = get_xsd_data(
+                data["service_meta"].get("ServiceCode"),
+                data["service_meta"].get("ServiceEditionCode"),
+                data["forms_meta"].get("DataFormatID"),
+                data["forms_meta"].get("DataFormatVersion"),
+            )
+            if xml_schema:
+                data["schema"] = xml_schema
+                models_data.append(data)
+        logging.info("Form task services xsd data fetched from Altinn")
+
+        altinn_models = [map_model_from_dict(model_dict) for model_dict in models_data]
+        altinn_catalog = create_catalog(altinn_models, catalog_type)
+        await save_catalog_to_cache(altinn_catalog, catalog_type)
+
+        logging.info(f"Completed update of {catalog_type} catalog")
+    except BaseException as err:
+        logging.error(f"Exception occured when updating {catalog_type}, {err}")
 
 
 async def altinn_catalog() -> str:
