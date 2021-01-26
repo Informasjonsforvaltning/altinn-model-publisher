@@ -96,6 +96,6 @@ def test_sets_correct_class_for_different_xsd_types() -> None:
 @pytest.mark.unit
 def test_removes_unsafe_characters() -> None:
     """Should remove unsafe characters."""
-    result = uri_safe_string("Abc De< 12#")
+    result = uri_safe_string("Abc D%e< 12#")
     expected = "AbcDe12#"
     assert result == expected
