@@ -1,5 +1,6 @@
 """Resource module for catalog views."""
 import asyncio
+import gc
 
 from aiohttp import hdrs
 from aiohttp.web import Response, View
@@ -31,6 +32,7 @@ class Altinn(View):
     async def post() -> Response:
         """Update Altinn catalog."""
         update_status = await asyncio.create_task(update_altinn_catalog())
+        gc.collect()
 
         if update_status == Config.update_in_progress():
             return Response(text="Too Many Requests", status=429)
@@ -54,6 +56,7 @@ class OR(View):
     async def post() -> Response:
         """Update OR catalog."""
         update_status = await asyncio.create_task(update_or_catalog())
+        gc.collect()
 
         if update_status == Config.update_in_progress():
             return Response(text="Too Many Requests", status=429)
@@ -77,6 +80,7 @@ class Seres(View):
     async def post() -> Response:
         """Update Seres catalog."""
         update_status = await asyncio.create_task(update_seres_catalog())
+        gc.collect()
 
         if update_status == Config.update_in_progress():
             return Response(text="Too Many Requests", status=429)
