@@ -57,20 +57,19 @@ def seres_model_properties_from_content(
 ) -> List[ModelProperty]:
     """Create list of properties from element content."""
     model_properties = []
-    if content_data:
-        if isinstance(content_data, XsdGroup):
-            for group_data in content_data:
-                model_properties.extend(
-                    seres_model_properties_from_content(
-                        group_data, model_namespace, element_namespace
-                    )
+    if isinstance(content_data, XsdGroup):
+        for group_data in content_data:
+            model_properties.extend(
+                seres_model_properties_from_content(
+                    group_data, model_namespace, element_namespace
                 )
-        elif hasattr(content_data, "prefixed_name"):
-            prop = create_seres_model_property(
-                content_data, model_namespace, element_namespace
             )
-            if prop:
-                model_properties.append(prop)
+    elif hasattr(content_data, "prefixed_name"):
+        prop = create_seres_model_property(
+            content_data, model_namespace, element_namespace
+        )
+        if prop:
+            model_properties.append(prop)
 
     return model_properties
 
@@ -142,10 +141,10 @@ def create_seres_model_property(
                 type_ref_data = data.ref
 
             if hasattr(type_ref_data, "primitive_type"):
-                seres_guid = extract_seres_guid(data)
+                type_ref_seres_guid = extract_seres_guid(type_ref_data)
                 type_ref_identifier = (
-                    seres_guid
-                    if seres_guid
+                    type_ref_seres_guid
+                    if type_ref_seres_guid
                     else uri_identifier(type_ref_data, model_namespace, True)
                 )
                 if type_ref_identifier:

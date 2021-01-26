@@ -1,5 +1,5 @@
 """Mappers to create InformationModel from OR data."""
-from typing import List, Optional
+from typing import Optional
 
 from modelldcatnotordf.modelldcatno import (
     Attribute,
@@ -14,7 +14,6 @@ from xmlschema import XMLSchema
 from xmlschema.validators import (
     XsdAttribute,
     XsdElement,
-    XsdGroup,
 )
 
 from .mapper_utils import (
@@ -51,28 +50,6 @@ def create_model_from_or_xsd(xsd_data: XMLSchema) -> InformationModel:
     return model
 
 
-def or_model_properties_from_content(
-    content_data: Optional[XMLSchema], model_namespace: str, element_namespace: str
-) -> List[ModelProperty]:
-    """Create list of properties from element content."""
-    model_properties = []
-    if content_data:
-        if isinstance(content_data, XsdGroup):
-            for group_data in content_data:
-                group_prop = create_or_group_model_property(
-                    group_data, model_namespace, element_namespace
-                )
-                model_properties.append(group_prop)
-        elif hasattr(content_data, "prefixed_name"):
-            prop = create_or_model_property(
-                content_data, model_namespace, element_namespace
-            )
-            if prop:
-                model_properties.append(prop)
-
-    return model_properties
-
-
 def create_or_model_element(
     data: XMLSchema, model_namespace: str
 ) -> Optional[ModelElement]:
@@ -98,12 +75,6 @@ def create_or_model_element(
                     )
                     if model_property:
                         model_element.has_property.append(model_property)
-
-        if hasattr(data, "content"):
-            content_properties = or_model_properties_from_content(
-                data.content, model_namespace, f"{identifier}/"
-            )
-            model_element.has_property.extend(content_properties)
 
         if (
             hasattr(data, "type")
