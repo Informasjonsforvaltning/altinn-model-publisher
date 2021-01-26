@@ -82,20 +82,17 @@ def model_properties_from_content(
 ) -> List[ModelProperty]:
     """Create list of properties from element content."""
     model_properties = []
-    if content_data:
-        if isinstance(content_data, XsdGroup):
-            for group_data in content_data:
-                model_properties.extend(
-                    model_properties_from_content(
-                        group_data, model_namespace, element_namespace
-                    )
+    if isinstance(content_data, XsdGroup):
+        for group_data in content_data:
+            model_properties.extend(
+                model_properties_from_content(
+                    group_data, model_namespace, element_namespace
                 )
-        elif hasattr(content_data, "prefixed_name"):
-            prop = create_model_property(
-                content_data, model_namespace, element_namespace
             )
-            if prop:
-                model_properties.append(prop)
+    elif hasattr(content_data, "prefixed_name"):
+        prop = create_model_property(content_data, model_namespace, element_namespace)
+        if prop:
+            model_properties.append(prop)
 
     return model_properties
 
