@@ -38,11 +38,6 @@ class Config:
         _ROUTES["OR"]: {"POST"},
         _ROUTES["SERES"]: {"POST"},
     }
-    _CATALOG_TYPES = {
-        "ALTINN": "altinn",
-        "SERES": "seres",
-        "OR": "or",
-    }
 
     @classmethod
     def altinn_uri(cls: Type[T]) -> str:
@@ -113,8 +108,3 @@ class Config:
     def update_in_progress(cls: Type[T]) -> str:
         """Update status value when update in progress."""
         return cls._CACHE_VALUES["UPDATE_IN_PROGRESS"]
-
-    @classmethod
-    def catalog_types(cls: Type[T]) -> Dict[str, str]:
-        """Available catalog types."""
-        return cls._CATALOG_TYPES

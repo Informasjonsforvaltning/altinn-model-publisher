@@ -1,4 +1,5 @@
 """Service layer module for modelldcat-ap-no compliant information models from altinn."""
+from enum import Enum
 import logging
 from typing import Dict, List, Optional
 
@@ -18,6 +19,14 @@ from .altinn_client import (
     fetch_metadata_with_task_forms,
     get_xsd_data,
 )
+
+
+class CatalogType(Enum):
+    """Available catalog types."""
+
+    ALTINN = "altinn"
+    OR = "or"
+    SERES = "seres"
 
 
 def service_meta_data_filtered_by_type_form_task() -> List[Dict]:
@@ -77,12 +86,12 @@ def filter_forms_meta_data(data_formats: Optional[List[Dict]]) -> Dict:
 
 
 def catalog_type_corresponds_with_data_format_provider(
-    meta_data: Dict, catalog_type: str
+    meta_data: Dict, catalog_type: CatalogType
 ) -> bool:
     """Check that DataFormatProviderType corresponds with catalog type."""
-    if catalog_type == Config.catalog_types()["SERES"]:
+    if catalog_type == CatalogType.SERES:
         return meta_data["forms_meta"]["DataFormatProviderType"] == "Seres"
-    elif catalog_type == Config.catalog_types()["OR"]:
+    elif catalog_type == CatalogType.OR:
         return meta_data["forms_meta"]["DataFormatProviderType"] == "OR"
     else:
         return (
@@ -91,15 +100,17 @@ def catalog_type_corresponds_with_data_format_provider(
         )
 
 
-def create_catalog(altinn_models: List[InformationModel], catalog_type: str) -> Catalog:
+def create_catalog(
+    altinn_models: List[InformationModel], catalog_type: CatalogType
+) -> Catalog:
     """Create turtle representation of catalog with models."""
     catalog = Catalog()
     catalog.publisher = f"""{Config.organizations_uri()}/organizations/991825827"""
 
-    if catalog_type == Config.catalog_types()["SERES"]:
+    if catalog_type == CatalogType.SERES:
         catalog.identifier = "https://www.altinn.no/models/seres"
         catalog.title = {"nb": "Seres informasjonsmodellkatalog"}
-    elif catalog_type == Config.catalog_types()["OR"]:
+    elif catalog_type == CatalogType.OR:
         catalog.identifier = "https://www.altinn.no/models/or"
         catalog.title = {"nb": "OR informasjonsmodellkatalog"}
     else:
@@ -118,7 +129,7 @@ async def update_altinn_catalog() -> str:
         return Config.update_in_progress()
     else:
         await save_update_status(Config.update_in_progress())
-        await fetch_altinn_models_and_update_database(Config.catalog_types()["ALTINN"])
+        await fetch_altinn_models_and_update_database(CatalogType.ALTINN)
         await save_update_status(Config.ready_to_update())
         return "updated"
 
@@ -130,7 +141,7 @@ async def update_seres_catalog() -> str:
         return Config.update_in_progress()
     else:
         await save_update_status(Config.update_in_progress())
-        await fetch_altinn_models_and_update_database(Config.catalog_types()["SERES"])
+        await fetch_altinn_models_and_update_database(CatalogType.SERES)
         await save_update_status(Config.ready_to_update())
         return "updated"
 
@@ -142,14 +153,14 @@ async def update_or_catalog() -> str:
         return Config.update_in_progress()
     else:
         await save_update_status(Config.update_in_progress())
-        await fetch_altinn_models_and_update_database(Config.catalog_types()["OR"])
+        await fetch_altinn_models_and_update_database(CatalogType.OR)
         await save_update_status(Config.ready_to_update())
         return "updated"
 
 
-async def fetch_altinn_models_and_update_database(catalog_type: str) -> None:
+async def fetch_altinn_models_and_update_database(catalog_type: CatalogType) -> None:
     """Fetch information models from Altinn and update database."""
-    logging.info(f"Starting update of {catalog_type} from Altinn")
+    logging.info(f"Starting update of {catalog_type.value} from Altinn")
     try:
         all_form_tasks = service_meta_data_filtered_by_type_form_task()
         form_tasks = filter_form_tasks_by_edition(all_form_tasks)
@@ -196,26 +207,26 @@ async def fetch_altinn_models_and_update_database(catalog_type: str) -> None:
 
         altinn_models = [map_model_from_dict(model_dict) for model_dict in models_data]
         altinn_catalog = create_catalog(altinn_models, catalog_type)
-        await save_catalog_to_cache(altinn_catalog, catalog_type)
+        await save_catalog_to_cache(altinn_catalog, catalog_type.value)
 
-        logging.info(f"Completed update of {catalog_type} catalog")
+        logging.info(f"Completed update of {catalog_type.value} catalog")
     except BaseException as err:
-        logging.error(f"Exception occured when updating {catalog_type}, {err}")
+        logging.error(f"Exception occured when updating {catalog_type.value}, {err}")
 
 
 async def altinn_catalog() -> str:
     """Return Altinn models from database."""
     logging.info("Fetching Altinn catalog from database")
-    return await read_catalog_from_cache(Config.catalog_types()["ALTINN"])
+    return await read_catalog_from_cache(CatalogType.ALTINN.value)
 
 
 async def seres_catalog() -> str:
     """Return Seres models from database."""
     logging.info("Fetching Seres catalog from database")
-    return await read_catalog_from_cache(Config.catalog_types()["SERES"])
+    return await read_catalog_from_cache(CatalogType.SERES.value)
 
 
 async def or_catalog() -> str:
     """Return OR models from database."""
     logging.info("Fetching OR catalog from database")
-    return await read_catalog_from_cache(Config.catalog_types()["OR"])
+    return await read_catalog_from_cache(CatalogType.OR.value)
