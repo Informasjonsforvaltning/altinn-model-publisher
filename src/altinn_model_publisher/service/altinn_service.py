@@ -164,6 +164,7 @@ async def fetch_altinn_models_and_update_database(catalog_type: CatalogType) -> 
     try:
         all_form_tasks = service_meta_data_filtered_by_type_form_task()
         form_tasks = filter_form_tasks_by_edition(all_form_tasks)
+        del all_form_tasks
         logging.info("Form tasks metadata fetched from Altinn")
 
         combined_meta_data_all_types = []
@@ -181,6 +182,7 @@ async def fetch_altinn_models_and_update_database(catalog_type: CatalogType) -> 
                         "forms_meta": forms_meta[format_id],
                     }
                 )
+        del form_tasks
         logging.info("Form task services metadata fetched from Altinn")
 
         combined_meta_data = [
@@ -190,6 +192,7 @@ async def fetch_altinn_models_and_update_database(catalog_type: CatalogType) -> 
                 meta_data, catalog_type
             )
         ]
+        del combined_meta_data_all_types
 
         models_data = []
 
@@ -203,11 +206,18 @@ async def fetch_altinn_models_and_update_database(catalog_type: CatalogType) -> 
             if xml_schema:
                 data["schema"] = xml_schema
                 models_data.append(data)
+        del combined_meta_data
         logging.info("Form task services xsd data fetched from Altinn")
 
         altinn_models = [map_model_from_dict(model_dict) for model_dict in models_data]
+        del models_data
+
         altinn_catalog = create_catalog(altinn_models, catalog_type)
-        await save_catalog_to_cache(altinn_catalog, catalog_type.value)
+        catalog_rdf = bytes(altinn_catalog.to_rdf())
+
+        await save_catalog_to_cache(catalog_rdf, catalog_type.value)
+        del altinn_models
+        del altinn_catalog
 
         logging.info(f"Completed update of {catalog_type.value} catalog")
     except BaseException as err:

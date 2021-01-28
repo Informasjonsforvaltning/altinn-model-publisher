@@ -33,7 +33,7 @@ async def test_altinn_update(
 
     mock_save_to_cache.assert_called_once()
     saved = mock_save_to_cache.call_args_list.pop()[0][0]
-    saved_rdf = saved.to_rdf().decode()
+    saved_rdf = saved.decode()
 
     expected_graph = Graph().parse(data=altinn_catalog_turtle, format="turtle")
     saved_graph = Graph().parse(data=saved_rdf, format="turtle")
@@ -62,7 +62,7 @@ async def test_or_update(
 
     mock_save_to_cache.assert_called_once()
     saved = mock_save_to_cache.call_args_list.pop()[0][0]
-    saved_rdf = saved.to_rdf().decode()
+    saved_rdf = saved.decode()
 
     expected_graph = Graph().parse(data=or_catalog_turtle, format="turtle")
     saved_graph = Graph().parse(data=saved_rdf, format="turtle")
@@ -91,7 +91,7 @@ async def test_seres_update(
 
     mock_save_to_cache.assert_called_once()
     saved = mock_save_to_cache.call_args_list.pop()[0][0]
-    saved_rdf = saved.to_rdf().decode()
+    saved_rdf = saved.decode()
 
     expected_graph = Graph().parse(data=seres_catalog_turtle, format="turtle")
     saved_graph = Graph().parse(data=saved_rdf, format="turtle")
