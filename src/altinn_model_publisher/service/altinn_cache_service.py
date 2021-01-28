@@ -1,8 +1,8 @@
 """Service layer module for saving altinn models to a zip file."""
 import gzip
+import logging
 
 from aiocache import caches
-from datacatalogtordf.catalog import Catalog
 
 from altinn_model_publisher.config import Config
 
@@ -11,9 +11,14 @@ caches.set_config(Config.cache_config())
 cache = caches.get("default")
 
 
-async def save_catalog_to_cache(catalog: Catalog, catalog_type: str) -> None:
+async def save_catalog_to_cache(catalog: bytes, catalog_type: str) -> None:
     """Zip and save catalog to cache."""
-    await cache.set(catalog_type, gzip.compress(bytes(catalog.to_rdf())))
+    try:
+        await cache.set(catalog_type, gzip.compress(catalog))
+    except BaseException as err:
+        logging.error(
+            f"Exception occured when saving {catalog_type}-catalog to redis: {err}"
+        )
 
 
 async def read_catalog_from_cache(catalog_type: str) -> str:
