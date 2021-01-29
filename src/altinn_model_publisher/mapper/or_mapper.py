@@ -128,7 +128,15 @@ def create_or_model_property(
             elif hasattr(data, "ref") and data.ref is not None:
                 type_ref_data = data.ref
 
-            if hasattr(type_ref_data, "primitive_type"):
+            if is_code_list(type_ref_data):
+                type_ref = CodeList()
+                type_ref_identifier = uri_identifier(
+                    type_ref_data, model_namespace, True
+                )
+                if type_ref_identifier:
+                    type_ref.identifier = type_ref_identifier
+                    model_property.has_type.append(type_ref)
+            elif hasattr(type_ref_data, "primitive_type"):
                 type_ref_identifier = uri_identifier(
                     type_ref_data, model_namespace, True
                 )

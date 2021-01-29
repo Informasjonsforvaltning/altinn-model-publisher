@@ -156,7 +156,18 @@ def create_seres_model_property(
             elif hasattr(data, "ref") and data.ref is not None:
                 type_ref_data = data.ref
 
-            if hasattr(type_ref_data, "primitive_type"):
+            if is_code_list(type_ref_data):
+                type_ref = CodeList()
+                seres_guid = extract_seres_guid(type_ref_data)
+                type_ref_identifier = (
+                    seres_guid
+                    if seres_guid
+                    else uri_identifier(type_ref_data, model_namespace, True)
+                )
+                if type_ref_identifier:
+                    type_ref.identifier = type_ref_identifier
+                    model_property.has_type.append(type_ref)
+            elif hasattr(type_ref_data, "primitive_type"):
                 type_ref_seres_guid = extract_seres_guid(type_ref_data)
                 type_ref_identifier = (
                     type_ref_seres_guid
