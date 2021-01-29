@@ -3,6 +3,7 @@ from typing import Dict, List, Optional
 
 from modelldcatnotordf.modelldcatno import (
     Attribute,
+    CodeList,
     InformationModel,
     ModelElement,
     ModelProperty,
@@ -17,12 +18,14 @@ from xmlschema.validators import (
 )
 
 from .mapper_utils import (
+    create_code_elements,
     create_model_uri_identifier,
     create_simple_type,
     extract_model_publisher,
     extract_model_title,
     first_character_lower_case,
     first_character_upper_case,
+    is_code_list,
     uri_identifier,
 )
 from .or_mapper import create_model_from_or_xsd
@@ -57,22 +60,19 @@ def create_model_from_xsd(xsd_data: XMLSchema) -> InformationModel:
     model_namespace = f"{xsd_data.base_url}/"
 
     for model_element_key in xsd_data.elements:
-        model_element = create_model_element(
-            xsd_data.elements[model_element_key], model_namespace
+        model.modelelements.extend(
+            create_model_elements(xsd_data.elements[model_element_key], model_namespace)
         )
-        model.modelelements.append(model_element)
 
     for model_element_key in xsd_data.types:
-        model_element = create_model_element(
-            xsd_data.types[model_element_key], model_namespace
+        model.modelelements.extend(
+            create_model_elements(xsd_data.types[model_element_key], model_namespace)
         )
-        model.modelelements.append(model_element)
 
     for model_element_key in xsd_data.groups:
-        model_element = create_model_element(
-            xsd_data.groups[model_element_key], model_namespace
+        model.modelelements.extend(
+            create_model_elements(xsd_data.groups[model_element_key], model_namespace)
         )
-        model.modelelements.append(model_element)
 
     return model
 
@@ -97,14 +97,19 @@ def model_properties_from_content(
     return model_properties
 
 
-def create_model_element(
-    data: XMLSchema, model_namespace: str
-) -> Optional[ModelElement]:
+def create_model_elements(data: XMLSchema, model_namespace: str) -> List[ModelElement]:
     """Create Model Element."""
-    model_element = None
+    model_elements = []
     identifier = uri_identifier(data, model_namespace, True)
     if identifier:
-        if hasattr(data, "primitive_type"):
+        if is_code_list(data):
+            model_element = CodeList()
+            model_element.identifier = identifier
+            model_element.dct_identifier = identifier
+            model_element.title = {"nb": first_character_upper_case(data.prefixed_name)}
+
+            model_elements.extend(create_code_elements(data.enumeration, identifier))
+        elif hasattr(data, "primitive_type"):
             model_element = create_simple_type(data, model_namespace)
         else:
             model_element = ObjectType()
@@ -128,7 +133,9 @@ def create_model_element(
                 data.content, model_namespace, f"{identifier}/"
             )
             model_element.has_property.extend(content_properties)
-    return model_element
+
+        model_elements.append(model_element)
+    return model_elements
 
 
 def create_model_property(
