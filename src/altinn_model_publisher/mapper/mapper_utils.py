@@ -1,13 +1,22 @@
 """Utility methods for mapping process."""
 import re
-from typing import Dict, Optional
+from typing import Dict, List, Optional
 
 from datacatalogtordf import Agent
-from modelldcatnotordf.modelldcatno import SimpleType
+from modelldcatnotordf.modelldcatno import CodeElement, CodeList, SimpleType
 from xmlschema import XMLSchema
 
 from altinn_model_publisher.config import Config
 from altinn_model_publisher.organizations.organizations import map_shortname_to_org
+
+
+def is_code_list(data: XMLSchema) -> bool:
+    """Return True when XSD data is CodeList."""
+    return (
+        hasattr(data, "enumeration")
+        and data.enumeration is not None
+        and len(data.enumeration) > 0
+    )
 
 
 def create_model_uri_identifier(data: Dict) -> str:
@@ -166,6 +175,38 @@ def create_simple_type(input_data: XMLSchema, model_namespace: str) -> SimpleTyp
         simple_type.pattern = data.patterns.patterns[0].pattern
 
     return simple_type
+
+
+def create_code_elements(
+    codes: List[str], code_list_identifier: str
+) -> List[CodeElement]:
+    """Create list of CodeElement from codes."""
+    code_elements = []
+
+    code_list_ref = CodeList()
+    code_list_ref.identifier = code_list_identifier
+
+    for i, name in enumerate(codes):
+        code_element = CodeElement()
+        code_element.identifier = f"{code_list_identifier}#{name}"
+        code_element.dct_identifier = f"{code_list_identifier}#{name}"
+        code_element.notation = name
+        code_element.in_scheme = [code_list_ref]
+
+        if i == 0:
+            code_element.top_concept_of = [code_list_ref]
+        else:
+            previous_element = CodeElement()
+            previous_element.identifier = f"{code_list_identifier}#{codes[i - 1]}"
+            code_element.previous_element = previous_element
+
+        if i < len(codes) - 1:
+            next_element = CodeElement()
+            next_element.identifier = f"{code_list_identifier}#{codes[i + 1]}"
+            code_element.next_element = next_element
+
+        code_elements.append(code_element)
+    return code_elements
 
 
 def first_character_lower_case(input: str) -> str:
