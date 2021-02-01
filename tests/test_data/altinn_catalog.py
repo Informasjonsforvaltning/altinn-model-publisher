@@ -13,6 +13,12 @@ altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     ns1:model <https://altinn.fellesdatakatalog.digdir.no/models/4711-5466>,
         <https://altinn.fellesdatakatalog.digdir.no/models/4942-sofus> .
 
+<http://localhost:8000/api/metadata/formtask/4711/1/forms/5466/41779/Maalekort_M/skjema> a ns1:Attribute ;
+    dct:title "skjema"@nb ;
+    xsd:maxOccurs 1 ;
+    xsd:minOccurs 1 ;
+    ns1:containsObjectType <http://seres.no/guid/NAV/Meldingsdel/skjema/634646> .
+
 <http://localhost:8000/api/metadata/formtask/4711/1/forms/5466/41779/Melding> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/4711/1/forms/5466/41779/Melding" ;
     dct:title "Melding"@nb .
@@ -724,13 +730,7 @@ altinn_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513> a ns1:ObjectType ;
     dct:identifier "http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513" ;
     dct:title "Maalekort_M"@nb ;
-    ns1:hasProperty <http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513/skjema> .
-
-<http://seres.no/guid/NAV/Meldingsmodell/Maalekort_M/634513/skjema> a ns1:Attribute ;
-    dct:title "skjema"@nb ;
-    xsd:maxOccurs 1 ;
-    xsd:minOccurs 1 ;
-    ns1:containsObjectType <http://seres.no/guid/NAV/Meldingsdel/skjema/634646> .
+    ns1:hasProperty <http://localhost:8000/api/metadata/formtask/4711/1/forms/5466/41779/Maalekort_M/skjema> .
 
 <http://seres.no/guid/NAV/Relasjonsegenskap/fagsystem/634645> a ns1:Attribute ;
     dct:title "fagsystem"@nb ;
