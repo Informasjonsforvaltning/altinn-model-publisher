@@ -2,9 +2,9 @@
 seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix ns1: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ns2: <https://data.norge.no/vocabulary/modelldcatno#> .
-@prefix ns3: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns3: <http://rdf-vocabulary.ddialliance.org/xkos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.altinn.no/models/seres> a dcat:Catalog ;
@@ -374,7 +374,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon/tidsrom> a ns2:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon/tilleggspensjonsbeloep> a ns2:Attribute ;
     dct:title "tilleggspensjonsbeloep"@nb ;
@@ -418,7 +418,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/fartoey> a ns2:Attribute ;
     dct:title "fartoey"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fartoey> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fartoey> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/loennsansiennitet> a ns2:Attribute ;
     dct:title "loennsansiennitet"@nb ;
@@ -432,7 +432,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/permisjon> a ns2:Attribute ;
     dct:title "permisjon"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Permisjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Permisjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold/sisteDatoForStillingsprosentendring> a ns2:Attribute ;
     dct:title "sisteDatoForStillingsprosentendring"@nb ;
@@ -472,30 +472,30 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/fradragIGrunnlagetForSone> a ns2:Attribute ;
     dct:title "fradragIGrunnlagetForSone"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlaget> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlaget> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/fradragIGrunnlagetForUtenlandsk> a ns2:Attribute ;
     dct:title "fradragIGrunnlagetForUtenlandsk"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlagetForUtenlandsk> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/FradragIGrunnlagetForUtenlandsk> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/loennOgGodtgjoerelse> a ns2:Attribute ;
     dct:title "loennOgGodtgjoerelse"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/tilskuddOgPremieTilPensjon> a ns2:Attribute ;
     dct:title "tilskuddOgPremieTilPensjon"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/utenlandskeMedFastAvgiftsbeloep> a ns2:Attribute ;
     dct:title "utenlandskeMedFastAvgiftsbeloep"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedFastAvgiftsbeloep> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedFastAvgiftsbeloep> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift/utenlandskeMedSaerskiltProsentsats> a ns2:Attribute ;
     dct:title "utenlandskeMedSaerskiltProsentsats"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedSaerskiltProsentsats> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskeMedSaerskiltProsentsats> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag/avgiftsgrunnlagBeloep> a ns2:Attribute ;
     dct:title "avgiftsgrunnlagBeloep"@nb ;
@@ -627,7 +627,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat/spesifikasjon> a ns2:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat/startdatoOpptjeningsperiode> a ns2:Attribute ;
     dct:title "startdatoOpptjeningsperiode"@nb ;
@@ -692,7 +692,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret/spesifikasjon> a ns2:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret/startdatoOpptjeningsperiode> a ns2:Attribute ;
     dct:title "startdatoOpptjeningsperiode"@nb ;
@@ -792,7 +792,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "leveranse"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode/arbeidsforholdId> a ns2:Attribute ;
     dct:title "arbeidsforholdId"@nb ;
@@ -838,7 +838,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode/tidsrom> a ns2:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode/utloeserArbeidsgiveravgift> a ns2:Attribute ;
     dct:title "utloeserArbeidsgiveravgift"@nb ;
@@ -1150,7 +1150,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/spesifikasjon> a ns2:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/startdatoOpptjeningsperiode> a ns2:Attribute ;
     dct:title "startdatoOpptjeningsperiode"@nb ;
@@ -1160,7 +1160,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/tidsrom> a ns2:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle/tilleggsinformasjon> a ns2:Attribute ;
     dct:title "tilleggsinformasjon"@nb ;
@@ -1199,77 +1199,77 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/alleFelter> a ns2:Attribute ;
     dct:title "alleFelter"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InntektAlle> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/bilOgBaat> a ns2:Attribute ;
     dct:title "bilOgBaat"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/bonusFraForsvaret> a ns2:Attribute ;
     dct:title "bonusFraForsvaret"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BonusFraForsvaret> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/dagmammaIEgenBolig> a ns2:Attribute ;
     dct:title "dagmammaIEgenBolig"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/DagmammaIEgenBolig> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/DagmammaIEgenBolig> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/etterbetalingsperiode> a ns2:Attribute ;
     dct:title "etterbetalingsperiode"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Etterbetalingsperiode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/inntektPaaNorskKontinentalsokkel> a ns2:Attribute ;
     dct:title "inntektPaaNorskKontinentalsokkel"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/inntjeningsforhold> a ns2:Attribute ;
     dct:title "inntjeningsforhold"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/livrente> a ns2:Attribute ;
     dct:title "livrente"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/loennsinntekt> a ns2:Attribute ;
     dct:title "loennsinntekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/lottOgPart> a ns2:Attribute ;
     dct:title "lottOgPart"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LottOgPartInnenFiske> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/LottOgPartInnenFiske> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/naeringsinntekt> a ns2:Attribute ;
     dct:title "naeringsinntekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Naeringsinntekt> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Naeringsinntekt> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/nettoloenn> a ns2:Attribute ;
     dct:title "nettoloenn"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/pensjon> a ns2:Attribute ;
     dct:title "pensjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AldersUfoereEtterlatteAvtalefestetOgKrigspensjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/pensjonEllerTrygd> a ns2:Attribute ;
     dct:title "pensjonEllerTrygd"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygd> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/PensjonEllerTrygd> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/reiseKostOgLosji> a ns2:Attribute ;
     dct:title "reiseKostOgLosji"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/tilleggsinformasjon> a ns2:Attribute ;
     dct:title "tilleggsinformasjon"@nb ;
@@ -1278,7 +1278,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/utenlandskArtist> a ns2:Attribute ;
     dct:title "utenlandskArtist"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet/valgNivaa1> a ns2:Attribute ;
     dct:title "valgNivaa1"@nb ;
@@ -1298,28 +1298,28 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/arbeidsforhold> a ns2:Attribute ;
     dct:title "arbeidsforhold"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsforhold> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/forskuddstrekk> a ns2:Attribute ;
     dct:title "forskuddstrekk"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Forskuddstrekk> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Forskuddstrekk> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/fradrag> a ns2:Attribute ;
     dct:title "fradrag"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fradrag> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Fradrag> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/identifiserendeInformasjon> a ns2:Attribute ;
     dct:title "identifiserendeInformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/IdentifiserendeInformasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/IdentifiserendeInformasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/inntekt> a ns2:Attribute ;
     dct:title "inntekt"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsentitet> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/internasjonalIdentifikator> a ns2:Attribute ;
     dct:title "internasjonalIdentifikator"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InternasjonalIdentifikator> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/InternasjonalIdentifikator> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/norskIdentifikator> a ns2:Attribute ;
     dct:title "norskIdentifikator"@nb ;
@@ -1328,12 +1328,12 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/oppholdPaaSvalbardJanMayenOgBilandene> a ns2:Attribute ;
     dct:title "oppholdPaaSvalbardJanMayenOgBilandene"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/OppholdPaaSvalbardJanMayenOgBilandene> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/OppholdPaaSvalbardJanMayenOgBilandene> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker/sjoefolksrelatertInformasjon> a ns2:Attribute ;
     dct:title "sjoefolksrelatertInformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/SjoefolksrelatertInformasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/SjoefolksrelatertInformasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold/antall> a ns2:Attribute ;
     dct:title "antall"@nb ;
@@ -1384,7 +1384,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold/spesifikasjon> a ns2:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntjeningsforhold/startdatoOpptjeningsperiode> a ns2:Attribute ;
     dct:title "startdatoOpptjeningsperiode"@nb ;
@@ -1426,11 +1426,11 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/betalingsinformasjon> a ns2:Attribute ;
     dct:title "betalingsinformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Betalingsinformasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Betalingsinformasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet/virksomhet> a ns2:Attribute ;
     dct:title "virksomhet"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/kalendermaaned> a ns2:Attribute ;
     dct:title "kalendermaaned"@nb ;
@@ -1460,18 +1460,18 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "oppgave"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/JuridiskEntitet> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/opplysningspliktig> a ns2:Attribute ;
     dct:title "opplysningspliktig"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Opplysningspliktig> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Opplysningspliktig> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Leveranse/spraakForTilbakemelding> a ns2:Attribute ;
     dct:title "spraakForTilbakemelding"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> .
+    ns2:hasValueFrom <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente/arbeidsforholdId> a ns2:Attribute ;
     dct:title "arbeidsforholdId"@nb ;
@@ -1517,7 +1517,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente/tidsrom> a ns2:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Livrente/totaltUtbetaltBeloep> a ns2:Attribute ;
     dct:title "totaltUtbetaltBeloep"@nb ;
@@ -1577,7 +1577,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt/spesifikasjon> a ns2:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Loennsinntekt/startdatoOpptjeningsperiode> a ns2:Attribute ;
     dct:title "startdatoOpptjeningsperiode"@nb ;
@@ -1746,7 +1746,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/bilinformasjon> a ns2:Attribute ;
     dct:title "bilinformasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/BilOgBaat> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/fordel> a ns2:Attribute ;
     dct:title "fordel"@nb ;
@@ -1776,7 +1776,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/spesifikasjon> a ns2:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Nettoloennsordning/startdatoOpptjeningsperiode> a ns2:Attribute ;
     dct:title "startdatoOpptjeningsperiode"@nb ;
@@ -1841,7 +1841,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/spesifikasjon> a ns2:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/startdatoOpptjeningsperiode> a ns2:Attribute ;
     dct:title "startdatoOpptjeningsperiode"@nb ;
@@ -1851,7 +1851,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/tidsrom> a ns2:Attribute ;
     dct:title "tidsrom"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Periode> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/NorskKontinentalsokkel/utloeserArbeidsgiveravgift> a ns2:Attribute ;
     dct:title "utloeserArbeidsgiveravgift"@nb ;
@@ -2031,7 +2031,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji/spesifikasjon> a ns2:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/ReiseKostOgLosji/startdatoOpptjeningsperiode> a ns2:Attribute ;
     dct:title "startdatoOpptjeningsperiode"@nb ;
@@ -2143,7 +2143,7 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist/spesifikasjon> a ns2:Attribute ;
     dct:title "spesifikasjon"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spesifikasjon> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/UtenlandskArtist/startdatoOpptjeningsperiode> a ns2:Attribute ;
     dct:title "startdatoOpptjeningsperiode"@nb ;
@@ -2186,11 +2186,11 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/arbeidsgiveravgift> a ns2:Attribute ;
     dct:title "arbeidsgiveravgift"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgift> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/inntektsmottaker> a ns2:Attribute ;
     dct:title "inntektsmottaker"@nb ;
-    ns2:hasType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker> .
+    ns2:containsObjectType <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Inntektsmottaker> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Virksomhet/norskIdentifikator> a ns2:Attribute ;
     dct:title "norskIdentifikator"@nb ;
@@ -2201,947 +2201,947 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://seres.no/guid/Finanstilsynet/DataTypeegenskap/aksjeutsteder/446028> a ns2:Attribute ;
     dct:title "aksjeutsteder"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/ORDataenkeltype/VerdipapirutstederAksje-34213/374215> .
+    ns2:containsObjectType <http://seres.no/guid/ORDataenkeltype/VerdipapirutstederAksje-34213/374215> .
 
 <http://seres.no/guid/Finanstilsynet/DataTypeegenskap/grunnfondsbevisutsteder/446026> a ns2:Attribute ;
     dct:title "grunnfondsbevisutsteder"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/ORDataenkeltype/Grunnfondsbevis-34215/374128> .
+    ns2:containsObjectType <http://seres.no/guid/ORDataenkeltype/Grunnfondsbevis-34215/374128> .
 
 <http://seres.no/guid/Finanstilsynet/DataTypeegenskap/obligasjonsutsteder/446027> a ns2:Attribute ;
     dct:title "obligasjonsutsteder"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/ORDataenkeltype/Obligasjon-34214/374133> .
+    ns2:containsObjectType <http://seres.no/guid/ORDataenkeltype/Obligasjon-34214/374133> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/OBX-utvalg/445915> a ns2:Attribute ;
     dct:title "oBX-utvalg"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBorsnotertOBXIndeksutvalg-23723/11580> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBorsnotertOBXIndeksutvalg-23723/11580> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/PBOver1/445927> a ns2:Attribute ;
     dct:title "pBOver1"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/VerdsettelsePrisBok1-23746/11588> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/VerdsettelsePrisBok1-23746/11588> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/adresselinje1/660280> a ns2:Attribute ;
     dct:title "adresselinje1"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/aksjeStørstOppgangNedgang/445914> a ns2:Attribute ;
     dct:title "aksjeStoerstOppgangNedgang"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetAksjerStorstKursoppgangKursnedgang-23724/11485> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetAksjerStorstKursoppgangKursnedgang-23724/11485> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/aksjebasertInsentivordning/445930> a ns2:Attribute ;
     dct:title "aksjebasertInsentivordning"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/InsentivordningAksjebasert-23730/11474> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/InsentivordningAksjebasert-23730/11474> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/andelUnder10/445956> a ns2:Attribute ;
     dct:title "andelUnder10"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalAndel10-23775/11448> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalAndel10-23775/11448> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/andre/771959> a ns2:Attribute ;
     dct:title "andre"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S66/493175> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S66/493175> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/anginote/771940> a ns2:Attribute ;
     dct:title "anginote"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T11/658942> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T11/658942> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/annenMåte/622379> a ns2:Attribute ;
     dct:title "annenMaate"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S13/602701> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S13/602701> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/annet/622390> a ns2:Attribute ;
     dct:title "annet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S1/488797> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S1/488797> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/annet/771891> a ns2:Attribute ;
     dct:title "annet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S19/488666> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S19/488666> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/annet/771912> a ns2:Attribute ;
     dct:title "annet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S44/493183> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S44/493183> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/annet/771924> a ns2:Attribute ;
     dct:title "annet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S34/488651> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S34/488651> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/annetforklar/771890> a ns2:Attribute ;
     dct:title "annetforklar"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T02/658951> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T02/658951> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/annetforklar/771958> a ns2:Attribute ;
     dct:title "andreforklar"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T01/658952> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T01/658952> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/annetforklaring/771911> a ns2:Attribute ;
     dct:title "annetforklaring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T08/658945> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T08/658945> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/annetforklaring/771923> a ns2:Attribute ;
     dct:title "annetforklaring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T07/658946> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T07/658946> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ansvarlige/665145> a ns2:Attribute ;
     dct:title "ansvarlige"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S23/632322> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S23/632322> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/antallAlternativeResultatmål/664867> a ns2:Attribute ;
     dct:title "antallAlternativeResultatmaal"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_10_S1/488631> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_10_S1/488631> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/antallMøterRevisorOgRevisjonsutvalg/622407> a ns2:Attribute ;
     dct:title "antallMoeterRevisorOgRevisjonsutvalg"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_2_S01/493616> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_2_S01/493616> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/balanseførtGoodwill/600742> a ns2:Attribute ;
     dct:title "balansefoertGoodwill"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S07/517985> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S07/517985> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/balanseførtOver10/445944> a ns2:Attribute ;
     dct:title "balansefoertOver10"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle10AvEgenkapital-23759/11540> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle10AvEgenkapital-23759/11540> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/balanseførtOver10Egenkapital/446016> a ns2:Attribute ;
     dct:title "balansefoertOver10Egenkapital"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte10AvEgenkapital-23773/11566> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte10AvEgenkapital-23773/11566> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/balanseførtOver50/445943> a ns2:Attribute ;
     dct:title "balansefoertOver50"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle50AvEgenkapital-23760/11571> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielle50AvEgenkapital-23760/11571> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/balanseførtOver50Egenkapital/446015> a ns2:Attribute ;
     dct:title "balansefoertOver50Egenkapital"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte50AvEgenkapital-23774/11636> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtviklingskostnaderBalanseforte50AvEgenkapital-23774/11636> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/balansesum/771915> a ns2:Attribute ;
     dct:title "balansesum"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S41/493185> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S41/493185> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/bankogfinans/665148> a ns2:Attribute ;
     dct:title "bankogfinans"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S26/634248> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S26/634248> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/benytterAlternativeResultatmål/664868> a ns2:Attribute ;
     dct:title "benytterAlternativeResultatmaal"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S103/639331> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S103/639331> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/bransje/445917> a ns2:Attribute ;
     dct:title "bransje"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBransje-23719/11572> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetBransje-23719/11572> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/bruddDispensasjonLånebetingelser/445987> a ns2:Attribute ;
     dct:title "bruddDispensasjonLaanebetingelser"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/LanebetingelserBruddDispensasjon-23778/11610> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/LanebetingelserBruddDispensasjon-23778/11610> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/brukEksperterBransjeerfaring/622386> a ns2:Attribute ;
     dct:title "brukEksperterBransjeerfaring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S22/622458> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S22/622458> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/bruttoEndringTotaleEiendelerOver10/445921> a ns2:Attribute ;
     dct:title "bruttoEndringTotaleEiendelerOver10"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069/374118> .
+    ns2:containsObjectType <http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069/374118> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/bruttoEndringTotaleEiendelerOver25/445920> a ns2:Attribute ;
     dct:title "bruttoEndringTotaleEiendelerOver25"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070/374197> .
+    ns2:containsObjectType <http://seres.no/guid/ORDatakodeutvalg/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070/374197> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/børsverdiForetak/445913> a ns2:Attribute ;
     dct:title "boersverdiForetak"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/ORDataenkeltype/ForetakBorsverdi-34065/374170> .
+    ns2:containsObjectType <http://seres.no/guid/ORDataenkeltype/ForetakBorsverdi-34065/374170> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/coveredbondbenchmark/665141> a ns2:Attribute ;
     dct:title "coveredbondbenchmark"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S35/665081> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S35/665081> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/diskutertKamAvslutning/664857> a ns2:Attribute ;
     dct:title "diskutertKamAvslutning"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S91/518003> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S91/518003> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/diskutertKamPlanlegging/664858> a ns2:Attribute ;
     dct:title "diskutertKamPlanlegging"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S92/508213> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S92/508213> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/driftsaktivitetOverstigerÅrsresultat/445909> a ns2:Attribute ;
     dct:title "driftsaktivitetOverstigerAArsresultat"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739/11523> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739/11523> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ebitda/771913> a ns2:Attribute ;
     dct:title "ebitda"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S43/493184> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S43/493184> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/egenkapitalAksjeeierMorforetak/445954> a ns2:Attribute ;
     dct:title "egenkapitalAksjeeierMorforetak"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/ORDataenkeltype/EgenkapitalMorforetaketsAksjeeiere-34067/374150> .
+    ns2:containsObjectType <http://seres.no/guid/ORDataenkeltype/EgenkapitalMorforetaketsAksjeeiere-34067/374150> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/eksternRevisorPåpektSvakhetSystemKontrollRisikostyring/622406> a ns2:Attribute ;
     dct:title "eksternRevisorPaapektSvakhetSystemKontrollRisikostyring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S98/600722> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S98/600722> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/eksternRevisorSkiftet/445931> a ns2:Attribute ;
     dct:title "eksternRevisorSkiftet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEksternRevisorSkifteSisteToAr-23729/11488> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEksternRevisorSkifteSisteToAr-23729/11488> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/endretAlternativeResultatmål/664865> a ns2:Attribute ;
     dct:title "endretAlternativeResultatmaal"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S104/639327> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S104/639327> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/endringGjeldOver5/664859> a ns2:Attribute ;
     dct:title "endringGjeldOver5"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S89/517995> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S89/517995> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/endringRegnskapsprinppEndringStandard/664861> a ns2:Attribute ;
     dct:title "endringRegnskapsprinppEndringStandard"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S86/494314> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S86/494314> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/endringRegnskapsprinsippFrivillig/664862> a ns2:Attribute ;
     dct:title "endringRegnskapsprinsippFrivillig"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S87/494313> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S87/494313> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/epost/637646> a ns2:Attribute ;
     dct:title "epost"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S02/637663> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S02/637663> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/epost/637651> a ns2:Attribute ;
     dct:title "epost"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S01/637664> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Epost_S01/637664> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ergittforklaringendringer/771956> a ns2:Attribute ;
     dct:title "ergittforklaringendringer"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S59/493178> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S59/493178> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ergittforklaringendringerforklaring/771955> a ns2:Attribute ;
     dct:title "ergittforklaringendringerforklaring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T12/658941> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T12/658941> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ergittinngåendeutgående/771907> a ns2:Attribute ;
     dct:title "ergittinngaaendeutgaaende"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S20/488665> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S20/488665> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ergittinngåendeutgåendeforklaring/771906> a ns2:Attribute ;
     dct:title "ergittinngaaendeutgaaendeforklaring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T03/658950> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T03/658950> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ergittopplysninger/771905> a ns2:Attribute ;
     dct:title "ergittopplysningertransaksjonsprisen"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S21/488664> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S21/488664> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ergittopplysningerforklaring/771904> a ns2:Attribute ;
     dct:title "ergittopplysningertransaksjonsprisenforklaring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T04/658949> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T04/658949> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ergitttilstrekkeligeopplysninger/771969> a ns2:Attribute ;
     dct:title "ergitttilstrekkeligeopplysninger"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S58/493179> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S58/493179> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ergitttilstrekkeligeopplysningerforklaring/771968> a ns2:Attribute ;
     dct:title "ergitttilstrekkeligeopplysningerforklaring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T13/658940> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T13/658940> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/erredegjordriftsinntektforklaring/771909> a ns2:Attribute ;
     dct:title "erredegjordriftsinntektforklaring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T05/658948> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T05/658948> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/erredegjortanvender/771908> a ns2:Attribute ;
     dct:title "erredegjortanvender"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S23/488662> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S23/488662> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/erredegjortanvenderforklaring/771910> a ns2:Attribute ;
     dct:title "erredegjortanvenderforklaring"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T06/658947> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T06/658947> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/erredegjortnårdriftsinntekt/771903> a ns2:Attribute ;
     dct:title "erredegjordriftsinntekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S22/488663> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S22/488663> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/etablertRevisjonsutvalg/622408> a ns2:Attribute ;
     dct:title "etablertRevisjonsutvalg"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S99/600718> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S99/600718> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/etiskRetningslinje/445935> a ns2:Attribute ;
     dct:title "etiskRetningslinje"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEtiskeRetningslinjerOffentliggjorte-23725/11602> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetEtiskeRetningslinjerOffentliggjorte-23725/11602> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/fastsetteleieperioden/771927> a ns2:Attribute ;
     dct:title "fastsetteleieperioden"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S31/488654> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S31/488654> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/fastsettelsetransaksjonspris/771898> a ns2:Attribute ;
     dct:title "fastsettelsetransaksjonspris"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S12/488673> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S12/488673> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/fastsettelånerente/771925> a ns2:Attribute ;
     dct:title "fastsettelaanerente"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S33/488652> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S33/488652> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/feilÅrsregnskapDelårsregnskap/445984> a ns2:Attribute ;
     dct:title "feilAArsregnskapDelaarsregnskap"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960/11494> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960/11494> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/finansielleInstrumenterUnotert/445971> a ns2:Attribute ;
     dct:title "finansielleInstrumenterUnotert"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/FinansielleInstrumenterUnoterteEidUtstedt-23752/11475> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/FinansielleInstrumenterUnoterteEidUtstedt-23752/11475> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/fondsobligasjoner/665143> a ns2:Attribute ;
     dct:title "fondsobligasjoner"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S33/665089> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S33/665089> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/fordelingtransaksjonspris/771897> a ns2:Attribute ;
     dct:title "fordelingtransaksjonspris"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S13/488672> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S13/488672> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/fordklarendringer/771994> a ns2:Attribute ;
     dct:title "fordklarendringer"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T09/658944> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T09/658944> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/foretaksnavn/664848> a ns2:Attribute ;
     dct:title "foretaksnavn"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Foretaksnavn/639250> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Foretaksnavn/639250> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/forsikringsbokføring/771934> a ns2:Attribute ;
     dct:title "forsikringsbokfoering"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S53/493167> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S53/493167> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/fraveketKravIFRS/445983> a ns2:Attribute ;
     dct:title "fraveketKravIFRS"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/IFRSKravFraveketKravMedHensikt-31961/11526> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/IFRSKravFraveketKravMedHensikt-31961/11526> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/geografiskområde/771964> a ns2:Attribute ;
     dct:title "geografiskomraade"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S61/493177> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S61/493177> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/gevinstTapFinansielleInstrumenterOver25/445969> a ns2:Attribute ;
     dct:title "gevinstTapFinansielleInstrumenterOver25"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754/11532> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754/11532> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/gevinstTapFinansielleInstrumenterOver5/445970> a ns2:Attribute ;
     dct:title "gevinstTapFinansielleInstrumenterOver5"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753/11537> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753/11537> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/gjeldVirkeligVerdi/664860> a ns2:Attribute ;
     dct:title "gjeldVirkeligVerdi"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S88/517999> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S88/517999> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/groenneobligasjoner/665140> a ns2:Attribute ;
     dct:title "groenneobligasjoner"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S36/665077> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S36/665077> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/haddeias1257avesentligeffekt/771949> a ns2:Attribute ;
     dct:title "haddeias1257avesentligeffekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S55/493165> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S55/493165> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/harleiekontrakter/771974> a ns2:Attribute ;
     dct:title "harleiekontrakter"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S45/494012> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S45/494012> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/identifisereleieavtale/771928> a ns2:Attribute ;
     dct:title "identifisereleieavtale"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S30/488655> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S30/488655> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/identifiseringleveringsforpliktelser/771899> a ns2:Attribute ;
     dct:title "identifiseringleveringsforpliktelser"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S11/488475> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S11/488475> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ifrs16harforklartforskjeller/772063> a ns2:Attribute ;
     dct:title "ifrs16harforklartforskjeller"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Ifrs16harforklartforskjeller/772068> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Ifrs16harforklartforskjeller/772068> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ikkeaktuelt/771916> a ns2:Attribute ;
     dct:title "ikkeaktuelt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S40/493186> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S40/493186> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/immateriellEiendel/445945> a ns2:Attribute ;
     dct:title "immateriellEiendel"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielleAndre-23758/11460> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelerImmaterielleAndre-23758/11460> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/industrioghandel/665146> a ns2:Attribute ;
     dct:title "industrioghandel"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S24/632318> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S24/632318> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/ingeneffekt/771933> a ns2:Attribute ;
     dct:title "ingeneffekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S54/493166> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S54/493166> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/innføringifric23vesentligeffekt/771948> a ns2:Attribute ;
     dct:title "innfoeringifric23vesentligeffekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S56/493164> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S56/493164> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/inntektvekstOver25/445986> a ns2:Attribute ;
     dct:title "inntektvekstOver25"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Inntektsvekst25SisteAr50TreSisteAr-23779/11590> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Inntektsvekst25SisteAr50TreSisteAr-23779/11590> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/inntruffetForholdTrusselRevisorUavhengighet/622401> a ns2:Attribute ;
     dct:title "inntruffetForholdTrusselRevisorUavhengighet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S94/508205> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S94/508205> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/investeringerOver50/600183> a ns2:Attribute ;
     dct:title "investeringerOver50"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S6/487462> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S6/487462> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/investeringsaktivitetOverstigerÅrsresultat/445908> a ns2:Attribute ;
     dct:title "investeringsaktivitetOverstigerAArsresultat"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740/11510> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740/11510> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/kapasitetKompetanse/622395> a ns2:Attribute ;
     dct:title "kapasitetKompetanse"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S2/488798> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S2/488798> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/klassifiseringfinansielleinstrument/771937> a ns2:Attribute ;
     dct:title "klassifiseringfinansielleinstrument"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S50/494007> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S50/494007> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/kommuneogfylke/665149> a ns2:Attribute ;
     dct:title "kommuneogfylke"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S27/634244> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S27/634244> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/konsernregnskap/445938> a ns2:Attribute ;
     dct:title "konsernregnskap"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetKonsernregnskap-23722/11570> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetKonsernregnskap-23722/11570> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/konsolidertDatterselskap/600184> a ns2:Attribute ;
     dct:title "konsolidertDatterselskap"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S5/487463> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S5/487463> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/kontinuitet/622392> a ns2:Attribute ;
     dct:title "kontinuitet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S03/602942> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S03/602942> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/kontraktensløpetid/771962> a ns2:Attribute ;
     dct:title "kontraktensloepetid"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S63/493162> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S63/493162> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/kontraktskostnader/771892> a ns2:Attribute ;
     dct:title "kontraktskostnader"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S18/488667> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S18/488667> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/kontraktstype/771967> a ns2:Attribute ;
     dct:title "kontraktstype"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S67/493174> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S67/493174> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/konvertible/665144> a ns2:Attribute ;
     dct:title "konvertible"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S12/602705> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S12/602705> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/korrigertNegativ/445955> a ns2:Attribute ;
     dct:title "korrigertNegativ"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalKorrigertNegativ-23776/11616> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EgenkapitalKorrigertNegativ-23776/11616> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/kredittforetak/665147> a ns2:Attribute ;
     dct:title "kredittforetak"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S25/634252> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S25/634252> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/kvalitetNyhetsbrev/622382> a ns2:Attribute ;
     dct:title "kvalitetNyhetsbrev"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S14/602697> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S14/602697> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/kvalitetPresentasjonBrev/622383> a ns2:Attribute ;
     dct:title "kvalitetPresentasjonBrev"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S21/622462> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S21/622462> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/lEI-nummer/771885> a ns2:Attribute ;
     dct:title "lEI-nummer"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/LEI-nummer/660277> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/LEI-nummer/660277> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/leiekontrakterinneholder/771973> a ns2:Attribute ;
     dct:title "leiekontrakterinneholder"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S46/494011> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S46/494011> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/leiekontrakterinneholderleiekomponenter/771979> a ns2:Attribute ;
     dct:title "harforetaketleiekontrakter"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/493187> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/493187> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/maalform/665679> a ns2:Attribute ;
     dct:title "maalform"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Målform/660674> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Målform/660674> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/markedkundetype/771963> a ns2:Attribute ;
     dct:title "markedkundetype"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S62/493161> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S62/493161> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/medgåttTid/622388> a ns2:Attribute ;
     dct:title "medgaattTid"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S15/602693> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S15/602693> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/mestkrevendevurdering/771982> a ns2:Attribute ;
     dct:title "mestkrevendevurdering"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T10/658943> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_750_T10/658943> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/metodebrukt/771894> a ns2:Attribute ;
     dct:title "metodebrukt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S16/488669> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S16/488669> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/målingandre/771935> a ns2:Attribute ;
     dct:title "maalingandre"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S52/493168> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S52/493168> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/målingkundefordringer/771936> a ns2:Attribute ;
     dct:title "maalingkundefordringer"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S51/493169> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S51/493169> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/målingleiebetalinger/771926> a ns2:Attribute ;
     dct:title "maalingleiebetalinger"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S32/488653> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S32/488653> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/navn/637645> a ns2:Attribute ;
     dct:title "navn"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S02/637661> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S02/637661> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/navn/637650> a ns2:Attribute ;
     dct:title "navn"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S01/637662> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Navn_S01/637662> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/nedskriving/445928> a ns2:Attribute ;
     dct:title "nedskriving"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger-23745/11478> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger-23745/11478> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/negativGoodwill/600182> a ns2:Attribute ;
     dct:title "negativGoodwill"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S3/487465> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S3/487465> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/negativtDriftsresultat/445961> a ns2:Attribute ;
     dct:title "negativtDriftsresultat"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/DriftsresultatNegativSisteToAr-23742/11506> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/DriftsresultatNegativSisteToAr-23742/11506> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/negativtÅrsresultat/445959> a ns2:Attribute ;
     dct:title "negativtAArsresultat"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsresultatNegativSisteToAr-23744/11567> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/ArsresultatNegativSisteToAr-23744/11567> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/nyeAlternativeResultatmål/664863> a ns2:Attribute ;
     dct:title "nyeAlternativeResultatmaal"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S105/639323> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S105/639323> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/obligasjonermedfortrinnsrett/665142> a ns2:Attribute ;
     dct:title "obligasjonermedfortrinnsrett"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S34/665085> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S34/665085> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/omarbeidelseResultatBalanseTall/600185> a ns2:Attribute ;
     dct:title "omarbeidelseResultatBalanseTall"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S4/487464> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S4/487464> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/oppfyllelseleveringsforpliktelsertid/771896> a ns2:Attribute ;
     dct:title "oppfyllelseleveringsforpliktelsertid"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S14/488671> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S14/488671> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/oppfyllelseleveringsforpliktelsertidspunkt/771895> a ns2:Attribute ;
     dct:title "oppfyllelseleveringsforpliktelsertidspunkt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S15/488670> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S15/488670> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/organisasjonsnummer/664849> a ns2:Attribute ;
     dct:title "organisasjonsnummer"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnummer/638574> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Organisasjonsnummer/638574> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/over10/445998> a ns2:Attribute ;
     dct:title "over10"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764/11598> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764/11598> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/over25FørSkatt/446010> a ns2:Attribute ;
     dct:title "over25FoerSkatt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering25ResultatForSkatt-23769/11638> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering25ResultatForSkatt-23769/11638> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/over50/445997> a ns2:Attribute ;
     dct:title "over50"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765/11452> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765/11452> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/over5FørSkatt/446011> a ns2:Attribute ;
     dct:title "over5FoerSkatt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering5ResultatForSkatt-23768/11495> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering5ResultatForSkatt-23768/11495> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/periodetype/664924> a ns2:Attribute ;
     dct:title "periodetype"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Periodetype/660275> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Periodetype/660275> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/personellRevisjonsteamet/622385> a ns2:Attribute ;
     dct:title "personellRevisjonsteamet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S16/602689> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S16/602689> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/postnummer/660281> a ns2:Attribute ;
     dct:title "postnummer"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Postnummer/660288> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Postnummer/660288> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/poststed/660279> a ns2:Attribute ;
     dct:title "poststed"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Poststed/660287> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Poststed/660287> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/presentererAlternativeResultatmål/664866> a ns2:Attribute ;
     dct:title "presentererAlternativeResultatmaal"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S106/639319> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S106/639319> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/prinsipalagent/771893> a ns2:Attribute ;
     dct:title "prinsipalagent"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S17/488668> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S17/488668> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/pris/622397> a ns2:Attribute ;
     dct:title "pris"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S04/602941> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S04/602941> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/påserRevisjonsutvalgetOppfølging/622405> a ns2:Attribute ;
     dct:title "paaserRevisjonsutvalgetOppfoelging"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S97/600726> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S97/600726> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/rapporteringsId/660290> a ns2:Attribute ;
     dct:title "rapporteringsid"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/RapporteringsId/636854> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/RapporteringsId/636854> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/referanser/622380> a ns2:Attribute ;
     dct:title "referanser"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S17/602685> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S17/602685> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/regnskapsspråk/445937> a ns2:Attribute ;
     dct:title "regnskapsspraak"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Regnskapsstandard-31959/11441> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Regnskapsstandard-31959/11441> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/regnskapsår/445939> a ns2:Attribute ;
     dct:title "regnskapsaar"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDataenkeltype/RegnskapAr-17102/10757> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDataenkeltype/RegnskapAr-17102/10757> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/relasjoner/622393> a ns2:Attribute ;
     dct:title "relasjoner"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S05/602940> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S05/602940> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/renomme/622394> a ns2:Attribute ;
     dct:title "renomme"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S06/602939> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S06/602939> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/restruktureringsavsetning/446012> a ns2:Attribute ;
     dct:title "restruktureringsavsetning"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering-23767/11529> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/AvsetningRestrukturering-23767/11529> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/resultatFørSkattNegativt/445924> a ns2:Attribute ;
     dct:title "resultatFoerSkattNegativt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/NedskrivningerNegativResultatForSkatt-23749/11560> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/NedskrivningerNegativResultatForSkatt-23749/11560> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/resultatFørSkattOver25/445925> a ns2:Attribute ;
     dct:title "resultatFoerSkattOver25"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger25ResultatForSkatt-23748/11484> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger25ResultatForSkatt-23748/11484> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/resultatFørSkattOver5/445926> a ns2:Attribute ;
     dct:title "resultatFoerSkattOver5"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger5ResultatForSkatt-23747/11562> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/Nedskrivninger5ResultatForSkatt-23747/11562> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/revisjonsberetning/600180> a ns2:Attribute ;
     dct:title "revisjonsberetning"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/ORDatakodeutvalg/RevisjonsberetningUtenAvvik-34066/374211> .
+    ns2:containsObjectType <http://seres.no/guid/ORDatakodeutvalg/RevisjonsberetningUtenAvvik-34066/374211> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/revisjonsberetningModifisering/600178> a ns2:Attribute ;
     dct:title "revisjonsberetningModifisering"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S2/487466> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S2/487466> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/revisjonsberetningPresisering/600179> a ns2:Attribute ;
     dct:title "revisjonsberetningPresisering"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S1/487467> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S1/487467> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/revisjonskvalitet/622396> a ns2:Attribute ;
     dct:title "revisjonskvalitet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S07/602938> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S07/602938> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/revisjonsutvalgRepresentert/622402> a ns2:Attribute ;
     dct:title "revisjonsutvalgRepresentert"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S95/600734> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S95/600734> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/rotasjonRevisjonsselskap/622391> a ns2:Attribute ;
     dct:title "rotasjonRevisjonsselskap"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S08/602937> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Heltall_1_S08/602937> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/salgskanaler/771960> a ns2:Attribute ;
     dct:title "salgskanaler"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S65/493159> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S65/493159> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/sammensetningTimeforbruk/622387> a ns2:Attribute ;
     dct:title "sammensetningTimeforbruk"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S18/602677> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S18/602677> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/sertifikater/665151> a ns2:Attribute ;
     dct:title "sertifikater"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S31/634228> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S31/634228> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/sikringsbokføring/445972> a ns2:Attribute ;
     dct:title "sikringsbokfoering"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SikringsbokføringFinansielleInstrumenter-23751/11591> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SikringsbokføringFinansielleInstrumenter-23751/11591> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/sluttetAlternativeResultatm/664864> a ns2:Attribute ;
     dct:title "sluttetAlternativeResultatm"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S107/639315> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S107/639315> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/spesifiser/664854> a ns2:Attribute ;
     dct:title "spesifiser"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_S10/600714> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Tekst_255_S10/600714> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/statslaan/665152> a ns2:Attribute ;
     dct:title "statslaan"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S30/634232> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S30/634232> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/storlaan/665150> a ns2:Attribute ;
     dct:title "storlaan"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S32/634224> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S32/634224> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/styrelederToppledelseSkiftet/445934> a ns2:Attribute ;
     dct:title "styrelederToppledelseSkiftet"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726/11611> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726/11611> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/sumforpliktelser/771914> a ns2:Attribute ;
     dct:title "sumforpliktelser"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/488646> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S39/488646> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/tapRettssak/445985> a ns2:Attribute ;
     dct:title "tapRettssak"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SkattesakerVesentligeTapteSisteToAr-23780/11453> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/SkattesakerVesentligeTapteSisteToAr-23780/11453> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/telefonPrefiks/637643> a ns2:Attribute ;
     dct:title "telefonprefiks"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S02/637657> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S02/637657> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/telefonPrefiks/637648> a ns2:Attribute ;
     dct:title "telefonprefiks"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S01/637658> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonPrefiks_S01/637658> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/telefonnr/637644> a ns2:Attribute ;
     dct:title "telefonnummer"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S02/637659> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S02/637659> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/telefonnr/637649> a ns2:Attribute ;
     dct:title "telefonnummer"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S01/637660> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataenkeltype/TelefonNummer_S01/637660> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/tidspunktoverføring/771961> a ns2:Attribute ;
     dct:title "tidspunktoverfoering"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S64/493160> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S64/493160> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/tidsriktigLevering/622384> a ns2:Attribute ;
     dct:title "tidsriktigLevering"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S19/602681> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S19/602681> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/typevaretjeneste/771965> a ns2:Attribute ;
     dct:title "typevaretjeneste"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S60/493176> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeutvalg/SvaralternativJaNei_S60/493176> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/uenighetRevisjonsutvalgetEksternRevisorInternKontroll/622404> a ns2:Attribute ;
     dct:title "uenighetRevisjonsutvalgetEksternRevisorInternKontroll"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S96/600730> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S96/600730> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/undersøkelserFølgeOppRevisor/622400> a ns2:Attribute ;
     dct:title "undersoekelserFoelgeOppRevisor"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S93/508209> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/SvaralternativJaNei_S93/508209> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utoverFinansielleEiendeler/445968> a ns2:Attribute ;
     dct:title "utoverFinansielleEiendeler"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755/11609> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755/11609> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utoverFinansielleEiendelerOver10/445967> a ns2:Attribute ;
     dct:title "utoverFinansielleEiendelerOver10"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756/11527> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756/11527> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utoverFinansielleEiendelerOver50/445966> a ns2:Attribute ;
     dct:title "utoverFinansielleEiendelerOver50"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757/11539> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757/11539> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utsattSkattefordeOver5/445980> a ns2:Attribute ;
     dct:title "utsattSkattefordeOver5"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762/11490> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762/11490> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utsattSkattefordel/445981> a ns2:Attribute ;
     dct:title "utsattSkattefordel"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordel-23761/11473> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordel-23761/11473> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utsattSkattefordelOver25/445979> a ns2:Attribute ;
     dct:title "utsattSkattefordelOver25"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763/11535> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/ORDatakodeutvalg/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763/11535> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utstederOvertakerEllerOvertatt/445922> a ns2:Attribute ;
     dct:title "utstederOvertakerEllerOvertatt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/ORDatakodeutvalg/UtstederIdentifisertOvertakerOverdrager-34068/374089> .
+    ns2:containsObjectType <http://seres.no/guid/ORDatakodeutvalg/UtstederIdentifisertOvertakerOverdrager-34068/374089> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/utstedertype/445918> a ns2:Attribute ;
     dct:title "utstedertype"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakomplekstype/Verdipapirutsteder/446029> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakomplekstype/Verdipapirutsteder/446029> .
 
 <http://seres.no/guid/Finanstilsynet/Dataegenskap/åpenhetsrapport/622381> a ns2:Attribute ;
     dct:title "aapenhetsrapport"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S20/602673> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Datakodeliste/Boolean_S20/602673> .
 
 <http://seres.no/guid/Finanstilsynet/Dataenkeltype/Adresselinje1/660286/guid> a ns2:Attribute ;
     dct:title "guid"@nb ;
@@ -3701,19 +3701,19 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:title "rapport"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/664853> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Meldingsdel/rapport/664853> .
 
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/rapportKRT-1003> a ns2:Attribute ;
     dct:title "rapportKRT-1003"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Meldingsdel/RapportKRT-1003/445953> .
 
 <http://seres.no/guid/Finanstilsynet/Meldingsmodell/KRT-1003v3_M/446114/skjemainnholdKRT-1003> a ns2:Attribute ;
     dct:title "skjemainnholdKRT-1003"@nb ;
     xsd:maxOccurs 1 ;
     xsd:minOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1003/446009> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Meldingsdel/SkjemainnholdKRT-1003/446009> .
 
 <http://seres.no/guid/Finanstilsynet/ORDataenkeltype/RegnskapAr-17102/10757/guid> a ns2:Attribute ;
     dct:title "guid"@nb ;
@@ -3902,192 +3902,192 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/adresse/664847> a ns2:Attribute ;
     dct:title "adresse"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Adresse/660282> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Adresse/660282> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/alternativeResultatmål/664901> a ns2:Attribute ;
     dct:title "alternativeResultatmaal"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/AlternativeResultatmål/664869> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/AlternativeResultatmål/664869> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/andreForhold/446000> a ns2:Attribute ;
     dct:title "andreForhold"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/AndreForhold/445989> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/AndreForhold/445989> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/egenkapital/446002> a ns2:Attribute ;
     dct:title "egenkapital"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Egenkapital/445957> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Egenkapital/445957> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/forpliktelseAvsetning/446004> a ns2:Attribute ;
     dct:title "forpliktelseAvsetning"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/ForpliktelseAvsetning/445999> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/ForpliktelseAvsetning/445999> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15/771902> a ns2:Attribute ;
     dct:title "ifrs15"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771901> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771901> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15kategorier/771957> a ns2:Attribute ;
     dct:title "ifrs15kategorier"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15kategorier/771966> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15kategorier/771966> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs15vurderinger/771900> a ns2:Attribute ;
     dct:title "ifrs15vurderinger"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771887> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs15/771887> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16/771888> a ns2:Attribute ;
     dct:title "ifrs16"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16/771886> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16/771886> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterleietaker/771981> a ns2:Attribute ;
     dct:title "ifrs16leiekontrakterleietaker"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16leiekontrakterleietaker/771971> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16leiekontrakterleietaker/771971> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16leiekontrakterutleiereksterne/771983> a ns2:Attribute ;
     dct:title "ifrs16leiekontrakterutleiereksterne"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/ifrs16leiekontrakterutleiereksterne/771975> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/ifrs16leiekontrakterutleiereksterne/771975> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurderinger/771970> a ns2:Attribute ;
     dct:title "ifrs16vurderinger"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifsr16vurderinger/771929> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifsr16vurderinger/771929> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs16vurdertikkeeffekt/771976> a ns2:Attribute ;
     dct:title "ifrs16vurdertikkeeffekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16vurdertikkeeffekt/771917> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16vurdertikkeeffekt/771917> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrs9/771947> a ns2:Attribute ;
     dct:title "ifrs9"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs9/771943> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs9/771943> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrsandre/771950> a ns2:Attribute ;
     dct:title "ifrsandre"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrsandre/771941> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrsandre/771941> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/ifrseffekt/771942> a ns2:Attribute ;
     dct:title "ifrseffekt"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16utleiereksterne/771938> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Ifrs16utleiereksterne/771938> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/immatriellEiendel/446005> a ns2:Attribute ;
     dct:title "immatriellEiendel"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/ImmateriellEiendel/445946> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/ImmateriellEiendel/445946> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/innsender/664852> a ns2:Attribute ;
     dct:title "innsender"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Innsender/664850> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Innsender/664850> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson1/664845> a ns2:Attribute ;
     dct:title "kontaktperson1"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson1/637652> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson1/637652> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontaktperson2/664844> a ns2:Attribute ;
     dct:title "kontaktperson2"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson2/637647> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontaktperson2/637647> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/kontantstrøm/445962> a ns2:Attribute ;
     dct:title "kontantstroem"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontantstrøm/445910> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Kontantstrøm/445910> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/markedsverdibasertEiendel/446006> a ns2:Attribute ;
     dct:title "markedsverdibasertEiendel"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/MarkedsverdibasertEiendel/445974> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/MarkedsverdibasertEiendel/445974> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/nedskriving/445958> a ns2:Attribute ;
     dct:title "nedskriving"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Nedskriving/445929> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Nedskriving/445929> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/organisasjonsforhold/446008> a ns2:Attribute ;
     dct:title "organisasjonsforhold"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Organisasjonsforhold/445936> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Organisasjonsforhold/445936> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/periode/664926> a ns2:Attribute ;
     dct:title "periode"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Periode/664925> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Periode/664925> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapportering/664851> a ns2:Attribute ;
     dct:title "rapportering"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapportering/664846> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapportering/664846> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rapporteringsregisteret/664900> a ns2:Attribute ;
     dct:title "rapporteringsregisteret"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapporteringsregsregisteret/660291> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Rapporteringsregsregisteret/660291> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/regnskap/445951> a ns2:Attribute ;
     dct:title "regnskap"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Regnskap/445940> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Regnskap/445940> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/rentepapirertype/665073> a ns2:Attribute ;
     dct:title "rentepapirertype"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/RentepapirerType/665072> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/RentepapirerType/665072> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/restruktureringsavsetning/446003> a ns2:Attribute ;
     dct:title "restruktureringsavsetning"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Restruktureringsavsetning/446014> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Restruktureringsavsetning/446014> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/resultatpost/446007> a ns2:Attribute ;
     dct:title "resultatpost"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Resultatpost/445965> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Resultatpost/445965> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsberetning/600187> a ns2:Attribute ;
     dct:title "revisjonsberetning"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsberetning/600181> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsberetning/600181> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalg/622454> a ns2:Attribute ;
     dct:title "revisjonsutvalg"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsutvalg/622409> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Revisjonsutvalg/622409> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgFaktorer/622399> a ns2:Attribute ;
     dct:title "revisjonsutvalgFaktorer"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgFaktorer/622389> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgFaktorer/622389> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/revisjonsutvalgKriterier/622403> a ns2:Attribute ;
     dct:title "revisjonsutvalgKriterier"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgKriterier/622398> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/RevisjonsutvalgKriterier/622398> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utsattSkattefordel/445942> a ns2:Attribute ;
     dct:title "utsattSkattefordel"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Skattefordel/445982> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Skattefordel/445982> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/utviklingsutgift/445941> a ns2:Attribute ;
     dct:title "utviklingsutgift"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Utviklingsutgift/446018> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Utviklingsutgift/446018> .
 
 <http://seres.no/guid/Finanstilsynet/Relasjonsegenskap/virksomhetssammenslutninger/446001> a ns2:Attribute ;
     dct:title "virksomhetssammenslutninger"@nb ;
     xsd:maxOccurs 1 ;
-    ns2:hasType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Virksomhetssammenslutninger/445923> .
+    ns2:containsObjectType <http://seres.no/guid/Finanstilsynet/Dataobjekttype/Virksomhetssammenslutninger/445923> .
 
 <http://seres.no/guid/ORDataenkeltype/EgenkapitalMorforetaketsAksjeeiere-34067/374150/guid> a ns2:Attribute ;
     dct:title "guid"@nb ;
@@ -4962,1836 +4962,1836 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsresultatNegativSisteToAr-23744_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering-23767_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering25ResultatForSkatt-23769_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningRestrukturering5ResultatForSkatt-23768_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig10AvEgenkapital-23764_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/AvsetningerForpliktelserKortsiktig50AvEgenkapital-23765_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S12_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S13_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S14_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S15_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S16_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S17_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S18_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S19_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S20_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S21_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon#false" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon> ;
-    ns3:notation "false" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon> ;
+    ns1:notation "false" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon#true" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon> ;
-    ns3:notation "true" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon> ;
+    ns1:notation "true" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S22_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S23_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S24_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S25_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S26_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S27_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S30_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S31_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S32_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S33_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S34_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S35_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon#false> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon#false" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon#true> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon> ;
-    ns3:notation "false" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon#true> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon> ;
+    ns1:notation "false" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon#true> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon#true" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon#false> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon> ;
-    ns3:notation "true" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon#false> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Boolean_S36_Verdirestriksjon> ;
+    ns1:notation "true" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/DriftsresultatNegativSisteToAr-23742_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalAndel10-23775_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EgenkapitalKorrigertNegativ-23776_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler-23755_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler10EK-23756_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelMarkedsverdibasertUtoverFinansielleEiendeler50EK-23757_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle10AvEgenkapital-23759_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielle50AvEgenkapital-23760_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EiendelerImmaterielleAndre-23758_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetAksjerStorstKursoppgangKursnedgang-23724_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBorsnotertOBXIndeksutvalg-23723_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#eiendom> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#eiendom" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#egenkapitalbevis> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "eiendom" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#egenkapitalbevis> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "eiendom" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#energi> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#energi" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#finans> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "energi" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#finans> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "energi" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEksternRevisorSkifteSisteToAr-23729_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetEtiskeRetningslinjerOffentliggjorte-23725_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetKonsernregnskap-23722_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetStyrelederToppledelseEkstraordinartSkifteSisteTreAr-23726_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/FinansielleInstrumenterUnoterteEidUtstedt-23752_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter25ResultatForSkatt-23754_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/GevinstTapFinansielleInstrumenter5ResultatForSkatt-23753_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/IFRSKravFraveketKravMedHensikt-31961_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#ikkeaktuelt> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#ikkeaktuelt" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#jagittårsregnskap> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> ;
-    ns3:notation "ikkeaktuelt" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#jagittårsregnskap> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> ;
+    ns1:notation "ikkeaktuelt" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#neigitttidligere> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#neigitttidligere" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> ;
-    ns3:notation "neigitttidligere" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> ;
+    ns1:notation "neigitttidligere" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Inntektsvekst25SisteAr50TreSisteAr-23779_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/InsentivordningAksjebasert-23730_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjDriftInvesteringerOverstigerArsresultat-23740_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/KontantstromOperasjonelleDriftsaktiviteterOverstigerArsresultat-23739_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/LanebetingelserBruddDispensasjon-23778_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger-23745_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger25ResultatForSkatt-23748_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Nedskrivninger5ResultatForSkatt-23747_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/NedskrivningerNegativResultatForSkatt-23749_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler10-34069_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RegnskapsforingVirksomhetssammenslutningEndringEiendeler25-34070_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#A> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#A" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#CGAAP> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
-    ns3:notation "A" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#CGAAP> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
+    ns1:notation "A" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#IFRS> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#IFRS" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#NGAAP> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
-    ns3:notation "IFRS" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#NGAAP> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
+    ns1:notation "IFRS" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/RevisjonsberetningUtenAvvik-34066_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SikringsbokfoeringFinansielleInstrumenter-23751_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SkattesakerVesentligeTapteSisteToAr-23780_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S01_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S02_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S03_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S04_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S05_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S06_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S07_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S103_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S104_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S105_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S106_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S107_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S11_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S12_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S13_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S14_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S15_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S16_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S17_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S18_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S19_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S20_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S21_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S22_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S23_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S30_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S31_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S32_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S33_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S34_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S39_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S40_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S41_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S42_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S43_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S44_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S45_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S46_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S50_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S51_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S52_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S53_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S54_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S55_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S56_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S58_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S59_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S60_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S61_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S62_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S63_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S64_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S65_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S66_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S67_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S86_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S87_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S88_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S89_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S91_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S92_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S93_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S94_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S95_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S96_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S97_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S98_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon#Ja> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon#Ja" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon#Nei> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon> ;
-    ns3:notation "Ja" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon#Nei> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon> ;
+    ns1:notation "Ja" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon#Nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon#Nei" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon#Ja> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon> ;
-    ns3:notation "Nei" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon#Ja> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/SvaralternativJaNei_S99_Verdirestriksjon> ;
+    ns1:notation "Nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordel-23761_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt25ResultatForSkatt-23763_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtsattSkattefordelResultateffekt5ResultatForSkatt-23762_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtstederIdentifisertOvertakerOverdrager-34068_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte10AvEgenkapital-23773_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/UtviklingskostnaderBalanseforte50AvEgenkapital-23774_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon#1> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon#1" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon#2> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon> ;
-    ns3:notation "1" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon#2> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon> ;
+    ns1:notation "1" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon#2> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon#2" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon#1> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon> ;
-    ns3:notation "2" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon#1> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/VerdsettelsePrisBok1-23746_Verdirestriksjon> ;
+    ns1:notation "2" .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AArOgMaaned> a ns2:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/AArOgMaaned" ;
@@ -7279,16 +7279,16 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#bokmaal> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#bokmaal" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#nynorsk> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> ;
-    ns3:notation "bokmaal" ;
-    ns3:topConceptOf <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> .
+    ns3:next <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#nynorsk> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> ;
+    ns1:notation "bokmaal" ;
+    ns1:topConceptOf <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#engelsk> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#engelsk" ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#nynorsk> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> ;
-    ns3:notation "engelsk" .
+    ns3:previous <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#nynorsk> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> ;
+    ns1:notation "engelsk" .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Tekst> a ns2:SimpleType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Tekst" ;
@@ -8674,108 +8674,108 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#IT> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#IT" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#konsumvarer> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#industri> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "IT" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#konsumvarer> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#industri> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "IT" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#egenkapitalbevis> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#egenkapitalbevis" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#eiendom> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#kommunikasjon> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "egenkapitalbevis" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#eiendom> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#kommunikasjon> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "egenkapitalbevis" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#finans> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#finans" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forbruksvare> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#energi> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "finans" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forbruksvare> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#energi> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "finans" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forbruksvare> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forbruksvare" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forsyning> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#finans> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "forbruksvare" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forsyning> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#finans> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "forbruksvare" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forsyning> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forsyning" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#helse> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forbruksvare> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "forsyning" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#helse> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forbruksvare> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "forsyning" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#helse> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#helse" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#industri> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forsyning> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "helse" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#industri> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#forsyning> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "helse" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#industri> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#industri" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#IT> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#helse> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "industri" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#IT> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#helse> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "industri" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#kommunikasjon> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#kommunikasjon" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#egenkapitalbevis> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#material> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "kommunikasjon" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#egenkapitalbevis> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#material> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "kommunikasjon" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#konsumvarer> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#konsumvarer" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#material> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#IT> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "konsumvarer" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#material> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#IT> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "konsumvarer" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#material> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#material" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#kommunikasjon> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#konsumvarer> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
-    ns3:notation "material" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#kommunikasjon> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon#konsumvarer> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/EnhetBransje-23719_Verdirestriksjon> ;
+    ns1:notation "material" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#jagittårsregnskap> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#jagittårsregnskap" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#nei> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#ikkeaktuelt> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> ;
-    ns3:notation "jagittårsregnskap" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#nei> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#ikkeaktuelt> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> ;
+    ns1:notation "jagittårsregnskap" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#nei> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#nei" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#neigitttidligere> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#jagittårsregnskap> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> ;
-    ns3:notation "nei" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#neigitttidligere> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon#jagittårsregnskap> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Ifrs16harforklartforskjeller_Verdirestriksjon> ;
+    ns1:notation "nei" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#CGAAP> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#CGAAP" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#A> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#USGAAP> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
-    ns3:notation "CGAAP" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#A> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#USGAAP> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
+    ns1:notation "CGAAP" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#NGAAP> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#NGAAP" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#USGAAP> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#IFRS> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
-    ns3:notation "NGAAP" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#USGAAP> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#IFRS> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
+    ns1:notation "NGAAP" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#USGAAP> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#USGAAP" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#CGAAP> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#NGAAP> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
-    ns3:notation "USGAAP" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#CGAAP> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon#NGAAP> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/Regnskapsstandard-31959_Verdirestriksjon> ;
+    ns1:notation "USGAAP" .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag> a ns2:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Arbeidsgiveravgiftsgrunnlag" ;
@@ -8836,10 +8836,10 @@ seres_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
 
 <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#nynorsk> a ns2:CodeElement ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#nynorsk" ;
-    ns1:next <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#engelsk> ;
-    ns1:previous <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#bokmaal> ;
-    ns3:inScheme <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> ;
-    ns3:notation "nynorsk" .
+    ns3:next <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#engelsk> ;
+    ns3:previous <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak#bokmaal> ;
+    ns1:inScheme <http://localhost:8000/api/metadata/formtask/3906/141205/forms/3940/20161021/Spraak> ;
+    ns1:notation "nynorsk" .
 
 <http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon> a ns2:CodeList ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/2365/6/forms/3442/45350/ArsregnskapDelarsregnskapTidligereArsAvdeketVesentligeFeil-31960_Verdirestriksjon" ;
