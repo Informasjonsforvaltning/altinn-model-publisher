@@ -197,8 +197,8 @@ def create_code_elements(
 
     for i, code in enumerate(non_empty_codes):
         code_element = CodeElement()
-        code_element.identifier = f"{code_list_identifier}#{code}"
-        code_element.dct_identifier = f"{code_list_identifier}#{code}"
+        code_element.identifier = f"{code_list_identifier}#{uri_safe_string(code)}"
+        code_element.dct_identifier = f"{code_list_identifier}#{uri_safe_string(code)}"
         code_element.notation = code
         code_element.in_scheme = [code_list_ref]
 
@@ -207,13 +207,15 @@ def create_code_elements(
         else:
             previous_element = CodeElement()
             previous_element.identifier = (
-                f"{code_list_identifier}#{non_empty_codes[i - 1]}"
+                f"{code_list_identifier}#{uri_safe_string(non_empty_codes[i - 1])}"
             )
             code_element.previous_element = previous_element
 
         if i < len(non_empty_codes) - 1:
             next_element = CodeElement()
-            next_element.identifier = f"{code_list_identifier}#{non_empty_codes[i + 1]}"
+            next_element.identifier = (
+                f"{code_list_identifier}#{uri_safe_string(non_empty_codes[i + 1])}"
+            )
             code_element.next_element = next_element
 
         code_elements.append(code_element)
