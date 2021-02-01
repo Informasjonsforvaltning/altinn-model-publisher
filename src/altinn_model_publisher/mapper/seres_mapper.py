@@ -86,9 +86,8 @@ def create_seres_model_elements(
     """Create Model Element."""
     model_elements = []
     seres_guid = extract_seres_guid(data)
-    identifier = (
-        seres_guid if seres_guid else uri_identifier(data, model_namespace, True)
-    )
+    uri_id = uri_identifier(data, model_namespace, True)
+    identifier = seres_guid if seres_guid else uri_id
     if identifier:
         if is_code_list(data):
             model_element = CodeList()
@@ -111,14 +110,14 @@ def create_seres_model_elements(
                     model_property = create_seres_model_property(
                         data.attributes[attribute_key],
                         model_namespace,
-                        f"{identifier}/",
+                        f"{uri_id if uri_id else identifier}/",
                     )
                     if model_property:
                         model_element.has_property.append(model_property)
 
         if hasattr(data, "content"):
             content_properties = seres_model_properties_from_content(
-                data.content, model_namespace, f"{identifier}/"
+                data.content, model_namespace, f"{uri_id if uri_id else identifier}/"
             )
             model_element.has_property.extend(content_properties)
 
