@@ -186,23 +186,27 @@ def create_code_elements(
     code_list_ref = CodeList()
     code_list_ref.identifier = code_list_identifier
 
-    for i, name in enumerate(codes):
+    non_empty_codes = [code for code in codes if code and len(code) > 0]
+
+    for i, code in enumerate(non_empty_codes):
         code_element = CodeElement()
-        code_element.identifier = f"{code_list_identifier}#{name}"
-        code_element.dct_identifier = f"{code_list_identifier}#{name}"
-        code_element.notation = name
+        code_element.identifier = f"{code_list_identifier}#{code}"
+        code_element.dct_identifier = f"{code_list_identifier}#{code}"
+        code_element.notation = code
         code_element.in_scheme = [code_list_ref]
 
         if i == 0:
             code_element.top_concept_of = [code_list_ref]
         else:
             previous_element = CodeElement()
-            previous_element.identifier = f"{code_list_identifier}#{codes[i - 1]}"
+            previous_element.identifier = (
+                f"{code_list_identifier}#{non_empty_codes[i - 1]}"
+            )
             code_element.previous_element = previous_element
 
-        if i < len(codes) - 1:
+        if i < len(non_empty_codes) - 1:
             next_element = CodeElement()
-            next_element.identifier = f"{code_list_identifier}#{codes[i + 1]}"
+            next_element.identifier = f"{code_list_identifier}#{non_empty_codes[i + 1]}"
             code_element.next_element = next_element
 
         code_elements.append(code_element)
