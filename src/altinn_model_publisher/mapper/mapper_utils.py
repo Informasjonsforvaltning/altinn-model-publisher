@@ -15,7 +15,14 @@ def is_code_list(data: XMLSchema) -> bool:
     return (
         hasattr(data, "enumeration")
         and data.enumeration is not None
-        and len(data.enumeration) > 0
+        and len(
+            [
+                code
+                for code in data.enumeration
+                if code and len(uri_safe_string(code)) > 0
+            ]
+        )
+        > 0
     )
 
 
