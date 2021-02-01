@@ -169,7 +169,7 @@ def create_model_property(
                 )
                 if type_ref_identifier:
                     type_ref.identifier = type_ref_identifier
-                    model_property.has_type.append(type_ref)
+                    model_property.has_value_from = type_ref
             elif hasattr(type_ref_data, "primitive_type"):
                 type_ref_identifier = uri_identifier(
                     type_ref_data, model_namespace, True
@@ -188,7 +188,7 @@ def create_model_property(
                 )
                 if type_ref_identifier:
                     type_ref.identifier = type_ref_identifier
-                    model_property.has_type.append(type_ref)
+                    model_property.contains_object_type = type_ref
 
             if hasattr(data, "occurs"):
                 model_property.min_occurs = data.occurs[0]
