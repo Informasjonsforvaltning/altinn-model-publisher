@@ -45,7 +45,7 @@ jobs:
           docker tag eu.gcr.io/digdir-fdk-infra/altinn-model-publisher:test eu.gcr.io/digdir-fdk-infra/altinn-model-publisher:$GITHUB_SHA
           docker tag eu.gcr.io/digdir-fdk-infra/altinn-model-publisher:test eu.gcr.io/digdir-fdk-infra/altinn-model-publisher:staging_latest
           docker rmi eu.gcr.io/digdir-fdk-infra/altinn-model-publisher:test
-          docker -- push eu.gcr.io/digdir-fdk-infra/altinn-model-publisher
+          docker -- push eu.gcr.io/digdir-fdk-infra/altinn-model-publisher -a
 
       - name: Apply Helm template
         run: |
