@@ -19,6 +19,7 @@ workers = 2
 threads = 2 * multiprocessing.cpu_count()
 loglevel = str(LOG_LEVEL)
 accesslog = "-"
+log_format = '{"AppName": "%(name)s", "logLevel": "%(levelname)s", "severity": "%(levelname)s", "Timestamp": "%(created)f", "Class_Name":"%(module)s", "Method_name": "%(funcName)s", "process_id":%(process)d, "message": "%(message)s"}'  # noqa: B950
 
 # Need to override the logger to remove healthcheck (ping) form accesslog
 
@@ -34,6 +35,10 @@ class CustomGunicornLogger(glogging.Logger):
         logger = logging.getLogger("gunicorn.access")
         logger.addFilter(PingFilter())
         logger.addFilter(ReadyFilter())
+
+        self.error_fmt = log_format
+        self.access_fmt = log_format
+        self.syslog_fmt = log_format
 
 
 class PingFilter(logging.Filter):
