@@ -1,5 +1,5 @@
 """Mappers to create InformationModel from OR data."""
-from typing import List, Optional
+from typing import Optional
 
 from modelldcatnotordf.modelldcatno import (
     Attribute,
@@ -18,7 +18,6 @@ from xmlschema.validators import (
 )
 
 from .mapper_utils import (
-    create_code_elements,
     create_simple_type,
     first_character_lower_case,
     first_character_upper_case,
@@ -33,32 +32,34 @@ def create_model_from_or_xsd(xsd_data: XMLSchema) -> InformationModel:
     model_namespace = f"{xsd_data.base_url}/"
 
     for model_element_key in xsd_data.elements:
-        model.modelelements.extend(
-            create_or_model_elements(
-                xsd_data.elements[model_element_key], model_namespace
-            )
+        model_element = create_or_model_element(
+            xsd_data.elements[model_element_key], model_namespace
         )
+        if model_element:
+            model.modelelements.append(model_element)
 
     for model_element_key in xsd_data.types:
-        model.modelelements.extend(
-            create_or_model_elements(xsd_data.types[model_element_key], model_namespace)
+        model_element = create_or_model_element(
+            xsd_data.types[model_element_key], model_namespace
         )
+        if model_element:
+            model.modelelements.append(model_element)
 
     for model_element_key in xsd_data.groups:
-        model.modelelements.extend(
-            create_or_model_elements(
-                xsd_data.groups[model_element_key], model_namespace
-            )
+        model_element = create_or_model_element(
+            xsd_data.groups[model_element_key], model_namespace
         )
+        if model_element:
+            model.modelelements.append(model_element)
 
     return model
 
 
-def create_or_model_elements(
+def create_or_model_element(
     data: XMLSchema, model_namespace: str
-) -> List[ModelElement]:
+) -> Optional[ModelElement]:
     """Create Model Element."""
-    model_elements = []
+    model_element = None
     identifier = uri_identifier(data, model_namespace, True)
     if identifier:
         if is_code_list(data):
@@ -66,8 +67,6 @@ def create_or_model_elements(
             model_element.identifier = identifier
             model_element.dct_identifier = identifier
             model_element.title = {"nb": first_character_upper_case(data.prefixed_name)}
-
-            model_elements.extend(create_code_elements(data.enumeration, identifier))
         elif hasattr(data, "primitive_type"):
             model_element = create_simple_type(data, model_namespace)
         else:
@@ -99,9 +98,7 @@ def create_or_model_elements(
                 if model_property:
                     model_element.has_property.append(model_property)
 
-        model_elements.append(model_element)
-
-    return model_elements
+    return model_element
 
 
 def create_or_model_property(

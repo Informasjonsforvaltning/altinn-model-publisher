@@ -18,7 +18,6 @@ from xmlschema.validators import (
 )
 
 from .mapper_utils import (
-    create_code_elements,
     create_simple_type,
     data_is_seres_property_type,
     extract_seres_guid,
@@ -35,25 +34,25 @@ def create_model_from_seres_xsd(xsd_data: XMLSchema) -> InformationModel:
     model_namespace = f"{xsd_data.base_url}/"
 
     for model_element_key in xsd_data.elements:
-        model.modelelements.extend(
-            create_seres_model_elements(
-                xsd_data.elements[model_element_key], model_namespace
-            )
+        model_element = create_seres_model_element(
+            xsd_data.elements[model_element_key], model_namespace
         )
+        if model_element:
+            model.modelelements.append(model_element)
 
     for model_element_key in xsd_data.types:
-        model.modelelements.extend(
-            create_seres_model_elements(
-                xsd_data.types[model_element_key], model_namespace
-            )
+        model_element = create_seres_model_element(
+            xsd_data.types[model_element_key], model_namespace
         )
+        if model_element:
+            model.modelelements.append(model_element)
 
     for model_element_key in xsd_data.groups:
-        model.modelelements.extend(
-            create_seres_model_elements(
-                xsd_data.groups[model_element_key], model_namespace
-            )
+        model_element = create_seres_model_element(
+            xsd_data.groups[model_element_key], model_namespace
         )
+        if model_element:
+            model.modelelements.append(model_element)
 
     return model
 
@@ -80,11 +79,11 @@ def seres_model_properties_from_content(
     return model_properties
 
 
-def create_seres_model_elements(
+def create_seres_model_element(
     data: XMLSchema, model_namespace: str
-) -> List[ModelElement]:
+) -> Optional[ModelElement]:
     """Create Model Element."""
-    model_elements = []
+    model_element = None
     seres_guid = extract_seres_guid(data)
     uri_id = uri_identifier(data, model_namespace, True)
     identifier = seres_guid if seres_guid else uri_id
@@ -94,8 +93,6 @@ def create_seres_model_elements(
             model_element.identifier = identifier
             model_element.dct_identifier = identifier
             model_element.title = {"nb": first_character_upper_case(data.prefixed_name)}
-
-            model_elements.extend(create_code_elements(data.enumeration, identifier))
         elif hasattr(data, "primitive_type"):
             model_element = create_simple_type(data, model_namespace)
         else:
@@ -121,9 +118,7 @@ def create_seres_model_elements(
             )
             model_element.has_property.extend(content_properties)
 
-        model_elements.append(model_element)
-
-    return model_elements
+    return model_element
 
 
 def create_seres_model_property(

@@ -10,9 +10,9 @@ from altinn_model_publisher.mapper.mapper_utils import (
     extract_model_title,
     uri_safe_string,
 )
-from altinn_model_publisher.mapper.model_mapper import create_model_elements
-from altinn_model_publisher.mapper.or_mapper import create_or_model_elements
-from altinn_model_publisher.mapper.seres_mapper import create_seres_model_elements
+from altinn_model_publisher.mapper.model_mapper import create_model_element
+from altinn_model_publisher.mapper.or_mapper import create_or_model_element
+from altinn_model_publisher.mapper.seres_mapper import create_seres_model_element
 from tests.test_data import test_xsd
 
 
@@ -44,42 +44,40 @@ def test_sets_correct_class_for_different_xsd_types() -> None:
     """Should set correct class for the different types."""
     schema = XMLSchema(test_xsd)
 
-    simple_type = create_model_elements(schema.types["Dato"], "http://namespace.no/")[0]
-    complex_type = create_model_elements(
-        schema.types["Tidsrom"], "http://namespace.no/"
-    )[0]
-    complex_list_type = create_model_elements(
+    simple_type = create_model_element(schema.types["Dato"], "http://namespace.no/")
+    complex_type = create_model_element(schema.types["Tidsrom"], "http://namespace.no/")
+    complex_list_type = create_model_element(
         schema.types["TidsromListe"], "http://namespace.no/"
-    )[0]
-    extension_type = create_model_elements(
+    )
+    extension_type = create_model_element(
         schema.types["DatoExtension"], "http://namespace.no/"
-    )[0]
+    )
 
-    or_simple_type = create_or_model_elements(
+    or_simple_type = create_or_model_element(
         schema.types["Dato"], "http://namespace.no/"
-    )[0]
-    or_complex_type = create_or_model_elements(
+    )
+    or_complex_type = create_or_model_element(
         schema.types["Tidsrom"], "http://namespace.no/"
-    )[0]
-    or_complex_list_type = create_or_model_elements(
+    )
+    or_complex_list_type = create_or_model_element(
         schema.types["TidsromListe"], "http://namespace.no/"
-    )[0]
-    or_extension_type = create_or_model_elements(
+    )
+    or_extension_type = create_or_model_element(
         schema.types["DatoExtension"], "http://namespace.no/"
-    )[0]
+    )
 
-    seres_simple_type = create_seres_model_elements(
+    seres_simple_type = create_seres_model_element(
         schema.types["Dato"], "http://namespace.no/"
-    )[0]
-    seres_complex_type = create_seres_model_elements(
+    )
+    seres_complex_type = create_seres_model_element(
         schema.types["Tidsrom"], "http://namespace.no/"
-    )[0]
-    seres_complex_list_type = create_seres_model_elements(
+    )
+    seres_complex_list_type = create_seres_model_element(
         schema.types["TidsromListe"], "http://namespace.no/"
-    )[0]
-    seres_extension_type = create_seres_model_elements(
+    )
+    seres_extension_type = create_seres_model_element(
         schema.types["DatoExtension"], "http://namespace.no/"
-    )[0]
+    )
 
     assert isinstance(simple_type, SimpleType)
     assert isinstance(or_simple_type, SimpleType)
