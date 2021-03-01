@@ -567,17 +567,8 @@ or_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBil-grp-3497>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBilOgSpesifikasjonAvDriftskostnader-grp-2771>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4>,
-        <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4#Ja>,
-        <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4#Nei>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051>,
-        <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#NO>,
-        <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#SA>,
-        <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#SF>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867>,
-        <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Eventuelt_annet_sted>,
-        <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Hjemmeadresse>,
-        <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Varierende_parkeringssted>,
-        <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Virksomhetens_adresse>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/OmBil-grp-5667>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/OppgavegiverFodselsnummer-datadef-26>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/Regnskapsforer-grp-2633>,
@@ -832,45 +823,6 @@ or_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBilOgSpesifikasjonAvDriftskostnader-grp-2771/driftskostnaderSpesifisertBil-datadef-34484>,
         <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/InformasjonOmBilOgSpesifikasjonAvDriftskostnader-grp-2771/gruppeid> .
 
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4#Ja> a ns1:CodeElement ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4#Ja" ;
-    ns3:next <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4#Nei> ;
-    ns2:inScheme <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4> ;
-    ns2:notation "Ja" ;
-    ns2:topConceptOf <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4> .
-
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4#Nei> a ns1:CodeElement ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4#Nei" ;
-    ns3:previous <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4#Ja> ;
-    ns2:inScheme <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg2JaNei-repformat-4> ;
-    ns2:notation "Nei" .
-
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#NO> a ns1:CodeElement ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#NO" ;
-    ns3:previous <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#SF> ;
-    ns2:inScheme <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051> ;
-    ns2:notation "NO" .
-
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#SA> a ns1:CodeElement ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#SA" ;
-    ns3:next <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#SF> ;
-    ns2:inScheme <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051> ;
-    ns2:notation "SA" ;
-    ns2:topConceptOf <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051> .
-
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Hjemmeadresse> a ns1:CodeElement ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Hjemmeadresse" ;
-    ns3:next <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Virksomhetens_adresse> ;
-    ns2:inScheme <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867> ;
-    ns2:notation "Hjemmeadresse" ;
-    ns2:topConceptOf <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867> .
-
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Varierende_parkeringssted> a ns1:CodeElement ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Varierende_parkeringssted" ;
-    ns3:previous <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Eventuelt_annet_sted> ;
-    ns2:inScheme <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867> ;
-    ns2:notation "Varierende_parkeringssted" .
-
 <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/OmBil-grp-5667> a ns1:ObjectType ;
     dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/OmBil-grp-5667" ;
     dct:title "OmBil-grp-5667"@nb ;
@@ -945,27 +897,6 @@ or_catalog_turtle = """@prefix dcat: <http://www.w3.org/ns/dcat#> .
     dct:identifier "https://altinn.fellesdatakatalog.digdir.no#Integer" ;
     dct:title "Integer"@en ;
     xsd:anyURI xsd:decimal .
-
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#SF> a ns1:CodeElement ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#SF" ;
-    ns3:next <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#NO> ;
-    ns3:previous <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051#SA> ;
-    ns2:inScheme <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg3TypeSkatteoppgave-repformat-1051> ;
-    ns2:notation "SF" .
-
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Eventuelt_annet_sted> a ns1:CodeElement ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Eventuelt_annet_sted" ;
-    ns3:next <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Varierende_parkeringssted> ;
-    ns3:previous <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Virksomhetens_adresse> ;
-    ns2:inScheme <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867> ;
-    ns2:notation "Eventuelt_annet_sted" .
-
-<http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Virksomhetens_adresse> a ns1:CodeElement ;
-    dct:identifier "http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Virksomhetens_adresse" ;
-    ns3:next <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Eventuelt_annet_sted> ;
-    ns3:previous <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867#Hjemmeadresse> ;
-    ns2:inScheme <http://localhost:8000/api/metadata/formtask/3314/1212/forms/245/10980/KodelisteEttValg4AdresseHjemmeVirksomhetAnnen-repformat-867> ;
-    ns2:notation "Virksomhetens_adresse" .
 
 <https://altinn.fellesdatakatalog.digdir.no#String> a ns1:SimpleType ;
     dct:identifier "https://altinn.fellesdatakatalog.digdir.no#String" ;
