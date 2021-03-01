@@ -9,7 +9,6 @@ from modelldcatnotordf.modelldcatno import (
     ModelElement,
     ModelProperty,
     ObjectType,
-    SimpleType,
 )
 from xmlschema import XMLSchema
 from xmlschema.validators import (
@@ -126,32 +125,28 @@ def create_or_model_property(
                 type_ref_data = data.ref
 
             if is_code_list(type_ref_data):
-                type_ref = CodeList()
                 type_ref_identifier = uri_identifier(
                     type_ref_data, model_namespace, True
                 )
                 if type_ref_identifier:
-                    type_ref.identifier = type_ref_identifier
-                    model_property.has_value_from = type_ref
+                    model_property.has_value_from = type_ref_identifier
             elif hasattr(type_ref_data, "primitive_type"):
                 type_ref_identifier = uri_identifier(
                     type_ref_data, model_namespace, True
                 )
                 if type_ref_identifier:
                     if "http://www.w3.org/2001/XMLSchema#" in type_ref_identifier:
-                        type_ref = create_simple_type(type_ref_data, model_namespace)
+                        model_property.has_simple_type = create_simple_type(
+                            type_ref_data, model_namespace
+                        )
                     else:
-                        type_ref = SimpleType()
-                        type_ref.identifier = type_ref_identifier
-                    model_property.has_simple_type = type_ref
+                        model_property.has_simple_type = type_ref_identifier
             elif type_ref_data and type_ref_data.prefixed_name:
-                type_ref = ObjectType()
                 type_ref_identifier = uri_identifier(
                     type_ref_data, model_namespace, True
                 )
                 if type_ref_identifier:
-                    type_ref.identifier = type_ref_identifier
-                    model_property.contains_object_type = type_ref
+                    model_property.contains_object_type = type_ref_identifier
 
             if hasattr(data, "occurs"):
                 model_property.min_occurs = data.occurs[0]
@@ -178,10 +173,7 @@ def create_or_group_model_property(
                     "nb": first_character_lower_case(data.prefixed_name)
                 }
 
-                if hasattr(data, "primitive_type"):
-                    type_ref = SimpleType()
-                else:
-                    type_ref = ObjectType()
-                type_ref.identifier = uri_identifier(data, model_namespace, True)
-                model_property.has_type.append(type_ref)
+                model_property.has_type.append(
+                    uri_identifier(data, model_namespace, True)
+                )
     return model_property

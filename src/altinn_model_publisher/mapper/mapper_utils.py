@@ -3,7 +3,7 @@ import re
 from typing import Dict, List, Optional
 
 from datacatalogtordf import Agent
-from modelldcatnotordf.modelldcatno import CodeElement, CodeList, SimpleType
+from modelldcatnotordf.modelldcatno import CodeElement, SimpleType
 from xmlschema import XMLSchema
 
 from altinn_model_publisher.config import Config
@@ -190,9 +190,6 @@ def create_code_elements(
     """Create list of CodeElement from codes."""
     code_elements = []
 
-    code_list_ref = CodeList()
-    code_list_ref.identifier = code_list_identifier
-
     non_empty_codes = [code for code in codes if code and len(code) > 0]
 
     for i, code in enumerate(non_empty_codes):
@@ -200,10 +197,10 @@ def create_code_elements(
         code_element.identifier = f"{code_list_identifier}#{uri_safe_string(code)}"
         code_element.dct_identifier = f"{code_list_identifier}#{uri_safe_string(code)}"
         code_element.notation = code
-        code_element.in_scheme = [code_list_ref]
+        code_element.in_scheme = [code_list_identifier]
 
         if i == 0:
-            code_element.top_concept_of = [code_list_ref]
+            code_element.top_concept_of = [code_list_identifier]
         else:
             previous_element = CodeElement()
             previous_element.identifier = (
